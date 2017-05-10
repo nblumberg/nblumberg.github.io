@@ -1,0 +1,107 @@
+html {
+  background-color: black;
+  color: white;
+}
+
+h1, h2, h3, h4, h5 {
+  color: whitesmoke;
+  text-shadow: 2px 2px 2px darkgray;
+}
+
+a {
+  color: lightskyblue;
+}
+
+a:visited {
+  color: lightsteelblue;
+}
+
+.skills {
+  max-width: 75%;
+
+  .legend {
+    clear: right;
+    position: relative;
+
+    h2, .skills {
+      float: left;
+      margin-right: 3rem;
+    }
+  }
+
+  .skill {
+    color: black;
+    display: inline-block;
+    margin: 0.25rem 0.25rem 0 0;
+    position: relative;
+  }
+  .term, .details {
+    border-color: grey;
+    border-radius: 8px;
+    border-style: inset;
+    border-width: 3px;
+    margin: 0;
+    padding: 0.5rem;
+    position: relative;
+    transform: skew(-10deg);
+  }
+  .term {
+    border-color: whitesmoke;
+    background: darkgrey;
+    display: inline-block;
+    transition: all 0.5s;
+
+    &.expert {
+      background-color: gold;
+    }
+    &.experienced {
+      background-color: silver;
+    }
+    &.familiar {
+      background-color: #cd7f32;
+    }
+    a {
+      color: black;
+    }
+    a:visited {
+      color: black;
+    }
+  }
+  .details {
+    background: lightgray;
+    display: block;
+    position: absolute;
+    left: 90%;
+    top: 0;
+    transform: skew(-10deg) scaleX(0);
+    transform-origin: left bottom;
+    transition: all 0.5s;
+    z-index: 1;
+
+    .fullName {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .description {
+      width: 25vw;
+    }
+  }
+  .skill:hover {
+    .term {
+      //border-color: grey;
+      &.expert {
+        background-color: #a38d1c;
+      }
+      &.experienced {
+        background-color: grey;
+      }
+      &.familiar {
+        background-color: #a06327;
+      }
+    }
+    .details {
+      display: inline-block;
+      transform: skew(-10deg) scaleX(1);
+    }
+  }
+}

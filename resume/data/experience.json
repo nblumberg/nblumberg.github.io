@@ -1,0 +1,71 @@
+[
+  {
+    "name": "Endurance International Group, Inc.",
+    "address": {
+      "number": "1601",
+      "street": "Trapelo Road",
+      "city": "Waltham",
+      "state": "MA",
+      "zipcode": "02451"
+    },
+    "website": "http://www.constantcontact.com",
+    "positions": [
+      {
+        "name": "Advisory Software Engineer",
+        "dates": [ "08/01/2016" ],
+        "summary": "Most senior engineering role within the organization. Responsibilities include those of prior positions in addition to the following:",
+        "responsibilities": [
+          {
+            "description": "Serve as technical lead for several areas of the company code base."
+          },
+          {
+            "description": "Architectural design of software across teams in a distributed, micro-service environment."
+          },
+          {
+            "description": "Spearhead technological solutions to improve application monitoring, performance, code coverage, automated testing, security, and development velocity."
+          },
+          {
+            "description": "Act as a member of the technical council for the CTO, submitting and steering large-scale initiatives for the engineering organization."
+          },
+          {
+            "description": "Promote technical education, documentation, and best practices across the engineering organization."
+          }
+        ]
+      },
+      {
+        "name": "Principal Software Engineer",
+        "dates": [ "08/01/2014", "08/01/2016" ],
+        "summary": "Generally, the most senior engineering role within a team. Responsibilities include those of prior positions in addition to the following:",
+        "responsibilities": [
+          {
+            "description": "Act as technical liaison to other teams inside and outside the engineering organization."
+          },
+          {
+            "description": "Oversee team code quality."
+          },
+          {
+            "description": "Facilitate team velocity."
+          },
+          {
+            "description": "Act as mentor to other team members."
+          }
+        ]
+      },
+      {
+        "name": "Senior Software Engineer II",
+        "dates": [ "04/01/2013", "04/01/2014" ],
+        "summary": "Expert in all areas of team responsibility.",
+        "responsibilities": [
+        ]
+      },
+      {
+        "name": "Senior Software Engineer",
+        "dates": [ "04/01/2011", "04/01/2013" ],
+        "summary": "Expert in all areas of team responsibility.",
+        "responsibilities": [
+        ]
+      }
+    ]
+
+  }
+]

@@ -1,2 +1,5 @@
 .idea
 node_modules
+resume/gen
+resume/.sass-cache
+nblumberg.github.io.git.iml

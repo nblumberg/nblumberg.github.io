@@ -12,7 +12,9 @@
     "positions": [
       {
         "name": "Advisory Software Engineer",
-        "dates": [ "08/01/2016" ],
+        "dates": {
+          "start": "08/01/2016"
+        },
         "summary": "Most senior engineering role within the organization. Responsibilities include those of prior positions in addition to the following:",
         "responsibilities": [
           {
@@ -34,7 +36,10 @@
       },
       {
         "name": "Principal Software Engineer",
-        "dates": [ "08/01/2014", "08/01/2016" ],
+        "dates": {
+          "start": "08/01/2014",
+          "end": "08/01/2016"
+        },
         "summary": "Generally, the most senior engineering role within a team. Responsibilities include those of prior positions in addition to the following:",
         "responsibilities": [
           {
@@ -53,14 +58,20 @@
       },
       {
         "name": "Senior Software Engineer II",
-        "dates": [ "04/01/2013", "04/01/2014" ],
+        "dates": {
+          "start": "04/01/2013",
+          "end": "04/01/2014"
+        },
         "summary": "Expert in all areas of team responsibility.",
         "responsibilities": [
         ]
       },
       {
         "name": "Senior Software Engineer",
-        "dates": [ "04/01/2011", "04/01/2013" ],
+        "dates": {
+          "start": "04/01/2011",
+          "end": "04/01/2013"
+        },
         "summary": "Expert in all areas of team responsibility.",
         "responsibilities": [
         ]

@@ -1,4 +1,4 @@
-module.exports = function gruntConfig(grunt) {
+module.exports = (grunt) => {
     "use strict";
 
     let config = {};
@@ -12,6 +12,10 @@ module.exports = function gruntConfig(grunt) {
     config.livereload = 8001;
     config.port = 8000;
     config.protocol = "http";
+
+    config.clean = {
+        "gen": [ "gen/*" ]
+    };
 
     config.connect = {
         html: {
@@ -33,14 +37,14 @@ module.exports = function gruntConfig(grunt) {
     config.sass = {
         all: {
             files: {
-                "css/index.css": "css/*.scss"
+                "gen/index.css": "css/*.scss"
             }
         }
     };
 
     config.watch = {
         all: {
-            files: [ "**/*", "!resume.html", "!node_modules", "!node_modules/**/*" ],
+            files: [ "**/*", "!resume.html", "!node_modules", "!node_modules/**/*", "!gen/**/*" ],
             tasks: [ "assets" ],
             options: {
                 livereload: config.livereload,
@@ -72,7 +76,7 @@ module.exports = function gruntConfig(grunt) {
     grunt.registerTask("css", () => {
         let css, files;
         css = "";
-        files = grunt.file.expand("css/*.css");
+        files = grunt.file.expand("gen/*.css");
         files.forEach(function forEachFile(file) {
             let filename = file.split("/").pop();
             css += `\n    <link rel=\"stylesheet\" href="${file}"></link>`;
@@ -83,23 +87,16 @@ module.exports = function gruntConfig(grunt) {
         grunt.file.write(src, html);
     });
     grunt.registerTask("data", () => {
-        let scripts, files;
-        scripts = "<script>";
-        files = grunt.file.expand("data/*.json");
+        let files = grunt.file.expand("data/*.json");
         files.forEach(function forEachFile(file) {
             let filename = file.split("/").pop().replace(".json", "");
             let data = grunt.file.read(file);
-            scripts += `\n        window.nb.data[ "${filename}" ] = ${data};`;
+            let content = `((data) => {\n    "use strict";\n    data[ "${filename}" ] = ${data};\n})(window.nb.data);`;
+            grunt.file.write("gen/" + filename + "Data.js", content);
         });
-        scripts += "\n    </script>";
-        let html = grunt.file.read(src);
-        html = html.replace("<!--DATA-->", scripts);
-        src = "resume.html";
-        grunt.file.write(src, html);
     });
     grunt.registerTask("html", () => {
-        let scripts, files;
-        scripts = "<script>";
+        let files;
         files = grunt.file.expand("html/*.html");
         files.forEach(function forEachFile(file) {
             let filename = file.split("/").pop().replace(".html", "");
@@ -107,18 +104,15 @@ module.exports = function gruntConfig(grunt) {
                 return;
             }
             let template = grunt.file.read(file);
-            scripts += `\n        window.nb.templates[ "${filename}" ] = window.nb.templates._\`${template}\`;`;
+            let content = `((templates) => {\n    "use strict";\n    templates[ "${filename}" ] = templates._\`${template}\`;\n})(window.nb.templates);`;
+            grunt.file.write("gen/" + filename + "Template.js", content);
         });
-        scripts += "\n    </script>";
-        let html = grunt.file.read(src);
-        html = html.replace("<!--TEMPLATES-->", scripts);
-        src = "resume.html";
-        grunt.file.write(src, html);
     });
     grunt.registerTask("js", () => {
         let scripts, files;
         scripts = "";
-        files = grunt.file.expand("js/*.js");
+        files = grunt.file.expand("gen/*.js");
+        grunt.log.writeln(JSON.stringify(files, null, "   "));
         files.forEach(function forEachFile(file) {
             let filename = file.split("/").pop();
             if (filename === "namespace.js") {
@@ -129,11 +123,11 @@ module.exports = function gruntConfig(grunt) {
         let html = grunt.file.read(src);
         html = html.replace("<!--NAMESPACE-->", `\n    <script src="js/namespace.js"></script>`);
         html = html.replace("<!--SCRIPTS-->", scripts);
+        html = html.replace("<!--INDEX-->", `\n    <script src="js/index.js"></script>`);
         src = "resume.html";
         grunt.file.write(src, html);
     });
-    grunt.registerTask("assets", [ "reset", "sass", "css", "js", "data", "html", "reset" ]);
-    grunt.registerTask("launch", [ "assets", "connect", "open", "watch" ]);
-    grunt.registerTask("relaunch", [ "assets", "connect", "watch" ]);
-
+    grunt.registerTask("assets", [ "reset", "sass", "css", "data", "html", "js", "reset" ]);
+    grunt.registerTask("launch", [ "clean", "assets", "connect", "open", "watch" ]);
+    grunt.registerTask("relaunch", [ "clean", "assets", "connect", "watch" ]);
 };

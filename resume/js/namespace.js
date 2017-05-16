@@ -4,10 +4,24 @@
     /**
      * Used to tag a template string
      * @param {String[]} strings The parts of the template string split (and excluding) placeholder values
-     * @param {String[]} keys The placeho
+     * @param {String[]} keys The placeholder names
      * @returns {render}
      */
     function template(strings, ...keys) {
+        function findSubObject(context, key) {
+            if (!key) {
+                return context;
+            }
+            if (!context) {
+                return undefined;
+            }
+            if (key.indexOf(".") === -1) {
+                return context[ key ];
+            }
+            let split = key.split(".");
+            return findSubObject(context[ split.shift() ], split.join("."));
+        }
+
         /**
          * Render a template string.
          * Takes an arbitrary number of arguments.
@@ -16,15 +30,14 @@
          * @param {*} values[ i ] Any value to be used in resolving the template variables
          * @returns
          */
-        return (function render(...values) {
-            let dict = values[ values.length - 1 ] || {};
+        return function render(context) {
             let result = [ strings[ 0 ] ];
-            keys.forEach(function (key, i) {
-                let value = Number.isInteger(key) ? values[ key ] : dict[ key ];
+            keys.forEach((key, i) => {
+                let value = findSubObject(context, key);
                 result.push(value, strings[ i + 1 ]);
             });
             return result.join("");
-        });
+        };
     }
 
     window.nb = {

@@ -1,36 +1,39 @@
-(function indexIIFE(window, document) {
+((rootData, templates, document) => {
     "use strict";
 
-    window.nb.data.skills.sort((a, b) => {
+    rootData.skills.sort((a, b) => {
         return a.shortName.toLowerCase() < b.shortName.toLowerCase() ? -1 : 1;
     });
 
-    function replaceElement(element, html) {
+    function insert(html, before, data) {
         let parent = document.createElement("div");
         parent.innerHTML = html;
-        resolveCustomElements(parent);
+        resolveCustomElements(parent, data);
         Array.prototype.slice.call(parent.children, 0).forEach((child) => {
-            element.parentElement.insertBefore(child, element);
+            before.parentElement.insertBefore(child, before);
         });
-        element.parentElement.removeChild(element);
     }
 
-    function resolveCustomElements(parent) {
+    function resolveCustomElements(parent, subData) {
+        subData = subData || {};
+
         Array.prototype.slice.call(parent.querySelectorAll("nb-placeholder")).forEach((placeholder) => {
             let name = placeholder.innerText.trim();
-            let html = window.nb.templates[ name ](window.nb.data[ name ]);
-            replaceElement(placeholder, html);
+            let data = subData[ placeholder.dataset.key ] || rootData[ placeholder.dataset.key ] || rootData[ name ];
+            let html = templates[ name ](data);
+            insert(html, placeholder, data);
+            placeholder.parentElement.removeChild(placeholder);
         });
 
         Array.prototype.slice.call(parent.querySelectorAll("nb-repeat")).forEach((repeat) => {
             let name = repeat.innerText.trim();
-            let html = "";
-            window.nb.data[ name ].forEach((entry) => {
-                html += window.nb.templates[ name ](entry);
+            let data = subData[ repeat.dataset.key ] || rootData[ repeat.dataset.key ] || rootData[ name ];            data.forEach((entry) => {
+                let html = templates[ name ](entry);
+                insert(html, repeat, entry);
             });
-            replaceElement(repeat, html);
+            repeat.parentElement.removeChild(repeat);
         });
     }
 
     resolveCustomElements(document);
-})(window, window.document);
+})(window.nb.data, window.nb.templates, window.document);

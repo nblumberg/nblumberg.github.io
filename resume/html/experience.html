@@ -1,13 +1,5 @@
-<div>
-    <h3><a href="${'website'}">${"name"}</a></h3>
-    <address>
-        <span class="number">${"address.number"}</span>
-        <span class="street">${"address.street"}</span>
-        <span class="city">${"address.city"}</span>
-        <span class="state">${"address.state"}</span>
-        <span class="zipCode">${"address.zipcode"}</span>
-    </address>
+<div class="experience">
+    <h3><a href="${'website'}" class="name">${"name"}</a></h3>
+    <nb-placeholder data-key="address">address</nb-placeholder>
+    <nb-repeat data-key="positions" class="positions">positions</nb-repeat>
 </div>
-<dt class="${'experienceLevel'}">${"shortName"}</dt>
-<dd>${"description"}</dd>
-

@@ -3,6 +3,10 @@ html {
   color: white;
 }
 
+body > section {
+  margin-top: 1rem;
+}
+
 h1, h2, h3, h4, h5 {
   color: whitesmoke;
   text-shadow: 2px 2px 2px darkgray;
@@ -20,12 +24,18 @@ a:visited {
   max-width: 75%;
 
   .legend {
-    clear: right;
+    display: table;
     position: relative;
 
+    & > * {
+      display: table-cell;
+    }
     h2, .skills {
-      float: left;
-      margin-right: 3rem;
+      margin: 0;
+      padding-right: 1rem;
+    }
+    .skills {
+      zoom: 0.75;
     }
   }
 
@@ -105,3 +115,22 @@ a:visited {
     }
   }
 }
+
+.experience {
+  address {
+    float: right;
+  }
+  .position {
+    & > *:not(.name) {
+      margin-left: 2rem;
+    }
+
+    .dates {
+      float: right;
+    }
+    .summary {
+      font-style: italic;
+    }
+  }
+}
+

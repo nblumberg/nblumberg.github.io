@@ -557,13 +557,6 @@
     "experience": []
   },
   {
-    "shortName": "REST",
-    "fullName": "REpresentational State Transfer",
-    "description": "A standard for web services handling URL patterns and data representations for stateless operations",
-    "experienceLevel": "experienced",
-    "experience": []
-  },
-  {
     "shortName": "SASS",
     "fullName": "Syntactically Awesome Style Sheets",
     "description": "A syntax extension for CSS supporting variables and conditional logic with transpilation to CSS",

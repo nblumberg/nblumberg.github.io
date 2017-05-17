@@ -143,7 +143,7 @@
           {
             "description": "Yahoo Content/Video Platform Console: Consisted of an application chrome wrapping modular sub-applications that could be slotted in and enabled by the current user’s authorizations. Integrated a series of Yahoo services to include sub-applications for: <ul><li>Managing accounts, users, and authorizations</li><li>Viewing customer video usage analytics</li><li>Managing video player configurations and hosting</li><li>Managing videos, playlists, and their metadata (includes all the video functionality of the Maven Console below)</li></ul>",
             "skills": [
-              "Flex", "Flash", "FlexUnit", "Fluint", "Mock4AS", "JavaScript", "AJAX", "REST", "Maven", "Flexmojos", "Firebug", "YInst", "YTS", "Agile", "VersionOne"
+              "Flex", "Flash", "FlexUnit", "Fluint", "Mock4AS", "JavaScript", "AJAX", "REST", "mvn", "Flexmojos", "Firebug", "YInst", "YTS", "Agile", "VersionOne"
             ]
           },
           {
@@ -211,6 +211,149 @@
             "description": "Assisted in development of the Flash portions of Real Live Sport’s website, providing ActionScript and file architecture expertise. Implemented the reading of data from an external XML file to manage prioritized and user-orderable preloading of .swf and .mp3 files. Implemented management of sounds, text, and user feedback from within ActionScript. Implemented dynamically generated Flash user interface elements (e.g. buttons, text feedback, etc.) based on external XML data.",
             "skills": [
               "Macromedia Flash Professional 8", "Macromedia ActionScript", "HTML", "JavaScript", "Adobe Photoshop"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Brown Publishing Network",
+    "address": {
+      "city": "Waltham",
+      "state": "MA",
+      "country": "USA"
+    },
+    "website": "http://sixredmarbles.com/",
+    "summary": "A third party educational book developer, specializing K-12 textbooks. (since acquired by six<b>red</b>marbles)",
+    "positions": [
+      {
+        "name": "Tools developer, contractor",
+        "dates": {
+          "start": "04/01/2008",
+          "end": "05/01/2008"
+        },
+        "responsibilities": [
+          {
+            "description": "Developed AppleScript tools for formatting Word documents as well as counting word occurrences to confirm that educational texts conformed to readable standards for English as a Second Language students.",
+            "skills": [
+              "AppleScript", "Microsoft Word"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Copy editor, contractor",
+        "dates": {
+          "start": "10/01/2005",
+          "end": "04/01/2006"
+        },
+        "responsibilities": [
+          {
+            "description": "Poured Word format textbook manuscripts into Adobe's InCopy. Set line and character styles and content layout within InCopy. Proofread content and compiled art specifications tables for art production. Tracked manuscript over matter inside Adobe InDesign templates.",
+            "skills": [
+              "Adobe InCopy", "Microsoft Word"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Floodgate Entertainment",
+    "address": {
+      "city": "Lincoln",
+      "state": "MA",
+      "country": "USA"
+    },
+    "website": "http://sixredmarbles.com/",
+    "summary": "A third party video game development house specializing in cell phone games.",
+    "positions": [
+      {
+        "name": "Game designer",
+        "dates": {
+          "start": "08/01/2002",
+          "end": "09/01/2005"
+        },
+        "responsibilities": [
+          {
+            "description": "Designed fiction and game play and implemented game spaces for Pirates of the Caribbean Multiplayer, a real-time multiplayer naval combat cell-phone game for BREW and J2ME cell phones and Microsoft Smartphones.",
+            "skills": [
+              "In-house editor"
+            ]
+          },
+          {
+            "description": "Lead designer for Neverwinter Nights Mobile Edition for BREW and J2ME based cell phones and Microsoft Smartphones. Designed and implemented fiction, game play, and game spaces. Also wrote NPC dialog and scripted interaction with game objects. Coordinated in-house asset development and delivery to the publisher, JAMDAT mobile's, California offices. Created minor art contributions and managed art content.",
+            "skills": [
+              "Adobe Photoshop", "In-house editor and scripting language", "Bugzilla", "JAMDAT's web-based Merant bug tracking system"
+            ]
+          },
+          {
+            "description": "Story designer for Arkane Studio's Dark Messiah of Might and Magic. Coordinated content development with Arkane Studio's Lyon, France office.",
+            "skills": [
+              "cwRsync", "Valve's Hammer toolset"
+            ]
+          },
+          {
+            "description": "Designed and implemented fiction, game play, and game spaces for Neverwinter Nights: Shadows of Undrentide. Also scripted characters, monsters, items, traps, spells, and game events and created loadscreen, monster, and item portraits for Shadows of Undrentide. Coordinated content development with Bioware Entertainment's Edmonton, Canada office.",
+            "skills": [
+              "Bioware Aurora Toolset", "Adobe Photoshop"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Game designer, contractor",
+        "dates": {
+          "start": "03/01/2001",
+          "end": "06/01/2001"
+        },
+        "responsibilities": [
+          {
+            "description": "Prototyped GUI for a proposed video game.",
+            "skills": [
+              "Macromedia Director", "Macromedia Lingo", "Adobe Photoshop"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Mad Doc Software",
+    "address": {
+      "city": "Andover",
+      "state": "MA",
+      "country": "USA"
+    },
+    "summary": "A third party video game development house specializing in contract-development for larger publishers.",
+    "positions": [
+      {
+        "name": "Game Designer and Programmer",
+        "dates": {
+          "start": "07/01/2001",
+          "end": "01/01/2002"
+        },
+        "responsibilities": [
+          {
+            "description": "Designed and implemented fiction, game play, and game spaces for Jane's Attack Squadron. Also researched historical accuracy of game elements and implemented changes to the game's editor.",
+            "skills": [
+              "Microsoft Developers' Studio", "Visual C++", "COM", "MFC", "Windows 2000", "in-house editor and scripting language"
+            ]
+          },
+          {
+            "description": "Managed source control and backups of code and assets.",
+            "skills": [
+              "Microsoft Visual Source Safe", "CVS", "RCS"
+            ]
+          },
+          {
+            "description": "Designed, implemented and documented user keys and tested game play for Star Trek Armada II.",
+            "skills": [
+              "Microsoft Developers' Studio", "Microsoft Word", "in-house editor and scripting language"
             ]
           }
         ]

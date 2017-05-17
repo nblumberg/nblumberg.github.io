@@ -31,13 +31,13 @@ address:before {
   font: normal normal normal 14px/1 FontAwesome; }
 
 *[data-show=""] {
-  display: none; }
+  display: none !important; }
 
 *[data-hide=""] {
-  display: inherit; }
+  display: inherit !important; }
 
 *[data-show-icon=""]:before {
-  display: none; }
+  display: none !important; }
 
 .contact a {
   display: block; }
@@ -50,6 +50,10 @@ address:before {
     width: 50%; }
     .me > *:last-child {
       text-align: right; }
+
+.overview {
+  font-style: italic;
+  font-size: 1.25rem; }
 
 .skills {
   max-width: 75%; }
@@ -64,14 +68,7 @@ address:before {
     .skills .legend .skills {
       zoom: 0.75; }
 
-.skill {
-  color: black;
-  display: inline-block;
-  margin: 0.25rem 0.25rem 0 0;
-  position: relative; }
-
-.term, .details {
-  border-color: grey;
+.wedge, .skillList .widget .popup, .term, .details {
   border-radius: 8px;
   border-style: inset;
   border-width: 3px;
@@ -79,6 +76,43 @@ address:before {
   padding: 0.5rem;
   position: relative;
   transform: skew(-10deg); }
+
+.slideHidden, .skillList .widget .popup, .details {
+  display: block;
+  position: absolute;
+  left: 90%;
+  top: 0;
+  transform: skew(-10deg) scaleX(0);
+  transform-origin: left bottom;
+  transition: all 0.5s;
+  z-index: 1; }
+
+.slideIn, .skillList .widget:hover .popup, .skill:hover .details {
+  display: inline-block;
+  transform: skew(-10deg) scaleX(1); }
+
+.skillList .widget {
+  display: inline-block;
+  position: relative; }
+  .skillList .widget:before {
+    content: "\f161";
+    font: normal normal normal 14px/1 FontAwesome; }
+  .skillList .widget .popup {
+    background-color: white;
+    border-color: black;
+    white-space: nowrap;
+    top: -1rem; }
+
+.skill {
+  color: black;
+  display: inline-block;
+  margin: 0.25rem 0.25rem 0 0;
+  position: relative; }
+  .skill.hidden {
+    display: none; }
+
+.term, .details {
+  border-color: grey; }
 
 .term {
   border-color: whitesmoke;
@@ -97,15 +131,7 @@ address:before {
     color: black; }
 
 .details {
-  background: lightgray;
-  display: block;
-  position: absolute;
-  left: 90%;
-  top: 0;
-  transform: skew(-10deg) scaleX(0);
-  transform-origin: left bottom;
-  transition: all 0.5s;
-  z-index: 1; }
+  background: lightgray; }
   .details .fullName {
     font-weight: bold;
     white-space: nowrap; }
@@ -118,9 +144,6 @@ address:before {
   background-color: grey; }
 .skill:hover .term.familiar {
   background-color: #a06327; }
-.skill:hover .details {
-  display: inline-block;
-  transform: skew(-10deg) scaleX(1); }
 
 .experience {
   border: 1px solid gray;

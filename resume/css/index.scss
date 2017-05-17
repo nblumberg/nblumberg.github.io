@@ -45,13 +45,13 @@ address:before {
 }
 
 *[data-show=""] {
-  display: none;
+  display: none !important;
 }
 *[data-hide=""] {
-  display: inherit;
+  display: inherit !important;
 }
 *[data-show-icon=""]:before {
-  display: none;
+  display: none !important;
 }
 
 .contact {
@@ -74,6 +74,11 @@ address:before {
   }
 }
 
+.overview {
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
 .skills {
   max-width: 75%;
 
@@ -92,17 +97,9 @@ address:before {
       zoom: 0.75;
     }
   }
-
 }
 
-.skill {
-  color: black;
-  display: inline-block;
-  margin: 0.25rem 0.25rem 0 0;
-  position: relative;
-}
-.term, .details {
-  border-color: grey;
+.wedge {
   border-radius: 8px;
   border-style: inset;
   border-width: 3px;
@@ -110,6 +107,62 @@ address:before {
   padding: 0.5rem;
   position: relative;
   transform: skew(-10deg);
+}
+.slideHidden {
+  display: block;
+  position: absolute;
+  left: 90%;
+  top: 0;
+  transform: skew(-10deg) scaleX(0);
+  transform-origin: left bottom;
+  transition: all 0.5s;
+  z-index: 1;
+}
+.slideIn {
+  display: inline-block;
+  transform: skew(-10deg) scaleX(1);
+}
+
+.skillList {
+  .widget {
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      content: "\f161";
+      font: normal normal normal 14px/1 FontAwesome;
+    }
+    .popup {
+      background-color: white;
+      border-color: black;
+      white-space: nowrap;
+
+      @extend .wedge;
+      @extend .slideHidden;
+
+      top: -1rem;
+    }
+    &:hover {
+      .popup {
+        @extend .slideIn;
+      }
+    }
+  }
+}
+
+.skill {
+  color: black;
+  display: inline-block;
+  margin: 0.25rem 0.25rem 0 0;
+  position: relative;
+
+  &.hidden {
+    display: none;
+  }
+}
+.term, .details {
+  border-color: grey;
+  @extend .wedge;
 }
 .term {
   border-color: whitesmoke;
@@ -135,14 +188,8 @@ address:before {
 }
 .details {
   background: lightgray;
-  display: block;
-  position: absolute;
-  left: 90%;
-  top: 0;
-  transform: skew(-10deg) scaleX(0);
-  transform-origin: left bottom;
-  transition: all 0.5s;
-  z-index: 1;
+
+  @extend .slideHidden;
 
   .fullName {
     font-weight: bold;
@@ -166,8 +213,7 @@ address:before {
     }
   }
   .details {
-    display: inline-block;
-    transform: skew(-10deg) scaleX(1);
+    @extend .slideIn;
   }
 }
 

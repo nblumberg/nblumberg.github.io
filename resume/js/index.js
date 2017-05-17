@@ -21,10 +21,14 @@
                         position.dates.end = moment(position.dates.end).format("MMMM YYYY");
                     }
                 }
-                if (position.skills) {
-                    position.skills.sort();
-                    position.skills = position.skills.map((skill) => {
-                        return skillMap[ skill.toLowerCase() ] || { "shortName": skill, "longName": skill };
+                if (position.responsibilities) {
+                    position.responsibilities.forEach((responsibility) => {
+                        if (responsibility.skills) {
+                            responsibility.skills.sort();
+                            responsibility.skills = responsibility.skills.map((skill) => {
+                                return skillMap[ skill.toLowerCase() ] || { "shortName": skill, "longName": skill };
+                            });
+                        }
                     });
                 }
             });
@@ -63,4 +67,31 @@
     }
 
     resolveCustomElements(document);
+
+    // Array.prototype.slice.call(document.querySelectorAll(".skillList")).forEach((skillList) => {
+    //     let widget = document.createElement("span");
+    //     widget.className = "widget";
+    //     skillList.insertBefore(widget, skillList.children[ 0 ]);
+    // });
+
+    document.addEventListener("keyup", (event) => {
+        if (event.target.className !== "searchSkills") {
+            return;
+        }
+        let input = event.target;
+        let skillList = input.parentElement.parentElement.parentElement;
+        let skills = Array.prototype.slice.call(skillList.querySelectorAll(".js-skill"));
+        let terms = input.value.toLowerCase().split(/(\s+|,)/);
+        skills.forEach((skill) => {
+            skill.className = "skill js-skill";
+            if (terms.length) {
+                skill.className = "skill js-skill hidden";
+                terms.forEach((term) => {
+                    if (skill.dataset.skill.toLowerCase().indexOf(term) !== -1) {
+                        skill.className = "skill js-skill";
+                    }
+                });
+            }
+        });
+    });
 })(window.nb.data, window.nb.templates, window.document, window.moment);

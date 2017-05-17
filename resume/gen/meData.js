@@ -9,6 +9,7 @@
   "city": "Waltham",
   "state": "MA",
   "zipcode": "02453",
-  "country": "USA"
+  "country": "USA",
+  "overview": "A savvy software developer with 20 years experience blending coding, design and usability to produce intuitive tools and games."
 };
 })(window.nb.data);

@@ -1,8 +1,34 @@
-((rootData, templates, document) => {
+((rootData, templates, document, moment) => {
     "use strict";
+
+    let skillMap = {};
 
     rootData.skills.sort((a, b) => {
         return a.shortName.toLowerCase() < b.shortName.toLowerCase() ? -1 : 1;
+    });
+    rootData.skills.forEach((skill) => {
+        skillMap[ skill.shortName.toLowerCase() ] = skill;
+    });
+
+    rootData.experience.forEach((experience) => {
+        if (experience.positions) {
+            experience.positions.forEach((position) => {
+                if (position.dates) {
+                    if (position.dates.start) {
+                        position.dates.start = moment(position.dates.start).format("MMMM YYYY");
+                    }
+                    if (position.dates.end) {
+                        position.dates.end = moment(position.dates.end).format("MMMM YYYY");
+                    }
+                }
+                if (position.skills) {
+                    position.skills.sort();
+                    position.skills = position.skills.map((skill) => {
+                        return skillMap[ skill.toLowerCase() ] || { "shortName": skill, "longName": skill };
+                    });
+                }
+            });
+        }
     });
 
     function insert(html, before, data) {
@@ -27,7 +53,8 @@
 
         Array.prototype.slice.call(parent.querySelectorAll("nb-repeat")).forEach((repeat) => {
             let name = repeat.innerText.trim();
-            let data = subData[ repeat.dataset.key ] || rootData[ repeat.dataset.key ] || rootData[ name ];            data.forEach((entry) => {
+            let data = subData[ repeat.dataset.key ] || rootData[ repeat.dataset.key ] || rootData[ name ];
+            data.forEach((entry) => {
                 let html = templates[ name ](entry);
                 insert(html, repeat, entry);
             });
@@ -36,4 +63,4 @@
     }
 
     resolveCustomElements(document);
-})(window.nb.data, window.nb.templates, window.document);
+})(window.nb.data, window.nb.templates, window.document, window.moment);

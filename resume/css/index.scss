@@ -1,6 +1,16 @@
+$fontawesome: "http://fontawesome.io/assets/font-awesome/fonts/fontawesome-webfont.";
+@font-face {
+  font-family: "FontAwesome";
+  src: url("#{$fontawesome}eot?v=4.7.0");
+  src: url("#{$fontawesome}eot?#iefix&v=4.7.0") format("embedded-opentype"), url("#{$fontawesome}woff2?v=4.7.0") format("woff2"), url("#{$fontawesome}.woff?v=4.7.0") format("woff"), url("#{$fontawesome}ttf?v=4.7.0") format("truetype"), url("#{$fontawesome}svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
-  background-color: black;
-  color: white;
+  //background-color: black;
+  //color: white;
+  font-family: Roboto, Arial, sans-serif;
 }
 
 body > section {
@@ -8,16 +18,60 @@ body > section {
 }
 
 h1, h2, h3, h4, h5 {
-  color: whitesmoke;
-  text-shadow: 2px 2px 2px darkgray;
+  //color: whitesmoke;
+  //text-shadow: 2px 2px 2px darkgray;
 }
 
 a {
   color: lightskyblue;
 }
-
 a:visited {
   color: lightsteelblue;
+}
+a:before {
+  font: normal normal normal 14px/1 FontAwesome;
+  margin-right: 0.25rem;
+}
+a[href^="mailto:"]:before {
+  content: "\f003";
+}
+a[href^="tel:"]:before {
+  content: "\f095";
+}
+
+address:before {
+  content: "\f2bc";
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+*[data-show=""] {
+  display: none;
+}
+*[data-hide=""] {
+  display: inherit;
+}
+*[data-show-icon=""]:before {
+  display: none;
+}
+
+.contact {
+  a {
+    display: block;
+  }
+}
+
+.me {
+  display: table;
+  width: 100%;
+
+  & > * {
+    display: table-cell;
+    width: 50%;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
 }
 
 .skills {
@@ -39,86 +93,114 @@ a:visited {
     }
   }
 
-  .skill {
-    color: black;
-    display: inline-block;
-    margin: 0.25rem 0.25rem 0 0;
-    position: relative;
-  }
-  .term, .details {
-    border-color: grey;
-    border-radius: 8px;
-    border-style: inset;
-    border-width: 3px;
-    margin: 0;
-    padding: 0.5rem;
-    position: relative;
-    transform: skew(-10deg);
-  }
-  .term {
-    border-color: whitesmoke;
-    background: darkgrey;
-    display: inline-block;
-    transition: all 0.5s;
+}
 
+.skill {
+  color: black;
+  display: inline-block;
+  margin: 0.25rem 0.25rem 0 0;
+  position: relative;
+}
+.term, .details {
+  border-color: grey;
+  border-radius: 8px;
+  border-style: inset;
+  border-width: 3px;
+  margin: 0;
+  padding: 0.5rem;
+  position: relative;
+  transform: skew(-10deg);
+}
+.term {
+  border-color: whitesmoke;
+  background: darkgrey;
+  display: inline-block;
+  transition: all 0.5s;
+
+  &.expert {
+    background-color: gold;
+  }
+  &.experienced {
+    background-color: silver;
+  }
+  &.familiar {
+    background-color: #cd7f32;
+  }
+  a {
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+}
+.details {
+  background: lightgray;
+  display: block;
+  position: absolute;
+  left: 90%;
+  top: 0;
+  transform: skew(-10deg) scaleX(0);
+  transform-origin: left bottom;
+  transition: all 0.5s;
+  z-index: 1;
+
+  .fullName {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .description {
+    width: 25vw;
+  }
+}
+.skill:hover {
+  .term {
+    //border-color: grey;
     &.expert {
-      background-color: gold;
+      background-color: #a38d1c;
     }
     &.experienced {
-      background-color: silver;
+      background-color: grey;
     }
     &.familiar {
-      background-color: #cd7f32;
-    }
-    a {
-      color: black;
-    }
-    a:visited {
-      color: black;
+      background-color: #a06327;
     }
   }
   .details {
-    background: lightgray;
-    display: block;
-    position: absolute;
-    left: 90%;
-    top: 0;
-    transform: skew(-10deg) scaleX(0);
-    transform-origin: left bottom;
-    transition: all 0.5s;
-    z-index: 1;
-
-    .fullName {
-      font-weight: bold;
-      white-space: nowrap;
-    }
-    .description {
-      width: 25vw;
-    }
-  }
-  .skill:hover {
-    .term {
-      //border-color: grey;
-      &.expert {
-        background-color: #a38d1c;
-      }
-      &.experienced {
-        background-color: grey;
-      }
-      &.familiar {
-        background-color: #a06327;
-      }
-    }
-    .details {
-      display: inline-block;
-      transform: skew(-10deg) scaleX(1);
-    }
+    display: inline-block;
+    transform: skew(-10deg) scaleX(1);
   }
 }
 
 .experience {
-  address {
-    float: right;
+  border: 1px solid gray;
+  margin-bottom: 1rem;
+  padding: 1rem;
+
+  header {
+    border-collapse: collapse;
+    display: table;
+    width: 100%;
+
+    & > * {
+      display: table-cell;
+      vertical-align: middle;
+      white-space: nowrap;
+      width: 99%;
+    }
+    .logo {
+      max-height: 3rem;
+      padding-right: 1rem;
+      width: 3rem;
+    }
+    .logo[src=""] {
+      display: none;
+    }
+    address {
+      text-align: right;
+    }
+  }
+  .summary {
+    font-style: italic;
   }
   .position {
     & > *:not(.name) {
@@ -127,9 +209,13 @@ a:visited {
 
     .dates {
       float: right;
-    }
-    .summary {
-      font-style: italic;
+
+      .present {
+        display: none;
+      }
+      .present[data-end=""] {
+        display: inline;
+      }
     }
   }
 }

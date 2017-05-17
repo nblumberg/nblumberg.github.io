@@ -28,6 +28,13 @@ module.exports = (grunt) => {
         }
     };
 
+    config.copy = {
+        moment: {
+            src: "node_modules/moment/min/moment.min.js",
+            dest: "gen/moment.min.js"
+        }
+    };
+
     config.open = {
         resume: {
             path: config.protocol + "://" + config.hostname + ":" + config.port + "/resume.html"
@@ -48,6 +55,7 @@ module.exports = (grunt) => {
             tasks: [ "assets" ],
             options: {
                 livereload: config.livereload,
+                livereloadOnError: false,
                 reload: true,
                 spawn: false
             }
@@ -127,7 +135,7 @@ module.exports = (grunt) => {
         src = "resume.html";
         grunt.file.write(src, html);
     });
-    grunt.registerTask("assets", [ "reset", "sass", "css", "data", "html", "js", "reset" ]);
+    grunt.registerTask("assets", [ "reset", "sass", "css", "data", "html", "copy", "js", "reset" ]);
     grunt.registerTask("launch", [ "clean", "assets", "connect", "open", "watch" ]);
     grunt.registerTask("relaunch", [ "clean", "assets", "connect", "watch" ]);
 };

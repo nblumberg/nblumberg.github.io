@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="gen/index.css"></link>
     <script src="//localhost:8001/livereload.js"></script>
 </head>
 <body>
-    <header>
-        <nb-placeholder data-key="name">name</nb-placeholder>
-        <nb-placeholder data-key="address">address</nb-placeholder>
-        <nb-placeholder data-key="contact">contact</nb-placeholder>
+    <header class="me">
+        <nb-placeholder data-key="me">name</nb-placeholder>
+        <div>
+            <nb-placeholder data-key="me">address</nb-placeholder>
+            <nb-placeholder data-key="me">contact</nb-placeholder>
+        </div>
     </header>
     <section class="skills">
         <div class="legend">
@@ -33,7 +36,7 @@
             <nb-repeat data-key="skills">skills</nb-repeat>
         </div>
     </section>
-    <section class="experience">
+    <section class="experiences">
         <h2>Experience</h2>
         <nb-repeat data-key="experience">experience</nb-repeat>
     </section>
@@ -41,13 +44,12 @@
     
     <script src="js/namespace.js"></script>
     
-    <script src="gen/addressData.js"></script>
     <script src="gen/addressTemplate.js"></script>
-    <script src="gen/contactData.js"></script>
     <script src="gen/contactTemplate.js"></script>
     <script src="gen/experienceData.js"></script>
     <script src="gen/experienceTemplate.js"></script>
-    <script src="gen/nameData.js"></script>
+    <script src="gen/meData.js"></script>
+    <script src="gen/moment.min.js"></script>
     <script src="gen/nameTemplate.js"></script>
     <script src="gen/positionsTemplate.js"></script>
     <script src="gen/responsibilitiesTemplate.js"></script>

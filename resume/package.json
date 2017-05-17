@@ -2,24 +2,30 @@
   "name": "nblumberg.github.io.git",
   "version": "0.0.1",
   "description": "Web pages for https://github.com/nblumberg",
-  "keywords": [ "nathanielblumberg", "nblumberg", "nathaniel", "blumberg" ],
+  "keywords": [
+    "nathanielblumberg",
+    "nblumberg",
+    "nathaniel",
+    "blumberg"
+  ],
   "homepage": "http://nblumberg.github.io/",
-  "license" : "BSD-3-Clause",
+  "license": "BSD-3-Clause",
   "author": "Nathaniel Blumberg <nathanielblumberg@gmail.com> (http://nblumberg.github.io/)",
-  "contributors": [ "Nathaniel Blumberg <nathanielblumberg@gmail.com> (http://nblumberg.github.io/)" ],
+  "contributors": [
+    "Nathaniel Blumberg <nathanielblumberg@gmail.com> (http://nblumberg.github.io/)"
+  ],
   "repository": {
-      "type": "git",
-      "url" : "https://github.com/nblumberg/nblumberg.github.io"
+    "type": "git",
+    "url": "https://github.com/nblumberg/nblumberg.github.io"
   },
-  "scripts": {
-
-  },
+  "scripts": {},
   "devDependencies": {
     "grunt": "1.0.1",
     "eslint": "3.19.0",
     "eslint-config-google": "0.7.1",
     "grunt-contrib-clean": "1.0.0",
     "grunt-contrib-connect": "1.0.2",
+    "grunt-contrib-copy": "1.0.0",
     "grunt-contrib-csslint": "2.0.0",
     "grunt-contrib-cssmin": "2.0.0",
     "grunt-contrib-htmlmin": "2.3.0",
@@ -33,9 +39,11 @@
     "karma-jasmine": "1.1.0",
     "load-grunt-tasks": "3.5.2"
   },
-  "engines":
-  {
-      "node": "<=6.9.2",
-      "npm": "<=3.10.9"
+  "engines": {
+    "node": "<=6.9.2",
+    "npm": "<=3.10.9"
+  },
+  "dependencies": {
+    "moment": "^2.18.1"
   }
 }

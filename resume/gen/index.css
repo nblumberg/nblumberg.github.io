@@ -4,6 +4,44 @@
   src: url("http://fontawesome.io/assets/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("http://fontawesome.io/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("http://fontawesome.io/assets/font-awesome/fonts/fontawesome-webfont..woff?v=4.7.0") format("woff"), url("http://fontawesome.io/assets/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("http://fontawesome.io/assets/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+.icon, a:before, address:before, .skillList .widget:before, .dates:before, .portfolio:before {
+  font: normal normal normal 14px/1 FontAwesome; }
+
+.wedge, .skillList .widget .popup, .term, .details {
+  border-radius: 8px;
+  border-style: inset;
+  border-width: 3px;
+  margin: 0;
+  padding: 0.5rem;
+  position: relative;
+  transform: skew(-10deg); }
+
+.slideHidden, .skillList .widget .popup, .details {
+  display: block;
+  position: absolute;
+  left: 90%;
+  top: 0;
+  transform: skew(-10deg) scaleX(0);
+  transform-origin: left bottom;
+  transition: all 0.4s ease;
+  z-index: 1; }
+
+.slideIn, .skillList .widget:hover .popup, .skillList .widget:active .popup, .skill:hover .details, .skil:active .details {
+  display: inline-block;
+  transform: skew(-10deg) scaleX(1); }
+
+*[data-show=""] {
+  display: none !important; }
+
+*[data-hide] {
+  display: none !important; }
+
+*[data-hide=""] {
+  display: unset !important; }
+
+*[data-show-icon=""]:before {
+  display: none !important; }
+
 html {
   font-family: Roboto, Arial, sans-serif; }
 
@@ -17,7 +55,6 @@ a:visited {
   color: lightsteelblue; }
 
 a:before {
-  font: normal normal normal 14px/1 FontAwesome;
   margin-right: 0.25rem; }
 
 a[href^="mailto:"]:before {
@@ -27,20 +64,7 @@ a[href^="tel:"]:before {
   content: "\f095"; }
 
 address:before {
-  content: "\f2bc";
-  font: normal normal normal 14px/1 FontAwesome; }
-
-*[data-show=""] {
-  display: none !important; }
-
-*[data-hide=""] {
-  display: inherit !important; }
-
-*[data-show-icon=""]:before {
-  display: none !important; }
-
-.contact a {
-  display: block; }
+  content: "\f2bc"; }
 
 .me {
   display: table;
@@ -50,6 +74,9 @@ address:before {
     width: 50%; }
     .me > *:last-child {
       text-align: right; }
+
+.contact a {
+  display: block; }
 
 .overview {
   font-style: italic;
@@ -68,40 +95,18 @@ address:before {
     .skills .legend .skills {
       zoom: 0.75; }
 
-.wedge, .skillList .widget .popup, .term, .details {
-  border-radius: 8px;
-  border-style: inset;
-  border-width: 3px;
-  margin: 0;
-  padding: 0.5rem;
-  position: relative;
-  transform: skew(-10deg); }
-
-.slideHidden, .skillList .widget .popup, .details {
-  display: block;
-  position: absolute;
-  left: 90%;
-  top: 0;
-  transform: skew(-10deg) scaleX(0);
-  transform-origin: left bottom;
-  transition: all 0.5s;
-  z-index: 1; }
-
-.slideIn, .skillList .widget:hover .popup, .skill:hover .details {
-  display: inline-block;
-  transform: skew(-10deg) scaleX(1); }
-
 .skillList .widget {
   display: inline-block;
   position: relative; }
   .skillList .widget:before {
-    content: "\f161";
-    font: normal normal normal 14px/1 FontAwesome; }
+    content: "\f161"; }
   .skillList .widget .popup {
     background-color: white;
     border-color: black;
     white-space: nowrap;
     top: -1rem; }
+    .skillList .widget .popup > * {
+      transform: skew(10deg); }
 
 .skill {
   color: black;
@@ -118,7 +123,7 @@ address:before {
   border-color: whitesmoke;
   background: darkgrey;
   display: inline-block;
-  transition: all 0.5s; }
+  transition: all 0.4s; }
   .term.expert {
     background-color: gold; }
   .term.experienced {
@@ -138,20 +143,33 @@ address:before {
   .details .description {
     width: 25vw; }
 
-.skill:hover .term.expert {
+.skill:hover .term.expert, .skil:active .term.expert {
   background-color: #a38d1c; }
-.skill:hover .term.experienced {
+.skill:hover .term.experienced, .skil:active .term.experienced {
   background-color: grey; }
-.skill:hover .term.familiar {
+.skill:hover .term.familiar, .skil:active .term.familiar {
   background-color: #a06327; }
+
+.dates:before {
+  content: "\f073"; }
+
+.company-overview {
+  display: table;
+  width: 100%; }
+  .company-overview > * {
+    display: table-cell; }
+  .company-overview:last-child {
+    text-align: right; }
 
 .experience {
   border: 1px solid gray;
   margin-bottom: 1rem;
-  padding: 1rem; }
+  padding: 1rem;
+  position: relative; }
   .experience header {
     border-collapse: collapse;
     display: table;
+    margin-bottom: 1rem;
     width: 100%; }
     .experience header > * {
       display: table-cell;
@@ -168,13 +186,79 @@ address:before {
       text-align: right; }
   .experience .summary {
     font-style: italic; }
-  .experience .position > *:not(.name) {
+  .experience .position > *:not(header) {
     margin-left: 2rem; }
-  .experience .position .dates {
-    float: right; }
-    .experience .position .dates .present {
-      display: none; }
-    .experience .position .dates .present[data-end=""] {
-      display: inline; }
+  .experience .position header {
+    display: table;
+    width: 100%; }
+    .experience .position header > * {
+      display: table-cell; }
+    .experience .position header:last-child {
+      text-align: right; }
+  .experience .position .dates .present {
+    display: none; }
+  .experience .position .dates .present[data-end=""] {
+    display: inline; }
+
+@media screen and (max-width: 700px) {
+  address > *, .dates > * {
+    display: none; } }
+.portfolio {
+  display: inline-block;
+  position: relative;
+  /* Now apply 3D transforms */ }
+  .portfolio:before {
+    content: "\f11b"; }
+  .portfolio .coverflow-container {
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 8px;
+    -webkit-box-reflect: below 0px linear-gradient(top, transparent 60%, rgba(0, 0, 0, 0.1) 100%);
+    display: none;
+    left: 125%;
+    padding: 0 1rem;
+    position: absolute;
+    top: -1rem;
+    z-index: 1; }
+  .portfolio:hover .coverflow-container, .portfolio:active .coverflow-container {
+    display: block; }
+  .portfolio label {
+    color: #999;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); }
+    .portfolio label:hover, .portfolio label:active {
+      color: #FFF; }
+  .portfolio .coverflow-list {
+    padding: 0;
+    transform: perspective(900px);
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective-origin: 100% 30%; }
+    .portfolio .coverflow-list .coverflow-item {
+      display: inline-block;
+      position: relative;
+      transform: rotateY(45deg);
+      transition: all 0.4s ease; }
+      .portfolio .coverflow-list .coverflow-item .album-cover {
+        display: block;
+        height: 150px;
+        margin: 0; }
+        .portfolio .coverflow-list .coverflow-item .album-cover img {
+          box-shadow: 0 1px 8px rgba(0, 0, 0, 0.9);
+          height: 150px;
+          max-width: 150px; }
+      .portfolio .coverflow-list .coverflow-item .album-name {
+        color: #444;
+        display: block;
+        text-align: center; }
+      .portfolio .coverflow-list .coverflow-item label {
+        border: none;
+        display: block;
+        padding: 0;
+        text-shadow: none; }
+  .portfolio input[type="radio"] {
+    display: none; }
 
 /*# sourceMappingURL=index.css.map */

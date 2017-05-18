@@ -26,7 +26,7 @@
                         if (responsibility.skills) {
                             responsibility.skills.sort();
                             responsibility.skills = responsibility.skills.map((skill) => {
-                                return skillMap[ skill.toLowerCase() ] || { "shortName": skill, "longName": skill };
+                                return skillMap[ skill.toLowerCase() ] || { "shortName": skill, "longName": skill, "experienceLevel": "familiar" };
                             });
                         }
                     });
@@ -58,21 +58,17 @@
         Array.prototype.slice.call(parent.querySelectorAll("nb-repeat")).forEach((repeat) => {
             let name = repeat.innerText.trim();
             let data = subData[ repeat.dataset.key ] || rootData[ repeat.dataset.key ] || rootData[ name ];
-            data.forEach((entry) => {
-                let html = templates[ name ](entry);
-                insert(html, repeat, entry);
-            });
+            if (data) {
+                data.forEach((entry) => {
+                    let html = templates[ name ](entry);
+                    insert(html, repeat, entry);
+                });
+            }
             repeat.parentElement.removeChild(repeat);
         });
     }
 
     resolveCustomElements(document);
-
-    // Array.prototype.slice.call(document.querySelectorAll(".skillList")).forEach((skillList) => {
-    //     let widget = document.createElement("span");
-    //     widget.className = "widget";
-    //     skillList.insertBefore(widget, skillList.children[ 0 ]);
-    // });
 
     document.addEventListener("keyup", (event) => {
         if (event.target.className !== "searchSkills") {

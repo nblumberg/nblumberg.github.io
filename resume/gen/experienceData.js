@@ -13,6 +13,7 @@
     },
     "logo": "https://www.endurance.com/wp-content/uploads/2016/08/endurance-site-icon.png",
     "website": "http://www.constantcontact.com",
+    "summary": "(Acquired Constant Contact in 2016)",
     "positions": [
       {
         "name": "Advisory Software Engineer",
@@ -106,11 +107,7 @@
           {
             "description": "Developed sponsored ad campaigns as landing pages for TripAdvisor search results.",
             "skills": [
-              "JavaScript",
-              "HTML",
-              "CSS",
-              "Java",
-              "Apache Velocity"
+              "JavaScript", "HTML", "CSS", "Java", "Velocity"
             ]
           }
         ]
@@ -143,13 +140,13 @@
           {
             "description": "Yahoo Content/Video Platform Console: Consisted of an application chrome wrapping modular sub-applications that could be slotted in and enabled by the current user’s authorizations. Integrated a series of Yahoo services to include sub-applications for: <ul><li>Managing accounts, users, and authorizations</li><li>Viewing customer video usage analytics</li><li>Managing video player configurations and hosting</li><li>Managing videos, playlists, and their metadata (includes all the video functionality of the Maven Console below)</li></ul>",
             "skills": [
-              "Flex", "Flash", "FlexUnit", "Fluint", "Mock4AS", "JavaScript", "AJAX", "REST", "mvn", "Flexmojos", "Firebug", "YInst", "YTS", "Agile", "VersionOne"
+              "Flex", "Flash", "FlexUnit", "Fluint", "Mock4AS", "JavaScript", "AJAX", "REST", "mvn", "Flex-mojos", "Firebug", "YInst", "YTS", "Agile", "VersionOne"
             ]
           },
           {
             "description": "Maven Console: allowed users to upload videos and thumbnails into a CMS, browse/search for videos, edit video metadata and availability, organize videos into playlists, and associate videos with specific player configurations. Users could also create player configurations by customizing base player UIs (each defined by a Flash swf) with uploaded images or colors chosen in the Console.",
             "skills": [
-              "DHTML", "JavaScript", "AJAX", "Flash CS3", "Apache", "Internet Explorer Developer Tools", "Microsoft Developers' Studio"
+              "HTML", "JavaScript", "AJAX", "Flash CS3", "httpd", "Internet Explorer Developer Tools", "Visual Studio"
             ]
           }
         ]
@@ -204,13 +201,13 @@
           {
             "description": "Developed the non-Flash portions of Real Live Sport’s website, using and manipulating art assets created for the Flash portion of the website to mimic the Flash site using DHTML and CSS.",
             "skills": [
-              "HTML", "DHTML", "XHTML", "CSS", "JavaScript", "Adobe Photoshop", "Adobe ImageReady", "Adobe Illustrator", "Macromedia Flash Professional 8"
+              "HTML", "CSS", "JavaScript", "Photoshop", "ImageReady", "Illustrator", "Flash"
             ]
           },
           {
             "description": "Assisted in development of the Flash portions of Real Live Sport’s website, providing ActionScript and file architecture expertise. Implemented the reading of data from an external XML file to manage prioritized and user-orderable preloading of .swf and .mp3 files. Implemented management of sounds, text, and user feedback from within ActionScript. Implemented dynamically generated Flash user interface elements (e.g. buttons, text feedback, etc.) based on external XML data.",
             "skills": [
-              "Macromedia Flash Professional 8", "Macromedia ActionScript", "HTML", "JavaScript", "Adobe Photoshop"
+              "Flash", "ActionScript", "HTML", "JavaScript", "Photoshop"
             ]
           }
         ]
@@ -225,6 +222,7 @@
       "state": "MA",
       "country": "USA"
     },
+    "logo": "img/brown_publishing_network.jpg",
     "website": "http://sixredmarbles.com/",
     "summary": "A third party educational book developer, specializing K-12 textbooks. (since acquired by six<b>red</b>marbles)",
     "positions": [
@@ -238,7 +236,7 @@
           {
             "description": "Developed AppleScript tools for formatting Word documents as well as counting word occurrences to confirm that educational texts conformed to readable standards for English as a Second Language students.",
             "skills": [
-              "AppleScript", "Microsoft Word"
+              "AppleScript", "Word"
             ]
           }
         ]
@@ -253,7 +251,7 @@
           {
             "description": "Poured Word format textbook manuscripts into Adobe's InCopy. Set line and character styles and content layout within InCopy. Proofread content and compiled art specifications tables for art production. Tracked manuscript over matter inside Adobe InDesign templates.",
             "skills": [
-              "Adobe InCopy", "Microsoft Word"
+              "InCopy", "Word"
             ]
           }
         ]
@@ -268,8 +266,27 @@
       "state": "MA",
       "country": "USA"
     },
-    "website": "http://sixredmarbles.com/",
+    "logo": "img/floodgate_entertainment.jpg",
+    "website": "https://en.wikipedia.org/wiki/Floodgate_Entertainment",
     "summary": "A third party video game development house specializing in cell phone games.",
+    "portfolio": [
+      {
+        "name": "Dark Messiah of Might and Magic",
+        "image": "img/dark_messiah_of_might_and_magic.png"
+      },
+      {
+        "name": "Neverwinter Nights Shadows of Undrentide",
+        "image": "img/neverwinter_nights_shadows_of_undrentide.jpg"
+      },
+      {
+        "name": "Neverwinter Nights: ME",
+        "image": "img/neverwinter_nights_mobile.jpg"
+      },
+      {
+        "name": "Pirates of the Carribean Multiplayer",
+        "image": "img/pirates_of_the_carribean_multiplayer.jpg"
+      }
+    ],
     "positions": [
       {
         "name": "Game designer",
@@ -287,7 +304,7 @@
           {
             "description": "Lead designer for Neverwinter Nights Mobile Edition for BREW and J2ME based cell phones and Microsoft Smartphones. Designed and implemented fiction, game play, and game spaces. Also wrote NPC dialog and scripted interaction with game objects. Coordinated in-house asset development and delivery to the publisher, JAMDAT mobile's, California offices. Created minor art contributions and managed art content.",
             "skills": [
-              "Adobe Photoshop", "In-house editor and scripting language", "Bugzilla", "JAMDAT's web-based Merant bug tracking system"
+              "Photoshop", "In-house editor", "In-house scripting language", "Bugzilla", "Merant Tracker"
             ]
           },
           {
@@ -299,7 +316,7 @@
           {
             "description": "Designed and implemented fiction, game play, and game spaces for Neverwinter Nights: Shadows of Undrentide. Also scripted characters, monsters, items, traps, spells, and game events and created loadscreen, monster, and item portraits for Shadows of Undrentide. Coordinated content development with Bioware Entertainment's Edmonton, Canada office.",
             "skills": [
-              "Bioware Aurora Toolset", "Adobe Photoshop"
+              "Bioware Aurora Toolset", "Photoshop"
             ]
           }
         ]
@@ -314,7 +331,7 @@
           {
             "description": "Prototyped GUI for a proposed video game.",
             "skills": [
-              "Macromedia Director", "Macromedia Lingo", "Adobe Photoshop"
+              "Flash", "ActionScript", "Photoshop"
             ]
           }
         ]
@@ -329,7 +346,19 @@
       "state": "MA",
       "country": "USA"
     },
+    "logo": "img/mad_doc_software.jpg",
+    "website": "https://en.wikipedia.org/wiki/Rockstar_New_England",
     "summary": "A third party video game development house specializing in contract-development for larger publishers.",
+    "portfolio": [
+      {
+        "name": "Jane's Attack Squadron",
+        "image": "img/janes_attack_squadron.jpg"
+      },
+      {
+        "name": "Star Trek Armada II",
+        "image": "img/star_trek_armada_2.jpg"
+      }
+    ],
     "positions": [
       {
         "name": "Game Designer and Programmer",
@@ -341,20 +370,180 @@
           {
             "description": "Designed and implemented fiction, game play, and game spaces for Jane's Attack Squadron. Also researched historical accuracy of game elements and implemented changes to the game's editor.",
             "skills": [
-              "Microsoft Developers' Studio", "Visual C++", "COM", "MFC", "Windows 2000", "in-house editor and scripting language"
+              "Visual Studio", "COM", "MFC", "Windows 2000", "in-house editor", "in-house scripting language"
             ]
           },
           {
             "description": "Managed source control and backups of code and assets.",
             "skills": [
-              "Microsoft Visual Source Safe", "CVS", "RCS"
+              "VSS", "CVS", "RCS"
             ]
           },
           {
             "description": "Designed, implemented and documented user keys and tested game play for Star Trek Armada II.",
             "skills": [
-              "Microsoft Developers' Studio", "Microsoft Word", "in-house editor and scripting language"
+              "Visual Studio", "Word", "in-house editor", "in-house scripting language"
             ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Katerra Corporation (Hardwired Games)",
+    "address": {
+      "city": "Woburn",
+      "state": "MA",
+      "country": "USA"
+    },
+    "summary": "A third party video game development house specializing in PC massively multiplayer online role-playing games.",
+    "positions": [
+      {
+        "name": "Programmer",
+        "dates": {
+          "start": "05/01/2000",
+          "end": "12/01/2000"
+        },
+        "responsibilities": [
+          {
+            "description": "Implemented game development tools and evaluation tests of rendering engine licenses for a planned PC massively multiplayer online role-playing game (MMORPG).",
+            "skills": [
+              "Visual Studio", "Visual C++ / STL", "Visual Basic", "NetImmerse", "Renderware3D", "UML", "Extreme Programming"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Looking Glass Studios",
+    "address": {
+      "city": "Cambridge",
+      "state": "MA",
+      "country": "USA"
+    },
+    "logo": "img/looking_glass_studios.jpg",
+    "website": "https://en.wikipedia.org/wiki/Looking_Glass_Studios",
+    "summary": "A third party video game development house specializing in PC games.",
+    "portfolio": [
+      {
+        "name": "Thief 2 Gold",
+        "image": "img/thief_2_gold.jpg"
+      }
+    ],
+    "positions": [
+      {
+        "name": "Game Designer",
+        "dates": {
+          "start": "01/01/2000",
+          "end": "05/01/2000"
+        },
+        "responsibilities": [
+          {
+            "description": "Designed and implemented fiction, game play and game spaces, and prototyped GUI and game mechanics for a planned PC and console game.",
+            "skills": [
+              "Macromedia Director", "Macromedia Lingo", "Photoshop", "Word", "in-house software and scripting language"
+            ]
+          },
+          {
+            "description": "Implemented game spaces for Thief 2 Gold.",
+            "skills": [
+              "in-house software and scripting language"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Reality Bytes, Inc.",
+    "address": {
+      "city": "Cambridge",
+      "state": "MA",
+      "country": "USA"
+    },
+    "logo": "img/reality_bytes.png",
+    "website": "http://www.mobygames.com/company/reality-bytes-inc",
+    "summary": "A third party video game development house specializing in Mac games.",
+    "portfolio": [
+      {
+        "name": "Dark Vengeance",
+        "image": "img/dark_vengeance.jpg"
+      }
+    ],
+    "positions": [
+      {
+        "name": "Coder/Scripter, Level Designer, & Usability Engineer",
+        "dates": {
+          "start": "01/01/1999",
+          "end": "09/01/2000"
+        },
+        "responsibilities": [
+          {
+            "description": "Implemented features for RBI's in-house model, action, and level editor Leo.",
+            "skills": [
+              "Metroworks Codewarrior for Mac", "C/C++", "Mac OS 8", "QuickDraw3D", "in-house scripting language"
+            ]
+          },
+          {
+            "description": "Helped design and create players, enemies, weapons, levels and game mechanics for unreleased projects ranging from a pulp comics \"ray gun & rocket pack\" style 3rd person shooter to racing titles.",
+            "skills": [
+              "Word", "in-house software and scripting language"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Scripting, Level Builder, & Usability Engineer",
+        "dates": {
+          "start": "12/01/1997",
+          "end": "12/01/1998"
+        },
+        "responsibilities": [
+          {
+            "description": "Implemented enemy/environment AI and cut scenes for Dark Vengeance video game.",
+            "skills": [
+              "in-house software and scripting language"
+            ]
+          },
+          {
+            "description": "Managed source control and backups of code and assets.",
+            "skills": [
+              "VSS"
+            ]
+          },
+          {
+            "description": "Acted as voice talent for Dark Vengeance.",
+            "skills": [
+              "VSS"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Level Builder & Usability Engineer, intern",
+        "dates": {
+          "start": "05/01/1997",
+          "end": "08/01/1997"
+        },
+        "responsibilities": [
+          {
+            "description": "Created 3D levels for Dark Vengeance.",
+            "skills": [
+              "in-house software and scripting language"
+            ]
+          },
+          {
+            "description": "Documented and debugged RBI's in-house editor Leo.",
+            "skills": [
+              "Excel", "in-house software"
+            ]
+          },
+          {
+            "description": "Ran user opinion studies on game artwork and animation."
           }
         ]
       }

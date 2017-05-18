@@ -37,7 +37,7 @@ module.exports = (grunt) => {
 
     config.open = {
         resume: {
-            path: config.protocol + "://" + config.hostname + ":" + config.port + "/resume.html"
+            path: config.protocol + "://" + config.hostname + ":" + config.port
         }
     };
 
@@ -51,7 +51,7 @@ module.exports = (grunt) => {
 
     config.watch = {
         all: {
-            files: [ "**/*", "!resume.html", "!node_modules", "!node_modules/**/*", "!gen/**/*" ],
+            files: [ "**/*", "!./index.html", "!node_modules", "!node_modules/**/*", "!gen/**/*" ],
             tasks: [ "assets" ],
             options: {
                 livereload: config.livereload,
@@ -91,7 +91,7 @@ module.exports = (grunt) => {
         });
         let html = grunt.file.read(src);
         html = html.replace("<!--STYLES-->", css);
-        src = "resume.html";
+        src = "index.html";
         grunt.file.write(src, html);
     });
     grunt.registerTask("data", () => {
@@ -132,7 +132,7 @@ module.exports = (grunt) => {
         html = html.replace("<!--NAMESPACE-->", `\n    <script src="js/namespace.js"></script>`);
         html = html.replace("<!--SCRIPTS-->", scripts);
         html = html.replace("<!--INDEX-->", `\n    <script src="js/index.js"></script>`);
-        src = "resume.html";
+        src = "index.html";
         grunt.file.write(src, html);
     });
     grunt.registerTask("assets", [ "reset", "sass", "css", "data", "html", "copy", "js", "reset" ]);

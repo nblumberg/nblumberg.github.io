@@ -1,5 +1,6 @@
 // Icon font
-$fontawesome: "http://fontawesome.io/assets/font-awesome/fonts/fontawesome-webfont.";
+//$fontawesome: "http://fontawesome.io/assets/font-awesome/fonts/fontawesome-webfont.";
+$fontawesome: "../font/fontawesome-webfont.";
 @font-face {
   font-family: "FontAwesome";
   src: url("#{$fontawesome}eot?v=4.7.0");

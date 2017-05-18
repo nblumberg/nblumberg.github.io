@@ -1,4 +1,4 @@
-((rootData, templates, document, moment) => {
+((window, rootData, templates, document, moment) => {
     "use strict";
 
     let skillMap = {};
@@ -90,4 +90,10 @@
             }
         });
     });
-})(window.nb.data, window.nb.templates, window.document, window.moment);
+
+    if (window.location.host.indexOf("localhost") !== -1) {
+        let script = document.createElement("script");
+        document.body.appendChild(script);
+        script.src = "//localhost:8001/livereload.js";
+    }
+})(window, window.nb.data, window.nb.templates, window.document, window.moment);

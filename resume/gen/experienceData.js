@@ -69,6 +69,18 @@
         },
         "summary": "Expert in all areas of team responsibility.",
         "responsibilities": [
+          {
+            "description": "Create an iframe-based web portlet framework to allow the company to break up the single \"monolithic\" application into separate teams, repositories, te and JavaScript API",
+            "skills": [
+              "JavaScript", "jQuery", "Java", "JSP", "Spring", "AJAX", "CXF", "EJB", "DB2"
+            ]
+          },
+          {
+            "description": "Re-implement the email creation and management wizard flow as a separate Spring application and microservice.",
+            "skills": [
+              "JavaScript", "jQuery", "Java", "JSP", "Spring", "AJAX", "CXF", "EJB", "DB2"
+            ]
+          }
         ]
       },
       {
@@ -79,6 +91,18 @@
         },
         "summary": "Expert in all areas of team responsibility.",
         "responsibilities": [
+          {
+            "description": "Re-implement the email creation and management wizard flow using Spring POST-back form transitions.",
+            "skills": [
+              "JavaScript", "jQuery", "Java", "JSP", "Spring"
+            ]
+          },
+          {
+            "description": "Streamline the management of stock images available to customers.",
+            "skills": [
+              "Java", "JSP", "Excel", "Spring"
+            ]
+          }
         ]
       }
     ]

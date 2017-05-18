@@ -1,6 +1,7 @@
+// =========
 // Icon font
-//$fontawesome: "http://fontawesome.io/assets/font-awesome/fonts/fontawesome-webfont.";
-$fontawesome: "../font/fontawesome-webfont.";
+// =========
+$fontawesome: "../font/fontawesome-webfont."; //"http://fontawesome.io/assets/font-awesome/fonts/fontawesome-webfont.";
 @font-face {
   font-family: "FontAwesome";
   src: url("#{$fontawesome}eot?v=4.7.0");
@@ -16,6 +17,7 @@ $fontawesome: "../font/fontawesome-webfont.";
 // Icon font element
 .icon {
   font: normal normal normal 1.5rem/1 FontAwesome;
+  text-decoration: none;
 }
 
 // Skewed polygon shapes
@@ -62,11 +64,9 @@ $transition-time: 0.4s;
   display: none !important;
 }
 
-
-
-// ==============================
+// ============
 // Basic styles
-// ==============================
+// ============
 html {
   font-family: Roboto, Arial, sans-serif;
 }
@@ -82,10 +82,9 @@ a:visited {
   color: lightsteelblue;
 }
 
-
-// ==============================
+// =====================
 // Generic icon elements
-// ==============================
+// =====================
 a:before {
   @extend .icon;
   margin-right: 0.25rem;
@@ -97,21 +96,41 @@ a[href^="tel:"]:before {
   content: "\f095";
 }
 
-address:before {
-  @extend .icon;
-  content: "\f2bc";
+address {
+  margin-bottom: 0.5rem;
+
+  &:before {
+    @extend .icon;
+    content: "\f2bc";
+  }
 }
 
+.dates {
+  &:before {
+    @extend .icon;
+    content: "\f073";
+  }
+  .short-month, .short-year {
+    display: none;
+  }
+}
+
+// ===========
+// Top section
+// ===========
 .me {
   display: table;
   width: 100%;
 
   & > * {
     display: table-cell;
-    width: 50%;
 
+    &:first-child {
+      width: 70%;
+    }
     &:last-child {
       text-align: right;
+      width: 30%;
     }
   }
 }
@@ -119,14 +138,19 @@ address:before {
 .contact {
   a {
     display: block;
+    margin-bottom: 0.5rem;
   }
 }
 
 .overview {
   font-style: italic;
   font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
+// =============
+// Skills styles
+// =============
 .skills {
   max-width: 75%; // leave room for slide ins
 
@@ -227,7 +251,7 @@ address:before {
     width: 25vw;
   }
 }
-.skill:hover, .skil:active {
+.skill:hover, .skill:active {
   .term {
     //border-color: grey;
     &.expert {
@@ -245,11 +269,9 @@ address:before {
   }
 }
 
-.dates:before {
-  @extend .icon;
-  content: "\f073";
-}
-
+// ==================
+// Experience section
+// ==================
 .company-overview {
   display: table;
   width: 100%;
@@ -322,16 +344,6 @@ address:before {
     }
   }
 }
-
-@media screen and (max-width: 700px) {
-  address, .dates {
-    & > * {
-      display: none;
-    }
-  }
-}
-
-
 
 // https://codepen.io/devilskitchen/pen/jkdgK
 .portfolio {
@@ -420,25 +432,25 @@ address:before {
   input[type="radio"] {
     display:none;
 
-  //  &:checked {
-  //    + .coverflow-item {
-  //      transform: rotateY(0deg);
-  //      margin: 0 auto;
-  //      background: #313131;
-  //      transition: all $transition-time ease;
-  //
-  //      img {
-  //        opacity: 1;
-  //      }
-  //      figcaption {
-  //        color: #FFFFFF;
-  //      }
-  //      ~ .coverflow-item {
-  //        transform: rotateY(-45deg);
-  //        background: #515151;
-  //      }
-  //    }
-  //  }
+    //  &:checked {
+    //    + .coverflow-item {
+    //      transform: rotateY(0deg);
+    //      margin: 0 auto;
+    //      background: #313131;
+    //      transition: all $transition-time ease;
+    //
+    //      img {
+    //        opacity: 1;
+    //      }
+    //      figcaption {
+    //        color: #FFFFFF;
+    //      }
+    //      ~ .coverflow-item {
+    //        transform: rotateY(-45deg);
+    //        background: #515151;
+    //      }
+    //    }
+    //  }
   }
 }
 
@@ -462,4 +474,67 @@ address:before {
 //  100% { transform: rotateY( 0deg ) translate3d( 150px,0,0 ) scale3d(1.2,1.2,1.2); }
 //}
 
+// ==============================
+// Responsive design styles
+// ==============================
+@media screen and (max-width: 835px) {
+  .me {
+    display: block;
+    width: 100%;
 
+    .overview {
+      display: block;
+    }
+    & > * {
+      display: block;
+      width: 100%;
+
+      address > * {
+        display: inline;
+      }
+
+      &:first-child {
+        width: 100%;
+      }
+      &:last-child {
+        text-align: left;
+        width: 100%;
+      }
+    }
+  }
+
+  address {
+    & > * {
+      display: none;
+    }
+  }
+  .dates {
+    .month, .year {
+      display: none;
+    }
+    .short-month, .short-year {
+      display: inline;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .dates {
+    & > * {
+      display: none;
+    }
+  }
+  .present {
+    display: none !important;
+  }
+}
+
+@media print {
+  .skillList {
+    .widget {
+      &:before {
+        content: "";
+      }
+    }
+  }
+}

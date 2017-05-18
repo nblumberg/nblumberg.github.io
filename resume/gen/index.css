@@ -4,8 +4,9 @@
   src: url("../font/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../font/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../font/fontawesome-webfont..woff?v=4.7.0") format("woff"), url("../font/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../font/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.icon, a:before, address:before, .skillList .widget:before, .dates:before, .portfolio:before {
-  font: normal normal normal 1.5rem/1 FontAwesome; }
+.icon, a:before, address:before, .dates:before, .skillList .widget:before, .portfolio:before {
+  font: normal normal normal 1.5rem/1 FontAwesome;
+  text-decoration: none; }
 
 .wedge, .skillList .widget .popup, .term, .details {
   border-radius: 8px;
@@ -26,7 +27,7 @@
   transition: all 0.4s ease;
   z-index: 1; }
 
-.slideIn, .skillList .widget:hover .popup, .skillList .widget:active .popup, .skill:hover .details, .skil:active .details, .portfolio:hover .coverflow-container, .portfolio:active .coverflow-container {
+.slideIn, .skillList .widget:hover .popup, .skillList .widget:active .popup, .skill:hover .details, .skill:active .details, .portfolio:hover .coverflow-container, .portfolio:active .coverflow-container {
   display: inline-block;
   transform: skew(-10deg) scaleX(1); }
 
@@ -63,24 +64,35 @@ a[href^="mailto:"]:before {
 a[href^="tel:"]:before {
   content: "\f095"; }
 
-address:before {
-  content: "\f2bc"; }
+address {
+  margin-bottom: 0.5rem; }
+  address:before {
+    content: "\f2bc"; }
+
+.dates:before {
+  content: "\f073"; }
+.dates .short-month, .dates .short-year {
+  display: none; }
 
 .me {
   display: table;
   width: 100%; }
   .me > * {
-    display: table-cell;
-    width: 50%; }
+    display: table-cell; }
+    .me > *:first-child {
+      width: 70%; }
     .me > *:last-child {
-      text-align: right; }
+      text-align: right;
+      width: 30%; }
 
 .contact a {
-  display: block; }
+  display: block;
+  margin-bottom: 0.5rem; }
 
 .overview {
   font-style: italic;
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem; }
 
 .skills {
   max-width: 75%; }
@@ -143,15 +155,12 @@ address:before {
   .details .description {
     width: 25vw; }
 
-.skill:hover .term.expert, .skil:active .term.expert {
+.skill:hover .term.expert, .skill:active .term.expert {
   background-color: #a38d1c; }
-.skill:hover .term.experienced, .skil:active .term.experienced {
+.skill:hover .term.experienced, .skill:active .term.experienced {
   background-color: grey; }
-.skill:hover .term.familiar, .skil:active .term.familiar {
+.skill:hover .term.familiar, .skill:active .term.familiar {
   background-color: #a06327; }
-
-.dates:before {
-  content: "\f073"; }
 
 .company-overview {
   display: table;
@@ -200,9 +209,6 @@ address:before {
   .experience .position .dates .present[data-end=""] {
     display: inline; }
 
-@media screen and (max-width: 700px) {
-  address > *, .dates > * {
-    display: none; } }
 .portfolio {
   display: inline-block;
   position: relative; }
@@ -262,5 +268,39 @@ address:before {
 .Floodgate .coverflow-list {
   left: 4.5rem;
   position: relative; }
+
+@media screen and (max-width: 835px) {
+  .me {
+    display: block;
+    width: 100%; }
+    .me .overview {
+      display: block; }
+    .me > * {
+      display: block;
+      width: 100%; }
+      .me > * address > * {
+        display: inline; }
+      .me > *:first-child {
+        width: 100%; }
+      .me > *:last-child {
+        text-align: left;
+        width: 100%; }
+
+  address > * {
+    display: none; }
+
+  .dates .month, .dates .year {
+    display: none; }
+  .dates .short-month, .dates .short-year {
+    display: inline; } }
+@media screen and (max-width: 700px) {
+  .dates > * {
+    display: none; }
+
+  .present {
+    display: none !important; } }
+@media print {
+  .skillList .widget:before {
+    content: ""; } }
 
 /*# sourceMappingURL=index.css.map */

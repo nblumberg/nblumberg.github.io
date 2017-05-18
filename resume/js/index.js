@@ -14,17 +14,32 @@
         if (experience.positions) {
             experience.positions.forEach((position) => {
                 if (position.dates) {
+                    let m;
                     if (position.dates.start) {
-                        position.dates.start = moment(position.dates.start).format("MMMM YYYY");
+                        m = moment(position.dates.start);
+                        position.dates.start = {
+                            month: m.format("MMMM"),
+                            shortMonth: m.format("MMM"),
+                            year: m.format("YYYY"),
+                            shortYear: "'" + m.format("YY")
+                        };
                     }
                     if (position.dates.end) {
-                        position.dates.end = moment(position.dates.end).format("MMMM YYYY");
+                        m = moment(position.dates.end);
+                        position.dates.end = {
+                            month: m.format("MMMM"),
+                            shortMonth: m.format("MMM"),
+                            year: m.format("YYYY"),
+                            shortYear: "'" + m.format("YY")
+                        };
                     }
                 }
                 if (position.responsibilities) {
                     position.responsibilities.forEach((responsibility) => {
                         if (responsibility.skills) {
-                            responsibility.skills.sort();
+                            responsibility.skills.sort((a, b) => {
+                                return a.toLowerCase() < b.toLowerCase() ? -1 : 1;
+                            });
                             responsibility.skills = responsibility.skills.map((skill) => {
                                 return skillMap[ skill.toLowerCase() ] || { "shortName": skill, "longName": skill, "experienceLevel": "familiar" };
                             });

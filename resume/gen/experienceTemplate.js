@@ -1,6 +1,6 @@
 ((templates) => {
     "use strict";
-    templates[ "experience" ] = templates._`<div class="experience">
+    templates[ "experience" ] = templates._`<div class="experience ${'name'}">
     <header>
         <img class="logo" src="${'logo'}" />
         <h3>

@@ -5,7 +5,7 @@
   font-weight: normal;
   font-style: normal; }
 .icon, a:before, address:before, .skillList .widget:before, .dates:before, .portfolio:before {
-  font: normal normal normal 14px/1 FontAwesome; }
+  font: normal normal normal 1.5rem/1 FontAwesome; }
 
 .wedge, .skillList .widget .popup, .term, .details {
   border-radius: 8px;
@@ -16,7 +16,7 @@
   position: relative;
   transform: skew(-10deg); }
 
-.slideHidden, .skillList .widget .popup, .details {
+.slideHidden, .skillList .widget .popup, .details, .portfolio .coverflow-container {
   display: block;
   position: absolute;
   left: 90%;
@@ -26,7 +26,7 @@
   transition: all 0.4s ease;
   z-index: 1; }
 
-.slideIn, .skillList .widget:hover .popup, .skillList .widget:active .popup, .skill:hover .details, .skil:active .details {
+.slideIn, .skillList .widget:hover .popup, .skillList .widget:active .popup, .skill:hover .details, .skil:active .details, .portfolio:hover .coverflow-container, .portfolio:active .coverflow-container {
   display: inline-block;
   transform: skew(-10deg) scaleX(1); }
 
@@ -205,8 +205,7 @@ address:before {
     display: none; } }
 .portfolio {
   display: inline-block;
-  position: relative;
-  /* Now apply 3D transforms */ }
+  position: relative; }
   .portfolio:before {
     content: "\f11b"; }
   .portfolio .coverflow-container {
@@ -214,14 +213,11 @@ address:before {
     border: 3px solid black;
     border-radius: 8px;
     -webkit-box-reflect: below 0px linear-gradient(top, transparent 60%, rgba(0, 0, 0, 0.1) 100%);
-    display: none;
-    left: 125%;
+    left: -25%;
     padding: 0 1rem;
     position: absolute;
     top: -1rem;
     z-index: 1; }
-  .portfolio:hover .coverflow-container, .portfolio:active .coverflow-container {
-    display: block; }
   .portfolio label {
     color: #999;
     display: inline-block;
@@ -241,6 +237,8 @@ address:before {
       position: relative;
       transform: rotateY(45deg);
       transition: all 0.4s ease; }
+      .portfolio .coverflow-list .coverflow-item:hover {
+        transform: rotateY(0deg); }
       .portfolio .coverflow-list .coverflow-item .album-cover {
         display: block;
         height: 150px;
@@ -260,5 +258,9 @@ address:before {
         text-shadow: none; }
   .portfolio input[type="radio"] {
     display: none; }
+
+.Floodgate .coverflow-list {
+  left: 4.5rem;
+  position: relative; }
 
 /*# sourceMappingURL=index.css.map */

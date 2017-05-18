@@ -539,6 +539,7 @@
     "shortName": "PowerPoint",
     "fullName": "Microsoft PowerPoint",
     "company": "Microsoft",
+    "website": "https://products.office.com/en-us/powerpoint",
     "description": "Microsoft's slide show presentation software, part of the Office suite",
     "experienceLevel": "experienced"
   },
@@ -565,12 +566,6 @@
     "experienceLevel": "experienced"
   },
   {
-    "shortName": "RequireJS",
-    "fullName": "RequireJS",
-    "description": "Javascript module and asset loading library",
-    "experienceLevel": "experienced"
-  },
-  {
     "shortName": "REST",
     "fullName": "REpresentational State Transfer web service APIs",
     "description": "A series of standards for stateless, potentially cacheable client-server communication",
@@ -579,6 +574,7 @@
   {
     "shortName": "SASS",
     "fullName": "Syntactically Awesome Style Sheets",
+    "website": "http://sass-lang.com/",
     "description": "A syntax extension for CSS supporting variables and conditional logic with transpilation to CSS",
     "experienceLevel": "experienced"
   },
@@ -729,14 +725,23 @@
     "experienceLevel": "expert"
   },
   {
-    "shortName": "XQuery/XPath",
-    "fullName": "XQuery/XPath",
+    "shortName": "XPath",
+    "fullName": "XML Path Language",
+    "website": "https://www.w3.org/TR/xpath/",
     "description": "A syntax for targeting specific parts of an XML document",
+    "experienceLevel": "experienced"
+  },
+  {
+    "shortName": "XQuery",
+    "fullName": "XML Query",
+    "website": "https://www.w3.org/XML/Query/",
+    "description": "A query language for accessing and transforming XML data",
     "experienceLevel": "experienced"
   },
   {
     "shortName": "XSLT",
     "fullName": "eXtensible Sylesheet Language Transformations",
+    "website": "https://www.w3.org/TR/xslt",
     "description": "A grammar for changing XML documents into other formats",
     "experienceLevel": "experienced"
   },

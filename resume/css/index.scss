@@ -15,7 +15,7 @@ $fontawesome: "../font/fontawesome-webfont.";
 
 // Icon font element
 .icon {
-  font: normal normal normal 14px/1 FontAwesome;
+  font: normal normal normal 1.5rem/1 FontAwesome;
 }
 
 // Skewed polygon shapes
@@ -344,12 +344,13 @@ address:before {
   }
 
   .coverflow-container {
+    @extend .slideHidden;
+
     background-color: white;
     border: 3px solid black;
     border-radius: 8px;
     -webkit-box-reflect: below 0px linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.1) 100%);
-    display: none;
-    left: 125%;
+    left: -25%;
     padding: 0 1rem;
     position: absolute;
     top: -1rem;
@@ -358,7 +359,7 @@ address:before {
 
   &:hover, &:active {
     .coverflow-container {
-      display: block;
+      @extend .slideIn;
     }
   }
 
@@ -386,6 +387,10 @@ address:before {
       transform: rotateY(45deg);
       transition: all $transition-time ease;
 
+      &:hover {
+        transform: rotateY(0deg);
+      }
+
       .album-cover {
         display: block;
         height: 150px;
@@ -411,17 +416,6 @@ address:before {
       }
     }
   }
-  /* Now apply 3D transforms */
-  //.coverflow-list {
-  //  transform: perspective(900px);
-  //  -webkit-transform-style: preserve-3d;
-  //  -webkit-perspective-origin: 100% 30%;
-  //
-  //  .coverflow-item {
-  //    transition: all $transition-time ease;
-  //    transform: rotateY(45deg);
-  //  }
-  //}
 
   input[type="radio"] {
     display:none;
@@ -445,6 +439,14 @@ address:before {
   //      }
   //    }
   //  }
+  }
+}
+
+// HACK: not sure why this particular one doesn't lay out properly
+.Floodgate {
+  .coverflow-list {
+    left: 4.5rem;
+    position: relative;
   }
 }
 

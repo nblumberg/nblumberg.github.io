@@ -272,19 +272,23 @@
     "portfolio": [
       {
         "name": "Dark Messiah of Might and Magic",
-        "image": "img/dark_messiah_of_might_and_magic.png"
+        "image": "img/dark_messiah_of_might_and_magic.png",
+        "website": "http://darkmessiahgame.uk.ubi.com/"
       },
       {
         "name": "Neverwinter Nights Shadows of Undrentide",
-        "image": "img/neverwinter_nights_shadows_of_undrentide.jpg"
+        "image": "img/neverwinter_nights_shadows_of_undrentide.jpg",
+        "website": "https://www.gamespot.com/reviews/neverwinter-nights-shadows-of-undrentide-review/1900-6030101/"
       },
       {
         "name": "Neverwinter Nights: ME",
-        "image": "img/neverwinter_nights_mobile.jpg"
+        "image": "img/neverwinter_nights_mobile.jpg",
+        "website": "https://www.gamespot.com/reviews/neverwinter-nights-review/1900-6106972/"
       },
       {
         "name": "Pirates of the Carribean Multiplayer",
-        "image": "img/pirates_of_the_carribean_multiplayer.jpg"
+        "image": "img/pirates_of_the_carribean_multiplayer.jpg",
+        "website": "http://disney.go.com/disneymobile/mdisney/pirates/"
       }
     ],
     "positions": [
@@ -409,7 +413,7 @@
           {
             "description": "Implemented game development tools and evaluation tests of rendering engine licenses for a planned PC massively multiplayer online role-playing game (MMORPG).",
             "skills": [
-              "Visual Studio", "Visual C++ / STL", "Visual Basic", "NetImmerse", "Renderware3D", "UML", "Extreme Programming"
+              "Visual Studio", "C++", "Visual Basic", "NetImmerse", "Renderware3D", "UML", "Extreme Programming"
             ]
           }
         ]
@@ -485,13 +489,13 @@
           {
             "description": "Implemented features for RBI's in-house model, action, and level editor Leo.",
             "skills": [
-              "Metroworks Codewarrior for Mac", "C/C++", "Mac OS 8", "QuickDraw3D", "in-house scripting language"
+              "Metroworks Codewarrior for Mac", "C", "C++", "Mac OS 8", "QuickDraw3D", "in-house scripting language"
             ]
           },
           {
             "description": "Helped design and create players, enemies, weapons, levels and game mechanics for unreleased projects ranging from a pulp comics \"ray gun & rocket pack\" style 3rd person shooter to racing titles.",
             "skills": [
-              "Word", "in-house software and scripting language"
+              "Word", "In-house editor", "In-house scripting language"
             ]
           }
         ]
@@ -506,7 +510,7 @@
           {
             "description": "Implemented enemy/environment AI and cut scenes for Dark Vengeance video game.",
             "skills": [
-              "in-house software and scripting language"
+              "In-house editor", "In-house scripting language"
             ]
           },
           {
@@ -533,17 +537,116 @@
           {
             "description": "Created 3D levels for Dark Vengeance.",
             "skills": [
-              "in-house software and scripting language"
+              "In-house editor", "In-house scripting language"
             ]
           },
           {
             "description": "Documented and debugged RBI's in-house editor Leo.",
             "skills": [
-              "Excel", "in-house software"
+              "Excel", "In-house editor"
             ]
           },
           {
             "description": "Ran user opinion studies on game artwork and animation."
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Tufts University, Art History Department",
+    "address": {
+      "number": "419",
+      "street": "Boston Avenue",
+      "city": "Medford",
+      "state": "MA",
+      "zipCode": "02155",
+      "country": "USA"
+    },
+    "logo": "http://tuheps.phy.tufts.edu/~ksliwa/HEP/seal_bluewhite_300.gif",
+    "website": "http://www.tufts.edu",
+    "positions": [
+      {
+        "name": "Programmer & Technical Consultant",
+        "dates": {
+          "start": "09/01/1996",
+          "end": "05/01/1998"
+        },
+        "responsibilities": [
+          {
+            "description": "Created a flash-card style study tool for art history students.",
+            "skills": [
+              "Flash", "ActionScript", "Photoshop", "FileFlex", "Mac OS 8", "AppleShare", "AppleScript", "Microsoft FoxPro", "HTML"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Tufts University, Cognitive Psychology Department",
+    "address": {
+      "number": "419",
+      "street": "Boston Avenue",
+      "city": "Medford",
+      "state": "MA",
+      "zipCode": "02155",
+      "country": "USA"
+    },
+    "logo": "http://tuheps.phy.tufts.edu/~ksliwa/HEP/seal_bluewhite_300.gif",
+    "website": "http://www.tufts.edu",
+    "positions": [
+      {
+        "name": "Research team, student",
+        "dates": {
+          "start": "01/01/1996",
+          "end": "05/01/1996"
+        },
+        "responsibilities": [
+          {
+            "description": "Conducted cognitive research on generation effects."
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "New England Cable News",
+    "address": {
+      "city": "Newton",
+      "state": "MA",
+      "country": "USA"
+    },
+    "logo": "http://pbs.twimg.com/profile_images/687708272888049664/xnj6qdEo_normal.jpg",
+    "website": "http://www.necn.com",
+    "positions": [
+      {
+        "name": "Playback Engineer, part-time",
+        "dates": {
+          "start": "07/01/1995",
+          "end": "03/01/1996"
+        },
+        "responsibilities": [
+          {
+            "description": "Organized and ran tapes for live news shows."
+          }
+        ]
+      },
+      {
+        "name": "Editor, intern",
+        "dates": {
+          "start": "05/01/1995",
+          "end": "08/01/1995"
+        },
+        "responsibilities": [
+          {
+            "description": "Edited footage for news shows."
+          },
+          {
+            "description": "Ran teleprompter for live news shows."
           }
         ]
       }

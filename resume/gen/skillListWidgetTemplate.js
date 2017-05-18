@@ -14,7 +14,7 @@
       </div>
     </div>
     <span>Hover over a skill for details &nbsp;</span>
-    <input type="text" class="searchSkills" placeholder="or type here to search/filter results" />
+    <input type="text" class="searchSkills" placeholder="or type here to search" />
   </div>
 </div>
 `;

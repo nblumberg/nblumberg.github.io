@@ -170,43 +170,43 @@ address {
   .company-overview:last-child {
     text-align: right; }
 
-.experience {
+.experience, .school {
   border: 1px solid gray;
   margin-bottom: 1rem;
   padding: 1rem;
   position: relative; }
-  .experience header {
+  .experience header, .school header {
     border-collapse: collapse;
     display: table;
     margin-bottom: 1rem;
     width: 100%; }
-    .experience header > * {
+    .experience header > *, .school header > * {
       display: table-cell;
       vertical-align: middle;
       white-space: nowrap;
       width: 99%; }
-    .experience header .logo {
+    .experience header .logo, .school header .logo {
       max-height: 3rem;
       padding-right: 1rem;
       width: 3rem; }
-    .experience header .logo[src=""] {
+    .experience header .logo[src=""], .school header .logo[src=""] {
       display: none; }
-    .experience header address {
+    .experience header address, .school header address {
       text-align: right; }
-  .experience .summary {
+  .experience .summary, .school .summary {
     font-style: italic; }
-  .experience .position > *:not(header) {
+  .experience .position > *:not(header), .school .position > *:not(header) {
     margin-left: 2rem; }
-  .experience .position header {
+  .experience .position header, .school .position header {
     display: table;
     width: 100%; }
-    .experience .position header > * {
+    .experience .position header > *, .school .position header > * {
       display: table-cell; }
-    .experience .position header:last-child {
+    .experience .position header:last-child, .school .position header:last-child {
       text-align: right; }
-  .experience .position .dates .present {
+  .experience .position .dates .present, .school .position .dates .present {
     display: none; }
-  .experience .position .dates .present[data-end=""] {
+  .experience .position .dates .present[data-end=""], .school .position .dates .present[data-end=""] {
     display: inline; }
 
 .portfolio {
@@ -268,6 +268,25 @@ address {
 .Floodgate .coverflow-list {
   left: 4.5rem;
   position: relative; }
+
+footer {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center; }
+
+.src, .src:visited {
+  background: forestgreen;
+  border-radius: 7rem 0 0 0;
+  bottom: 0;
+  color: white;
+  display: block;
+  height: 7rem;
+  padding: 2rem 0.25rem 0.25rem 2rem;
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+  width: 7rem; }
 
 @media screen and (max-width: 835px) {
   .me {

@@ -284,7 +284,7 @@ address {
   }
 }
 
-.experience {
+.experience, .school {
   border: 1px solid gray;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -473,6 +473,28 @@ address {
 //  0% { transform: rotateY( 45deg ); }
 //  100% { transform: rotateY( 0deg ) translate3d( 150px,0,0 ) scale3d(1.2,1.2,1.2); }
 //}
+
+footer {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+}
+
+$quarterCircleRadius: 7rem;
+.src, .src:visited {
+  background: forestgreen;
+  border-radius: $quarterCircleRadius 0 0 0;
+  bottom: 0;
+  color: white;
+  display: block;
+  height: $quarterCircleRadius;
+  padding: 2rem 0.25rem 0.25rem 2rem;
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+  width: $quarterCircleRadius;
+}
 
 // ==============================
 // Responsive design styles

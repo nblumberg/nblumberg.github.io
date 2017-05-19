@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Nathaniel Blumberg</title>
-    
+    <head>
+        <meta charset="UTF-8">
+        <title>Nathaniel Blumberg</title>
+        
     <link rel="stylesheet" href="gen/index.css"></link>
-</head>
-<body>
-    <header class="me">
-        <div>
-            <nb-placeholder data-key="me">name</nb-placeholder>
-            <nb-placeholder data-key="me">overview</nb-placeholder>
-        </div>
-        <div>
-            <nb-placeholder data-key="me">address</nb-placeholder>
-            <nb-placeholder data-key="me">contact</nb-placeholder>
-        </div>
-    </header>
-    <section class="skills">
-        <div class="legend">
-            <h2>Skills</h2>
-        </div>
-        <div class="skillList">
-            <nb-placeholder data-key="skills">skillListWidget</nb-placeholder>
-            <nb-repeat data-key="skills">skills</nb-repeat>
-        </div>
-    </section>
-    <section class="experiences">
-        <h2>Experience</h2>
-        <nb-repeat data-key="experience">experience</nb-repeat>
-    </section>
+    </head>
+    <body>
+        <header class="me">
+            <div>
+                <nb-placeholder data-key="me">name</nb-placeholder>
+                <nb-placeholder data-key="me">overview</nb-placeholder>
+            </div>
+            <div>
+                <nb-placeholder data-key="me">address</nb-placeholder>
+                <nb-placeholder data-key="me">contact</nb-placeholder>
+            </div>
+        </header>
+        <section class="skills">
+            <div class="legend">
+                <h2>Skills</h2>
+            </div>
+            <div class="skillList">
+                <nb-placeholder data-key="skills">skillListWidget</nb-placeholder>
+                <nb-repeat data-key="skills">skills</nb-repeat>
+            </div>
+        </section>
+        <section class="experiences">
+            <h2>Experience</h2>
+            <nb-repeat data-key="experience">experience</nb-repeat>
+        </section>
+        <section class="education">
+            <h2>Education</h2>
+            <nb-repeat data-key="education">education</nb-repeat>
+        </section>
+        <footer>
+            References available upon request
+        </footer>
+        <a class="src" href="https://github.com/nblumberg/nblumberg.github.io/tree/master/resume" target="_blank">
+            <h3>See how this resume was made!</h3>
+        </a>
 
-    
+        
     <script src="js/namespace.js"></script>
-    
+        
     <script src="gen/addressTemplate.js"></script>
     <script src="gen/artTemplate.js"></script>
     <script src="gen/contactTemplate.js"></script>
+    <script src="gen/educationData.js"></script>
+    <script src="gen/educationTemplate.js"></script>
     <script src="gen/experienceData.js"></script>
     <script src="gen/experienceTemplate.js"></script>
     <script src="gen/meData.js"></script>
@@ -49,7 +61,7 @@
     <script src="gen/skillListWidgetTemplate.js"></script>
     <script src="gen/skillsData.js"></script>
     <script src="gen/skillsTemplate.js"></script>
-    
+        
     <script src="js/index.js"></script>
-</body>
+    </body>
 </html>

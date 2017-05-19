@@ -49,6 +49,29 @@
             });
         }
     });
+    rootData.education.forEach((school) => {
+        if (school.dates) {
+            let m;
+            if (school.dates.start) {
+                m = moment(school.dates.start);
+                school.dates.start = {
+                    month: m.format("MMMM"),
+                    shortMonth: m.format("MMM"),
+                    year: m.format("YYYY"),
+                    shortYear: "'" + m.format("YY")
+                };
+            }
+            if (school.dates.end) {
+                m = moment(school.dates.end);
+                school.dates.end = {
+                    month: m.format("MMMM"),
+                    shortMonth: m.format("MMM"),
+                    year: m.format("YYYY"),
+                    shortYear: "'" + m.format("YY")
+                };
+            }
+        }
+    });
 
     function insert(html, before, data) {
         let parent = document.createElement("div");

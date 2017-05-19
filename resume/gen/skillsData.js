@@ -25,6 +25,14 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "Adobe Target",
+    "fullName": "Adobe Target (formerly Test and Target)",
+    "website": "http://www.adobe.com/marketing-cloud/target.html",
+    "company": "Adobe",
+    "description": "A system for injecting dynamic content into a webpage at load time based on cookies and passed data to segment users into different audiences for A/B testing different experiences",
+    "experienceLevel": "experienced"
+  },
+  {
     "shortName": "Agile",
     "fullName": "Agile development/SCRUM",
     "description": "A system for organizing software development allowing for frequent changes in priorities through rapid iteration",
@@ -35,6 +43,13 @@
     "fullName": "Asynchronous JavaScript and XML",
     "description": "Though now used to mean any request initiated through JavaScript for any kind of data after the initial webpage load",
     "experienceLevel": "expert"
+  },
+  {
+    "shortName": "Akamai",
+    "fullName": "Akamai CDN",
+    "website": "https://www.akamai.com/us/en/cdn/",
+    "description": "A Content Delivery Network mirroring web resources on multiple servers around the world to provide better load times due to geographic proximity to users",
+    "experienceLevel": "familiar"
   },
   {
     "shortName": "AMD",
@@ -48,14 +63,6 @@
     "website": "https://angularjs.org/",
     "description": "Javascript application framework managed by Google. Includes module management, dependency injection, use of the DOM as templates",
     "experienceLevel": "expert"
-  },
-  {
-    "shortName": "Tomcat",
-    "fullName": "Apache Tomcat/TomEE",
-    "website": "http://tomcat.apache.org/",
-    "company": "Apache",
-    "description": "A Java servlet container and HTTP web server implementing several Java EE specifications",
-    "experienceLevel": "experienced"
   },
   {
     "shortName": "AppleScript",
@@ -105,6 +112,13 @@
     "fullName": "C++",
     "description": "A strongly typed, class-based, low-level, compiled, object oriented programming language based on C",
     "experienceLevel": "experienced"
+  },
+  {
+    "shortName": "Cloudflare",
+    "fullName": "Cloudflare CDN",
+    "website": "https://www.cloudflare.com/",
+    "description": "A Content Delivery Network mirroring web resources on multiple servers around the world to provide better load times due to geographic proximity to users",
+    "experienceLevel": "familiar"
   },
   {
     "shortName": "COM",
@@ -189,12 +203,27 @@
     "experienceLevel": "familiar"
   },
   {
+    "shortName": "dotCMS",
+    "fullName": "dotCMS",
+    "website": "https://dotcms.com/",
+    "description": "A Content Management System",
+    "experienceLevel": "experienced"
+  },
+  {
     "shortName": "Eclipse",
     "fullName": "Eclipse IDEs",
     "website": "https://www.eclipse.org/ide/",
     "company": "Eclipse",
     "description": "An open source IDE with a wide array of plugins, language, and framework support",
     "experienceLevel": "experienced"
+  },
+  {
+    "shortName": "ehcache",
+    "fullName": "ehcache",
+    "company": "Software AG",
+    "description": "A Java caching framework",
+    "experienceLevel": "experienced",
+    "website": "http://www.ehcache.org/"
   },
   {
     "shortName": "EJB persistence",
@@ -302,6 +331,14 @@
     "experienceLevel": "expert"
   },
   {
+    "shortName": "Handlebars",
+    "fullName": "Handlebars",
+    "company": "Software AG",
+    "description": "A JavaScript templating library",
+    "experienceLevel": "experienced",
+    "website": "http://handlebarsjs.com/"
+  },
+  {
     "shortName": "HipChat",
     "fullName": "Atlassian HipChat",
     "company": "Atlassian",
@@ -395,6 +432,14 @@
     "experienceLevel": "expert"
   },
   {
+    "shortName": "JBoss",
+    "fullName": "JBoss",
+    "company": "Red Hat",
+    "description": "A web server that includes Apache HTTP Server and Apache Tomcat",
+    "experienceLevel": "experienced",
+    "website": "http://www.jboss.org/"
+  },
+  {
     "shortName": "JDBC",
     "fullName": "Java DataBase Connectivity",
     "website": "http://www.oracle.com/technetwork/java/javase/jdbc/index.html",
@@ -441,6 +486,12 @@
     "shortName": "JSON",
     "fullName": "JavaScript Object Notation",
     "description": "A hierarchical data format commonly used for data transfer on the web",
+    "experienceLevel": "expert"
+  },
+  {
+    "shortName": "JSONP",
+    "fullName": "JavaScript Object Notation with Padding",
+    "description": "A means of accessing JSON data via a cross-domain request by treating it as a script request where the server \"pads\" the JSON by wrapping it in a JavaScript method call designated by the caller",
     "experienceLevel": "expert"
   },
   {
@@ -507,6 +558,13 @@
     "experienceLevel": "expert"
   },
   {
+    "shortName": "mPulse",
+    "fullName": "SOASTA mPulse",
+    "description": "A Real-User Monitoring (RUM) tool",
+    "experienceLevel": "familiar",
+    "website": "https://www.soasta.com/performance-monitoring/"
+  },
+  {
     "shortName": "Mustache",
     "fullName": "Mustache templates",
     "website": "https://mustache.github.io/",
@@ -548,6 +606,14 @@
     "fullName": "Node Version Manager",
     "website": "https://github.com/creationix/nvm",
     "description": "A command line tool for managing multiple Node installations",
+    "experienceLevel": "experienced"
+  },
+  {
+    "shortName": "Optimizely",
+    "fullName": "Optimizely",
+    "website": "https://www.optimizely.com/",
+    "company": "Optimizely",
+    "description": "A system for injecting dynamic content into a webpage at load time based on cookies and passed data to segment users into different audiences for A/B testing different experiences",
     "experienceLevel": "experienced"
   },
   {
@@ -675,6 +741,21 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "Tealium",
+    "fullName": "Tealium Universal Data Hub",
+    "description": "A suite of tools (iQ Tag Management and AudienceStream) for injecting dynamic content into a webpage at load time based on cookies and passed data to segment users into different audiences for A/B testing different experiences",
+    "experienceLevel": "familiar",
+    "website": "https://tealium.com/"
+  },
+  {
+    "shortName": "Tomcat",
+    "fullName": "Apache Tomcat/TomEE",
+    "website": "http://tomcat.apache.org/",
+    "company": "Apache",
+    "description": "A Java servlet container and HTTP web server implementing several Java EE specifications",
+    "experienceLevel": "experienced"
+  },
+  {
     "shortName": "Trello",
     "fullName": "Atlassian Trello",
     "company": "Atlassian",
@@ -786,15 +867,6 @@
     "description": "A caching proxy server",
     "experienceLevel": "familiar",
     "website": "http://trafficserver.apache.org/"
-  },
-  {
-    "shortName": "JBoss",
-    "fullName": "JBoss",
-    "company": "Red Hat",
-    "description": "A web server that includes Apache HTTP Server and Apache Tomcat",
-    "experienceLevel": "experienced",
-    "website": "http://www.jboss.org/"
   }
-
 ];
 })(window.nb.data);

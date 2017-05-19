@@ -18,7 +18,7 @@
         "dates": {
           "start": "08/01/2016"
         },
-        "summary": "Most senior engineering role within the organization. Responsibilities include those of prior positions in addition to the following:",
+        "summary": "Most senior development role within the organization. Responsibilities include those of prior positions in addition to the following:",
         "responsibilities": [
           {
             "description": "Serve as technical lead for several areas of the company code base."
@@ -43,7 +43,7 @@
           "start": "08/01/2014",
           "end": "08/01/2016"
         },
-        "summary": "Generally, the most senior engineering role within a team. Responsibilities include those of prior positions in addition to the following:",
+        "summary": "Generally, the most senior development role within a team. Responsibilities include those of prior positions in addition to the following:",
         "responsibilities": [
           {
             "description": "Act as technical liaison to other teams inside and outside the engineering organization."
@@ -56,6 +56,72 @@
           },
           {
             "description": "Act as mentor to other team members."
+          },
+          {
+            "description": "Created new home page and listing pages unifying the separate products (email, events, social campaign, survey, etc.) into a single interface. Aggregated data from almost every microservice at the company into a single, performant, mobile-responsive page view. Helped lead disparate teams to a common data model. Created entry points into the wizard flows for each product. Implemented an automated onboarding checklist for new users. Supported numerous user experience A/B tests.",
+            "skills": [
+              "Angular",
+              "JavaScript",
+              "Handlebars",
+              "AJAX",
+              "JSONP",
+              "CORS",
+              "HTML",
+              "CSS",
+              "SASS",
+              "jasmine",
+              "istanbul",
+              "karma",
+              "grunt",
+              "npm",
+              "nvm",
+              "jetty",
+              "JBoss",
+              "Tomcat",
+              "httpd",
+              "jQuery",
+              "jQuery-UI",
+              "Java",
+              "JSP",
+              "Spring",
+              "CXF",
+              "ehcache",
+              "cookies",
+              "sessionStorage",
+              "Adobe Target",
+              "Optimizely",
+              "CloudFlare",
+              "Akamai"
+            ]
+          },
+          {
+            "description": "Architected and implemented a mobile responsive \"site chrome\" (navigation, messaging, account, and company data UI elements that can vary by account) as a set of static assets served from a CDN that could be self-configured and injected on every page without interfering with page content or requiring its direct involvement. Build process supported creating various internationalized versions of the site chrome. Supported targeted marketing and billing messaging.",
+            "skills": [
+              "JavaScript",
+              "Handlebars",
+              "AJAX",
+              "HTML",
+              "CSS",
+              "SASS",
+              "jasmine",
+              "istanbul",
+              "karma",
+              "grunt",
+              "npm",
+              "nvm",
+              "jQuery",
+              "localStorage",
+              "postMessage",
+              "Adobe Target",
+              "dotCMS",
+              "Akamai"
+            ]
+          },
+          {
+            "description": "Implemented JavaScript frameworks and APIs for capturing the following data from the browser and proxying them to the following services: <ol><li>page performance &rarr; StatsD/Graphite/Grafana dashboards</li><li>page view and user interaction event tracking &rarr; Adobe Analytics</li><li>RUM data &rarr; SOASTA mPulse</li></ol> Supported passive page view and user interaction event tracking, allowing developers to simply annotate DOM elements with data attributes to achieve click tracking.",
+            "skills": [
+              "JavaScript", "Tealium", "mPulse", "Adobe Analytics", "StatsD", "Graphite", "Grafana", "AJAX", "JSON", "CORS", "JSONP", "Java", "Spring", "CXF", "grunt", "npm", "nvm", "jasmine", "istanbul", "karma"
+            ]
           }
         ]
       },
@@ -68,9 +134,37 @@
         "summary": "Expert in all areas of team responsibility.",
         "responsibilities": [
           {
-            "description": "Architected and implemented a configuration-based iframe-based web portlet framework to allow the company to break up the single \"monolithic\" application into separate teams, repositories, technology stacks, and deploy schedules while maintaining a unified UI. Architected and implemented a JavaScript API loaded and consumed in all applications and windows to provide common, inter-application and cross-domain functionality and communication.",
+            "description": "Architected and implemented a configuration and iframe based web portlet framework to allow the company to break up the single \"monolithic\" application into separate teams, repositories, technology stacks, and deploy schedules while maintaining a unified UI. Architected and implemented an accompanying JavaScript API that was loaded and consumed in all applications and windows to provide common, inter-application and cross-domain functionality and communication. Supported in-browser overrides of configuration data for development and testing against locally running applications.",
             "skills": [
-              "JavaScript", "postMessage", "jQuery", "Java", "JSP", "Spring", "AJAX", "localStorage", "sessionStorage", "Cookies", "XML", "HTML", "CSS", "JMX Console", "AMD", "jasmine", "istanbul", "karma", "grunt", "npm", "nvm", "jetty", "JBoss", "Tomcat", "httpd", "CORS", "JSONP"
+              "JavaScript",
+              "postMessage",
+              "jQuery",
+              "jQuery-UI",
+              "Java",
+              "JSP",
+              "Spring",
+              "AJAX",
+              "localStorage",
+              "sessionStorage",
+              "Cookies",
+              "XML",
+              "HTML",
+              "CSS",
+              "JMX Console",
+              "AMD",
+              "jasmine",
+              "istanbul",
+              "karma",
+              "grunt",
+              "npm",
+              "nvm",
+              "jetty",
+              "JBoss",
+              "Tomcat",
+              "httpd",
+              "CORS",
+              "JSONP",
+              "CloudFlare"
             ]
           },
           {

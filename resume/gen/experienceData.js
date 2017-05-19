@@ -70,15 +70,15 @@
         "summary": "Expert in all areas of team responsibility.",
         "responsibilities": [
           {
-            "description": "Create an iframe-based web portlet framework to allow the company to break up the single \"monolithic\" application into separate teams, repositories, te and JavaScript API",
+            "description": "Architected and implemented a configuration-based iframe-based web portlet framework to allow the company to break up the single \"monolithic\" application into separate teams, repositories, technology stacks, and deploy schedules while maintaining a unified UI. Architected and implemented a JavaScript API loaded and consumed in all applications and windows to provide common, inter-application and cross-domain functionality and communication.",
             "skills": [
-              "JavaScript", "jQuery", "Java", "JSP", "Spring", "AJAX", "CXF", "EJB", "DB2"
+              "JavaScript", "postMessage", "jQuery", "Java", "JSP", "Spring", "AJAX", "localStorage", "sessionStorage", "Cookies", "XML", "HTML", "CSS", "JMX Console", "AMD", "jasmine", "istanbul", "karma", "grunt", "npm", "nvm", "jetty", "JBoss", "Tomcat", "httpd", "CORS", "JSONP"
             ]
           },
           {
-            "description": "Re-implement the email creation and management wizard flow as a separate Spring application and microservice.",
+            "description": "Re-implemented the email creation and management wizard flow again as a separate Spring application and microservice.",
             "skills": [
-              "JavaScript", "jQuery", "Java", "JSP", "Spring", "AJAX", "CXF", "EJB", "DB2"
+              "JavaScript", "jQuery", "Java", "JSP", "Spring", "AJAX", "CXF", "EJB persistence", "DB2", "SQL", "JDBC"
             ]
           }
         ]
@@ -92,13 +92,13 @@
         "summary": "Expert in all areas of team responsibility.",
         "responsibilities": [
           {
-            "description": "Re-implement the email creation and management wizard flow using Spring POST-back form transitions.",
+            "description": "Re-implemented the email creation and management wizard flow using Spring POST-back form transitions.",
             "skills": [
               "JavaScript", "jQuery", "Java", "JSP", "Spring"
             ]
           },
           {
-            "description": "Streamline the management of stock images available to customers.",
+            "description": "Streamlined the management of stock images available to customers.",
             "skills": [
               "Java", "JSP", "Excel", "Spring"
             ]

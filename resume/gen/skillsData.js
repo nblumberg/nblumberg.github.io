@@ -50,7 +50,7 @@
     "experienceLevel": "expert"
   },
   {
-    "shortName": "Apache Tomcat",
+    "shortName": "Tomcat",
     "fullName": "Apache Tomcat/TomEE",
     "website": "http://tomcat.apache.org/",
     "company": "Apache",
@@ -127,6 +127,12 @@
     "experienceLevel": "expert"
   },
   {
+    "shortName": "cookies",
+    "fullName": "Browser cookies",
+    "experienceLevel": "expert",
+    "description": "A domain-specific text-based key-value pair storage provided by the browser that is sent along with HTTP requests for consumption by servers"
+  },
+  {
     "shortName": "CORS",
     "fullName": "Cross-Origin Resource Sharing",
     "description": "A series of web standards allowing hosts to indicate what other domains should be able to access its resources, enforced by the browser security policies",
@@ -189,6 +195,13 @@
     "company": "Eclipse",
     "description": "An open source IDE with a wide array of plugins, language, and framework support",
     "experienceLevel": "experienced"
+  },
+  {
+    "shortName": "EJB persistence",
+    "fullName": "Enterprise JavaBeans persistence mechanism",
+    "website": "http://www.oracle.com/technetwork/java/javaee/ejb/index.html",
+    "experienceLevel": "familiar",
+    "description": "Part of the J2EE framework abstracting database access and storage behind Java classes"
   },
   {
     "shortName": "Excel",
@@ -369,14 +382,8 @@
   },
   {
     "shortName": "Java",
-    "fullName": "Java Development Kit (JDK) &amp; Java Development Machine (JVM) 1 through 8",
-    "description": "The Java programming language",
-    "experienceLevel": "experienced"
-  },
-  {
-    "shortName": "Java",
     "fullName": "Java",
-    "website": "http://www.oracle.com/technetwork/java/index.html",
+    "website": "https://www.oracle.com/java/index.html",
     "company": "Oracle",
     "description": "Class-based, object oriented programming language compiled to byte codes that can be run on any platform that has a Java Virtual Machine (JVM). Versions 1 through 8 and JavaEE.",
     "experienceLevel": "expert"
@@ -386,6 +393,13 @@
     "fullName": "JavaScript",
     "description": "A loosely typed, interpreted programming language supporting object oriented programming via aggregation. ECMAScript 1 through 2015",
     "experienceLevel": "expert"
+  },
+  {
+    "shortName": "JDBC",
+    "fullName": "Java DataBase Connectivity",
+    "website": "http://www.oracle.com/technetwork/java/javase/jdbc/index.html",
+    "experienceLevel": "familiar",
+    "description": "A standard for connecting a Java application and most database management systems"
   },
   {
     "shortName": "jetty",
@@ -401,6 +415,13 @@
     "company": "Atlassian",
     "description": "Issue and project tracking tool supporting agile development",
     "experienceLevel": "expert"
+  },
+  {
+    "shortName": "JMX Console",
+    "fullName": "Java Management eXtensions Console",
+    "website": "http://docs.jboss.org/jbossas/docs/Getting_Started_Guide/beta422/html/The_JBoss_Server___A_Quick_Tour-The_JMX_Console.html",
+    "experienceLevel": "experienced",
+    "description": "Application monitoring and custom controls and exposed as a separate series of pages for a web application running under JBoss"
   },
   {
     "shortName": "jQuery",
@@ -449,6 +470,12 @@
     "website": "https://karma-runner.github.io/1.0/index.html",
     "description": "A framework and browser agnostic command line javascript test runner",
     "experienceLevel": "expert"
+  },
+  {
+    "shortName": "localStorage",
+    "fullName": "Browser localStorage",
+    "experienceLevel": "expert",
+    "description": "A domain-specific text-based key-value pair storage provided by the browser that is not sent along with HTTP requests"
   },
   {
     "shortName": "Merant Tracker",
@@ -592,6 +619,12 @@
     "website": "http://www.seleniumhq.org/",
     "description": "A Java-based integration test framework that wraps WebDriver",
     "experienceLevel": "familiar"
+  },
+  {
+    "shortName": "sessionStorage",
+    "fullName": "Browser sessionStorage",
+    "experienceLevel": "expert",
+    "description": "A domain-specific text-based key-value pair storage provided by the browser that is not sent along with HTTP requests and only lasts as long as the life of the browser window"
   },
   {
     "shortName": "SOAP",
@@ -753,6 +786,15 @@
     "description": "A caching proxy server",
     "experienceLevel": "familiar",
     "website": "http://trafficserver.apache.org/"
+  },
+  {
+    "shortName": "JBoss",
+    "fullName": "JBoss",
+    "company": "Red Hat",
+    "description": "A web server that includes Apache HTTP Server and Apache Tomcat",
+    "experienceLevel": "experienced",
+    "website": "http://www.jboss.org/"
   }
+
 ];
 })(window.nb.data);

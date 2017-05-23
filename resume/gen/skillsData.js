@@ -313,7 +313,7 @@
     "website": "https://grafana.com/",
     "company": "Grafana Labs",
     "description": "Generate dashboards with updating graphs of real time data from a variety of data stores",
-    "experienceLevel": "familiar"
+    "experienceLevel": "experienced"
   },
   {
     "shortName": "Graphite",

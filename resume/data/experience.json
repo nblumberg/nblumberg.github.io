@@ -58,7 +58,7 @@
             "description": "Act as mentor to other team members."
           },
           {
-            "description": "Created new home page and listing pages unifying the separate products (email, events, social campaign, survey, etc.) into a single interface. Aggregated data from almost every microservice at the company into a single, performant, mobile-responsive page view. Helped lead disparate teams to a common data model. Created entry points into the wizard flows for each product. Implemented an automated onboarding checklist for new users. Supported numerous user experience A/B tests.",
+            "description": "Created new home page and listing pages unifying the separate products (email, events, social campaign, survey, etc.) into a single interface. Aggregated data from almost every microservice at the company into a single, high-performing, mobile-responsive page view. Helped lead disparate teams to a common data model. Created entry points into the wizard flows for each product. Implemented an automated onboarding checklist for new users. Supported numerous user experience A/B tests.",
             "skills": [
               "Angular",
               "JavaScript",

@@ -34,6 +34,27 @@
           },
           {
             "description": "Promote technical education, documentation, and best practices across the engineering organization."
+          },
+          {
+            "description": "Tested users on log in for current or past suspicious or malfeasant behavior using e-hawk",
+            "skills": [
+              "e-hawk",
+              "JavaScript",
+              "AJAX",
+              "JSONP",
+              "CORS",
+              "HTML",
+              "jasmine",
+              "istanbul",
+              "karma",
+              "grunt",
+              "npm",
+              "nvm",
+              "RabbitMQ",
+              "Spring",
+              "CXF",
+              "Akamai"
+            ]
           }
         ]
       },

@@ -210,6 +210,13 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "e-hawk",
+    "fullName": "e-hawk",
+    "description": "Phisher, bot, spammer, fraudster, and high-risk user identification service",
+    "experienceLevel": "familiar",
+    "website": "https://www.e-hawk.net/"
+  },
+  {
     "shortName": "Eclipse",
     "fullName": "Eclipse IDEs",
     "website": "https://www.eclipse.org/ide/",
@@ -644,6 +651,13 @@
     "website": "http://www.protractortest.org/#/",
     "description": "A Node/JavaScript-based integration test framework that wraps WebDriver",
     "experienceLevel": "experienced"
+  },
+  {
+    "shortName": "RabbitMQ",
+    "fullName": "RabbitMQ",
+    "description": "An inter-application messaging service",
+    "experienceLevel": "familiar",
+    "website": "https://www.rabbitmq.com/"
   },
   {
     "shortName": "RCS",

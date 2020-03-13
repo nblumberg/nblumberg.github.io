@@ -2,6 +2,7 @@
   "name": "nblumberg.github.io.git",
   "version": "0.0.1",
   "description": "Web pages for https://github.com/nblumberg",
+  "private": true,
   "keywords": [
     "nathanielblumberg",
     "nblumberg",
@@ -14,36 +15,55 @@
   "contributors": [
     "Nathaniel Blumberg <nathanielblumberg@gmail.com> (http://nblumberg.github.io/)"
   ],
+  "main": "src/js/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/nblumberg/nblumberg.github.io"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "webpack",
+    "launch": "./node_modules/grunt/bin/grunt launch",
+    "start": "webpack-dev-server --open",
+    "watch": "webpack --watch"
+  },
   "devDependencies": {
-    "grunt": "1.0.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
     "eslint": "3.19.0",
     "eslint-config-google": "0.7.1",
+    "file-loader": "^4.2.0",
+    "grunt": "^1.0.4",
     "grunt-contrib-clean": "1.0.0",
     "grunt-contrib-connect": "1.0.2",
     "grunt-contrib-copy": "1.0.0",
     "grunt-contrib-csslint": "2.0.0",
-    "grunt-contrib-cssmin": "2.0.0",
-    "grunt-contrib-htmlmin": "2.3.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
     "grunt-contrib-sass": "1.0.0",
     "grunt-contrib-sass-lint": "0.0.4",
     "grunt-contrib-uglify": "2.3.0",
-    "grunt-contrib-watch": "1.0.0",
-    "grunt-open": "0.2.3",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-open": "^0.2.4",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "3.2.0",
     "karma-jasmine": "1.1.0",
-    "load-grunt-tasks": "3.5.2"
+    "load-grunt-tasks": "3.5.2",
+    "mini-css-extract-plugin": "^0.8.0",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.1"
   },
   "engines": {
     "node": "<=6.9.2",
     "npm": "<=3.10.9"
   },
   "dependencies": {
-    "moment": "^2.18.1"
+    "babel-polyfill": "^6.26.0"
   }
 }

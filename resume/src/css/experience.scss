@@ -1,0 +1,236 @@
+@import "variables";
+@import "basic";
+
+// ==================
+// Experience section
+// ==================
+.company-overview {
+  display: table;
+  width: 100%;
+
+  & > * {
+    display: table-cell;
+  }
+  &:last-child {
+    text-align: right;
+  }
+}
+
+.experience, .school {
+  border: 1px solid gray;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  position: relative;
+
+  header {
+    border-collapse: collapse;
+    display: table;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    & > * {
+      display: table-cell;
+      vertical-align: middle;
+      white-space: nowrap;
+      width: 99%;
+    }
+    .logo {
+      max-height: 3rem;
+      padding-right: 1rem;
+      width: 3rem;
+    }
+    .logo[src=""] {
+      display: none;
+    }
+    address {
+      text-align: right;
+    }
+  }
+  .summary {
+    font-style: italic;
+  }
+  .position {
+    & > *:not(header) {
+      margin-left: 2rem;
+    }
+
+    header {
+      display: table;
+      width: 100%;
+
+      & > * {
+        display: table-cell;
+      }
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    .dates {
+      .present {
+        display: none;
+      }
+      .present[data-end=""] {
+        display: inline;
+      }
+    }
+  }
+}
+
+// https://codepen.io/devilskitchen/pen/jkdgK
+.portfolio {
+  display: inline-block;
+  position: relative;
+
+  &:before {
+    @extend .icon;
+    content: "\f11b";
+  }
+
+  .coverflow-container {
+    @extend .slideHidden;
+
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 8px;
+    -webkit-box-reflect: below 0px linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.1) 100%);
+    left: -25%;
+    padding: 0 1rem;
+    position: absolute;
+    top: -1rem;
+    z-index: 1;
+  }
+
+  &:hover, &:active {
+    .coverflow-container {
+      @extend .slideIn;
+    }
+  }
+
+  label {
+    color: #999;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    &:hover, &:active {
+      color: #FFF;
+    }
+  }
+
+  .coverflow-list {
+    padding: 0;
+    transform: perspective(900px);
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective-origin: 100% 30%;
+
+    .coverflow-item {
+      display: inline-block;
+      position: relative;
+      transform: rotateY(45deg);
+      transition: all $transition-time ease;
+
+      &:hover {
+        transform: rotateY(0deg);
+      }
+
+      .album-cover {
+        display: block;
+        height: 150px;
+        margin: 0;
+
+        img {
+          box-shadow: 0 1px 8px rgba(0,0,0,0.9);
+          height: 150px;
+          max-width: 150px;
+        }
+      }
+      .album-name {
+        color: #444;
+        display: block;
+        text-align: center;
+      }
+
+      label {
+        border: none;
+        display: block;
+        padding: 0;
+        text-shadow: none;
+      }
+    }
+  }
+
+  input[type="radio"] {
+    display:none;
+
+    //  &:checked {
+    //    + .coverflow-item {
+    //      transform: rotateY(0deg);
+    //      margin: 0 auto;
+    //      background: #313131;
+    //      transition: all $transition-time ease;
+    //
+    //      img {
+    //        opacity: 1;
+    //      }
+    //      figcaption {
+    //        color: #FFFFFF;
+    //      }
+    //      ~ .coverflow-item {
+    //        transform: rotateY(-45deg);
+    //        background: #515151;
+    //      }
+    //    }
+    //  }
+  }
+}
+
+// HACK: not sure why this particular one doesn't lay out properly
+.Floodgate {
+  .coverflow-list {
+    left: 4.5rem;
+    position: relative;
+  }
+}
+
+
+//@keyframes cover-forward {
+//  0% { transform: rotateY( 45deg ); }
+//  50% { transform: rotateY( 0deg ) translate3d( 60px,0,0 ) scale3d(1.2,1.2,1.2); z-index:999; }
+//  100% { transform: rotateY( 45deg ) translate3d( 0,0,0 ) scale3d(1,1,1); }
+//}
+//
+//@keyframes cover-return {
+//  0% { transform: rotateY( 45deg ); }
+//  100% { transform: rotateY( 0deg ) translate3d( 150px,0,0 ) scale3d(1.2,1.2,1.2); }
+//}
+
+footer {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+}
+
+.src, .src:visited {
+  background: forestgreen;
+  border-radius: $quarterCircleRadius 0 0 0;
+  bottom: 0;
+  color: white;
+  display: block;
+  height: $quarterCircleRadius;
+  padding: 2rem 0.25rem 0.25rem 2rem;
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+  width: $quarterCircleRadius;
+}
+
+@media print {
+  .experience {
+    &.game, &.academic, &.television {
+      display: none !important;
+    }
+  }
+}

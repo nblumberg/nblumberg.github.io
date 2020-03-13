@@ -1,0 +1,127 @@
+@import "variables";
+
+// =========
+// Icon font
+// =========
+@font-face {
+  font-family: "FontAwesome";
+  src: url("#{$fontawesome}eot#{$fontawesomeVersion}");
+  src: url("#{$fontawesome}eot#{$fontawesomeIEFix}") format("embedded-opentype"),
+       url("#{$fontawesome}woff2#{$fontawesomeVersion}") format("woff2"),
+       url("#{$fontawesome}woff#{$fontawesomeVersion}") format("woff"),
+       url("#{$fontawesome}ttf#{$fontawesomeVersion}") format("truetype"),
+       url("#{$fontawesome}svg#{$fontawesomeVersion}#{$fontawesomeRegular}") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// ==========================
+// Abstract, extended classes
+// ==========================
+
+// Icon font element
+.icon {
+  font: normal normal normal 1.5rem/1 FontAwesome;
+  text-decoration: none;
+}
+
+// Skewed polygon shapes
+.wedge {
+  border-radius: 8px;
+  border-style: inset;
+  border-width: 3px;
+  margin: 0;
+  padding: 0.5rem;
+  position: relative;
+  transform: skew(-10deg);
+}
+
+// Animate in (grow from the left)
+.slideHidden {
+  display: block;
+  position: absolute;
+  left: 90%;
+  top: 0;
+  transform: skew(-10deg) scaleX(0);
+  transform-origin: left bottom;
+  transition: all $transition-time ease;
+  z-index: 1;
+}
+.slideIn {
+  display: inline-block;
+  transform: skew(-10deg) scaleX(1);
+}
+
+// ==============================
+// Generic show/hide by attribute
+// ==============================
+*[data-show=""] {
+  display: none !important;
+}
+*[data-hide] {
+  display: none !important;
+}
+*[data-hide=""] {
+  display: unset !important;
+}
+*[data-show-icon=""]:before {
+  display: none !important;
+}
+
+// ============
+// Basic styles
+// ============
+html {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+body > section {
+  margin-top: 1rem;
+}
+
+a {
+  color: lightskyblue;
+}
+a:visited {
+  color: lightsteelblue;
+}
+
+// =====================
+// Generic icon elements
+// =====================
+a:before {
+  @extend .icon;
+  margin-right: 0.25rem;
+}
+a[href^="mailto:"]:before {
+  content: "\f003";
+}
+a[href^="tel:"]:before {
+  content: "\f095";
+}
+
+address {
+  margin-bottom: 0.5rem;
+
+  &:before {
+    @extend .icon;
+    content: "\f2bc";
+  }
+}
+
+.dates {
+  &:before {
+    @extend .icon;
+    content: "\f073";
+  }
+  .short-month, .short-year {
+    display: none;
+  }
+}
+
+.print {
+  &:before {
+    @extend .icon;
+    content: "\f02f";
+  }
+}

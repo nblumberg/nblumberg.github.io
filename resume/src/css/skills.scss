@@ -1,0 +1,164 @@
+@import "variables";
+@import "basic";
+
+// =============
+// Skills styles
+// =============
+.skills {
+  max-width: 75%; // leave room for slide ins
+
+  .skills-prompt {
+    color: grey;
+  }
+
+  .legend {
+    display: table;
+    position: relative;
+
+    & > * {
+      display: table-cell;
+    }
+    h2, .skills {
+      margin: 0;
+      padding-right: 1rem;
+    }
+    .skills {
+      zoom: 0.75;
+    }
+  }
+}
+
+.skillList {
+  .widget {
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      @extend .icon;
+      content: "\f161";
+    }
+    .popup {
+      background-color: white;
+      border-color: black;
+      white-space: nowrap;
+
+      @extend .wedge;
+      @extend .slideHidden;
+
+      top: -1rem;
+
+      & > * {
+        transform: skew(10deg);
+      }
+    }
+    &:hover, &:active {
+      .popup {
+        @extend .slideIn;
+      }
+    }
+  }
+}
+
+.skill {
+  color: black;
+  display: inline-block;
+  margin: 0.25rem 0.25rem 0 0;
+  position: relative;
+
+  &.hidden {
+    display: none;
+  }
+}
+.term, .details {
+  border-color: grey;
+  @extend .wedge;
+}
+.term {
+  border-color: whitesmoke;
+  background: darkgrey;
+  display: inline-block;
+  transition: all $transition-time;
+
+  a {
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+}
+.details {
+  background: lightgray;
+
+  @extend .slideHidden;
+
+  .fullName {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .description {
+    width: 25vw;
+  }
+}
+.expert {
+  background-color: gold;
+}
+.experienced {
+  background-color: silver;
+}
+.familiar {
+  background-color: #cd7f32;
+}
+.skill:hover, .skill:active {
+  .term {
+    //border-color: grey;
+    &.expert {
+      background-color: #a38d1c;
+    }
+    &.experienced {
+      background-color: grey;
+    }
+    &.familiar {
+      background-color: #a06327;
+    }
+  }
+  .details {
+    @extend .slideIn;
+  }
+}
+
+@media print {
+  .skills {
+    max-width: 100%;
+    .widget {
+      display: none;
+    }
+  }
+  .skillList {
+    .widget {
+      display: none;
+    }
+  }
+  .skill {
+    font-family: "Courier New";
+    display: inline-block;
+    margin: 0;
+    &:after {
+      content: ",";
+      margin-right: 0.5em;
+      margin-left: -0.5em;
+    }
+    &:last-child:after {
+      content: "";
+      margin: 0;
+    }
+    .term {
+      background-color: transparent !important;
+      border: 0;
+      padding: 0;
+      transform: none;
+      a {
+        text-decoration: none !important;
+      }
+    }
+  }
+}

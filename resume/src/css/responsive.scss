@@ -1,0 +1,64 @@
+// ==============================
+// Responsive design styles
+// ==============================
+@media screen and (max-width: 835px) {
+  .me {
+    display: block;
+    width: 100%;
+
+    .overview {
+      display: block;
+    }
+    & > * {
+      display: block;
+      width: 100%;
+
+      address > * {
+        display: inline;
+      }
+
+      &:first-child {
+        width: 100%;
+      }
+      &:last-child {
+        text-align: left;
+        width: 100%;
+      }
+    }
+  }
+
+  address {
+    & > * {
+      display: none;
+    }
+  }
+  .dates {
+    .month, .year {
+      display: none;
+    }
+    .short-month, .short-year {
+      display: inline;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .dates {
+    & > * {
+      display: none;
+    }
+  }
+  .present {
+    display: none !important;
+  }
+}
+
+@media print {
+  .skillList {
+    .widget {
+      &:before {
+        content: "";
+      }
+    }
+  }
+}

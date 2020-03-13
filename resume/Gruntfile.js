@@ -129,9 +129,9 @@ module.exports = (grunt) => {
             scripts += `\n    <script src="${file}"></script>`;
         });
         let html = grunt.file.read(src);
-        html = html.replace("<!--NAMESPACE-->", `\n    <script src="js/namespace.js"></script>`);
+        html = html.replace("<!--NAMESPACE-->", `\n    <script src="src/js/namespace.js"></script>`);
         html = html.replace("<!--SCRIPTS-->", scripts);
-        html = html.replace("<!--INDEX-->", `\n    <script src="js/index.js"></script>`);
+        html = html.replace("<!--INDEX-->", `\n    <script src="src/js/index.js"></script>`);
         src = "index.html";
         grunt.file.write(src, html);
     });

@@ -1,0 +1,38 @@
+// ===========
+// Top section
+// ===========
+.me {
+  display: table;
+  width: 100%;
+
+  & > * {
+    display: table-cell;
+
+    &:first-child {
+      width: 70%;
+    }
+    &:last-child {
+      text-align: right;
+      width: 30%;
+    }
+  }
+}
+
+.contact {
+  a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.overview {
+  font-style: italic;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+@media print {
+  .print, .skills-prompt, .src {
+    display: none !important;
+  }
+}

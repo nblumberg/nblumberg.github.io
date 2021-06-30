@@ -3,6 +3,8 @@ const data = require("../data/experience.json");
 const skills = require("./skills.js");
 const formatDate = require("./formatDate.js");
 
+const LIMIT_EXPERIENCE = 12;
+
 /**
  * Replace string start/end dates with maps containing their component values for HTML rendering
  * @param {Object} position {{ dates: { start: string[, end: string] } }}
@@ -49,7 +51,7 @@ const mapPosition = (data) => {
         position.dates = Object.assign({}, data.dates);
     }
     const recentDate = moment.max(moment(position.dates.start || 0), moment(position.dates.end || 0));
-    if (moment.duration(moment().diff(recentDate)).asYears() > 20) {
+    if (moment.duration(moment().diff(recentDate)).asYears() > LIMIT_EXPERIENCE) {
         // Exclude anything > 20 years old
         return null;
     }

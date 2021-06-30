@@ -414,7 +414,7 @@
         "priority": -1,
         "responsibilities": [
           {
-            "description": "Designed and implemented a framework to, by configuration, easily spin up a series of different initial product experiences and homepages for new customers targeting specific market segments. Implemented A/B testing a tracking withing the different experiences.",
+            "description": "Designed and implemented a framework to, by configuration, set up a system of user action triggers and prompts in product that launch step-by-step guided tours through specific product workflows",
             "skills": [
               "dotCMS",
               "ehcache",
@@ -438,7 +438,7 @@
         "priority": -1,
         "responsibilities": [
           {
-            "description": "Designed and implemented a framework to, by configuration, set up a system of user action triggers in product that launch step-by-step guided tours through specific product workflows",
+            "description": "Designed and implemented a framework for marketing teams to display targeted messaging to specific user segments in product",
             "skills": [
               "dotCMS",
               "Jasmine",

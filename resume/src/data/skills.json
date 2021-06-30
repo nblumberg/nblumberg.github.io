@@ -556,6 +556,13 @@
     "description": "A standard for connecting a Java application and most database management systems"
   },
   {
+    "shortName": "Jenkins",
+    "fullName": "Jenkins",
+    "website": "https://www.jenkins.io/",
+    "description": "The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.",
+    "experienceLevel": "experienced"
+  },
+  {
     "shortName": "Jest",
     "fullName": "Jest",
     "website": "https://jestjs.io/",
@@ -653,6 +660,13 @@
     "website": "https://aws.amazon.com/lambda/",
     "description": "AWS' serverless code",
     "experienceLevel": "expert"
+  },
+  {
+    "shortName": "Lerna",
+    "fullName": "Lerna",
+    "website": "https://lerna.js.org/",
+    "description": "A tool for managing JavaScript projects with multiple packages.",
+    "experienceLevel": "experienced"
   },
   {
     "shortName": "localStorage",
@@ -917,6 +931,14 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "Tiles",
+    "fullName": "Apache Tiles",
+    "website": "https://tiles.apache.org/",
+    "company": "Apache",
+    "description": "A free open-sourced templating framework for Java applications",
+    "experienceLevel": "familiar"
+  },
+  {
     "shortName": "Trello",
     "fullName": "Atlassian Trello",
     "company": "Atlassian",
@@ -980,7 +1002,7 @@
     "fullName": "Webpack",
     "company": "open source",
     "description": "A static asset management and bundling framework",
-    "experienceLevel": "familiar",
+    "experienceLevel": "experienced",
     "website": "https://webpack.js.org/"
   },
   {

@@ -1,6 +1,6 @@
 [
   {
-    "name": "Endurance International Group, Inc.",
+    "name": "Constant Contact",
     "address": {
       "number": "1601",
       "street": "Trapelo Road",
@@ -9,18 +9,21 @@
       "zipcode": "02451",
       "country": "USA"
     },
-    "logo": "https://www.endurance.com/wp-content/uploads/2016/08/endurance-site-icon.png",
+    "logo": "https://blogs.constantcontact.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-17-at-10.25.22-AM-600x532.png",
     "website": "http://www.constantcontact.com",
-    "summary": "(Acquired Constant Contact in 2016)",
+    "summary": "(formerly Endurance International Group, Inc., acquired Constant Contact in 2016)",
     "type": "software",
     "positions": [
       {
-        "name": "Advisory Software Engineer",
+        "name": "Advisory/Senior Principal Software Engineer",
         "dates": {
           "start": "08/01/2016"
         },
         "summary": "Most senior development role within the organization. Responsibilities include those of prior positions in addition to the following:",
         "responsibilities": [
+          {
+            "description": "Built and trained four separate teams from the ground up. Starting with almost exclusively junior engineers, I shepherded them through their technical and engineering growth until they were highly performing and efficient teams. All of this was accomplished during a periods of engineering and product management leadership turmoil."
+          },
           {
             "description": "Serve as technical lead for several areas of the company code base."
           },
@@ -31,135 +34,10 @@
             "description": "Spearhead technological solutions to improve application monitoring, performance, code coverage, automated testing, security, and development velocity."
           },
           {
-            "description": "Act as a member of the technical council for the CTO, submitting and steering large-scale initiatives for the engineering organization."
-          },
-          {
-            "description": "Formed and trained three separate high-performing teams from very junior engineers, mentored some up to senior levels."
+            "description": "Act as a member of the architectural group, submitting and steering large-scale initiatives for the engineering organization."
           },
           {
             "description": "Promote technical education, documentation, and best practices across the engineering organization."
-          },
-          {
-            "description": "Helped to design a system surfacing recommendations to users. Recommendations can be submitted by multiple applications, sourced from the company's data lake, fed through a complex event processing framework, stored in a framework that resolves conflicts from different sources, and presents a unified API for listening to real time recommendation events or pulling events via a REST API.",
-            "skills": [
-              "FlinkCEP",
-              "Firehose",
-              "Kinesis",
-              "S3",
-              "Aurora",
-              "API Gateway",
-              "JSON"
-            ]
-          },
-          {
-            "description": "Designed and implemented a calendar view of customer campaigns to enable date-based-planning and searching.",
-            "skills": [
-              "Angular",
-              "API Gateway",
-              "CloudFormation",
-              "CodePipeline",
-              "DynamoDB",
-              "IAM",
-              "Jasmine",
-              "Jenkins",
-              "Jest",
-              "Karma",
-              "Lambda",
-              "React",
-              "S3",
-              "Spring"
-            ]
-          },
-          {
-            "description": "Designed and implemented a series of JavaScript libraries centralizing the listing and display of customer campaigns and associating/implementing customer actions against those campaigns.",
-            "skills": [
-              "Grunt",
-              "JavaScript",
-              "Jest",
-              "npm",
-              "nvm",
-              "React",
-              "Webpack"
-            ]
-          },
-          {
-            "description": "Tested users on log in for current or past suspicious or malfeasant behavior using e-hawk",
-            "skills": [
-              "e-hawk",
-              "JavaScript",
-              "AJAX",
-              "JSONP",
-              "CORS",
-              "HTML",
-              "jasmine",
-              "istanbul",
-              "karma",
-              "grunt",
-              "npm",
-              "nvm",
-              "RabbitMQ",
-              "Spring",
-              "CXF",
-              "Akamai"
-            ]
-          },
-          {
-            "description": "Designed and implemented a system supporting the delivery and display of different styles of targeted messaging across the entire product.",
-            "skills": [
-              "Jasmine",
-              "JavaScript",
-              "Jenkins",
-              "Karma",
-              "Tealium",
-              "Optimizely"
-            ]
-          },
-          {
-            "description": "Designed and implemented a framework to, by configuration, easily spin up a series of different initial product experiences and homepages for new customers targeting specific market segments. Implemented A/B testing a tracking withing the different experiences.",
-            "skills": [
-              "Angular",
-              "Jasmine",
-              "Jenkins",
-              "JSON",
-              "Karma",
-              "Spring"
-            ]
-          },
-          {
-            "description": "Designed and implemented a framework to, by configuration, set up a system of user action triggers in product that launch step-by-step guided tours through specific product workflows",
-            "skills": [
-              "dotCMS",
-              "Jasmine",
-              "JavaScript",
-              "localStorage",
-              "Karma",
-              "Spring"
-            ]
-          },
-          {
-            "description": "Created cloud-based infrastructure and UI for campaign search. Aggregated all user-created content from disparate microservices, indexed it, and provided an API for running search queries against it. Polled for updates to keep indexed data current. Supported gradual roll out of the feature to the user base along with tools for managing and monitoring data processing.",
-            "skills": [
-              "Angular",
-              "CloudFormation",
-              "CodePipeline",
-              "ElasticSearch",
-              "Jenkins",
-              "IAM",
-              "Lambda",
-              "Lucene",
-              "New Relic",
-              "S3"
-            ]
-          },
-          {
-            "description": "Created a Facebook and Instagram integration presenting background social media activity on those platforms (e.g. posts, comments, replies, mentions from other users) as an interactive inbox.",
-            "skills": [
-              "Facebook Graph API",
-              "Facebook webhooks",
-              "Jest",
-              "React",
-              "Spring"
-            ]
           }
         ]
       },
@@ -182,7 +60,356 @@
           },
           {
             "description": "Act as mentor to other team members."
-          },
+          }
+        ]
+      },
+      {
+        "name": "Senior Software Engineer II",
+        "dates": {
+          "start": "04/01/2013",
+          "end": "04/01/2014"
+        },
+        "summary": "Expert in all areas of team responsibility.",
+        "responsibilities": [
+        ]
+      },
+      {
+        "name": "Senior Software Engineer",
+        "dates": {
+          "start": "04/01/2011",
+          "end": "04/01/2013"
+        },
+        "summary": "Expert in all areas of team responsibility.",
+        "responsibilities": [
+        ]
+      },
+
+      {
+        "name": "Project: universal search",
+        "dates": {
+          "start": "01/01/2020"
+        },
+        "responsibilities": [
+          {
+            "description": "Aggregate and index campaign, contact, and template data to provide a search service.",
+            "skills": [
+              "API Gateway",
+              "CloudFormation",
+              "CodePipeline",
+              "ElasticSearch",
+              "git",
+              "Java",
+              "Jenkins",
+              "Lambda"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: iCal integration",
+        "dates": {
+          "start": "12/01/2019",
+          "end": "06/01/2021"
+        },
+        "responsibilities": [
+          {
+            "description": "Publish marketing campaign scheduling data via iCal standard for integration with external calendar clients (e.g. Apple, Google, Outlook)",
+            "skills": [
+              "API Gateway",
+              "CloudFormation",
+              "CodePipeline",
+              "DynamoDB",
+              "git",
+              "IAM",
+              "Jenkins",
+              "Lambda",
+              "S3",
+              "SQS"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: recommendations",
+        "dates": {
+          "start": "01/01/2020",
+          "end": "10/01/2020"
+        },
+        "responsibilities": [
+          {
+            "description": "Helped to design a system surfacing recommendations to users. Recommendations can be submitted by multiple applications, sourced from the company's data lake, fed through a complex event processing framework, stored in a framework that resolves conflicts from different sources, and presents a unified API for listening to real time recommendation events or pulling events via a REST API.",
+            "skills": [
+              "API Gateway",
+              "Aurora",
+              "Firehose",
+              "FlinkCEP",
+              "Kinesis",
+              "JSON",
+              "S3"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: campaign search",
+        "dates": {
+          "start": "09/01/2018",
+          "end": "01/01/2020"
+        },
+        "responsibilities": [
+          {
+            "description": "Created cloud-based infrastructure and UI for campaign search. Aggregated all user-created content from disparate microservices, indexed it, and provided an API for running search queries against it. Polled for updates to keep indexed data current. Supported gradual roll out of the feature to the user base along with tools for managing and monitoring data processing.",
+            "skills": [
+              "Angular",
+              "CloudFormation",
+              "CodePipeline",
+              "git",
+              "IAM",
+              "Java",
+              "Jenkins",
+              "Lambda",
+              "lucene",
+              "New Relic",
+              "S3"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: marketing calendar v2",
+        "dates": {
+          "start": "01/01/2019"
+        },
+        "responsibilities": [
+          {
+            "description": "Reimplemented calendar view of customer campaigns to enable date-based-planning and searching.",
+            "skills": [
+              "API Gateway",
+              "Babel",
+              "CloudFormation",
+              "CodePipeline",
+              "DynamoDB",
+              "eslint",
+              "IAM",
+              "JavaScript",
+              "Jenkins",
+              "JSX",
+              "Lambda",
+              "Lerna",
+              "npm",
+              "nvm",
+              "React",
+              "SASS",
+              "Webpack"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: React refactor",
+        "dates": {
+          "start": "01/01/2019"
+        },
+        "responsibilities": [
+          {
+            "description": "Reimplement major portions of the UI using React. Reorganize front end code into lerna repos and break common functionality into reusable npm libraries shared across the product.",
+            "skills": [
+              "Babel",
+              "eslint",
+              "JavaScript",
+              "Jenkins",
+              "Jest",
+              "JSX",
+              "Lerna",
+              "npm",
+              "nvm",
+              "React",
+              "SASS",
+              "Webpack"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: campaign libraries",
+        "dates": {
+          "start": "01/01/2019"
+        },
+        "responsibilities": [
+          {
+            "description": "Designed and implemented a series of JavaScript libraries centralizing the listing and display of customer campaigns and associating/implementing customer actions against those campaigns.",
+            "skills": [
+              "Babel",
+              "eslint",
+              "Grunt",
+              "JavaScript",
+              "Jenkins",
+              "Jest",
+              "JSX",
+              "Lerna",
+              "npm",
+              "nvm",
+              "React",
+              "SASS",
+              "Webpack"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: social media integrations",
+        "dates": {
+          "start": "03/01/2018",
+          "end": "10/01/2018"
+        },
+        "responsibilities": [
+          {
+            "description": "Created a Facebook and Instagram integration presenting background social media activity on those platforms (e.g. posts, comments, replies, mentions from other users) as an interactive inbox.",
+            "skills": [
+              "Facebook Graph API",
+              "Facebook webhooks",
+              "Jest",
+              "React",
+              "Spring"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: front end design system",
+        "dates": {
+          "start": "01/01/2018"
+        },
+        "responsibilities": [
+          {
+            "description": "Helped create and organize adoption of a new Bootstrap-convention and React based design system to centralize the product display layer to allow for rebranding and white-labeling at build time.",
+            "skills": [
+              "Babel",
+              "eslint",
+              "JavaScript",
+              "Jest",
+              "JSX",
+              "npm",
+              "React",
+              "SASS",
+              "Webpack"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: marketing calendar",
+        "dates": {
+          "start": "01/01/2017"
+        },
+        "responsibilities": [
+          {
+            "description": "Designed and implemented a calendar view of customer campaigns to enable date-based-planning and searching.",
+            "skills": [
+              "Angular",
+              "Jasmine",
+              "Jenkins",
+              "Karma",
+              "Spring"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: eHawk validation",
+        "dates": {
+          "start": "01/01/2016",
+          "end": "01/01/2017"
+        },
+        "responsibilities": [
+          {
+            "description": "Tested users on log in for current or past suspicious or malfeasant behavior using e-hawk",
+            "skills": [
+              "e-hawk",
+              "JavaScript",
+              "AJAX",
+              "JSONP",
+              "CORS",
+              "HTML",
+              "jasmine",
+              "istanbul",
+              "karma",
+              "grunt",
+              "npm",
+              "nvm",
+              "RabbitMQ",
+              "Spring",
+              "CXF",
+              "Akamai"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: homepages",
+        "dates": {
+          "start": "01/01/2016",
+          "end": "12/01/2016"
+        },
+        "responsibilities": [
+          {
+            "description": "Designed and implemented a framework to, by configuration, easily spin up a series of different initial product experiences and homepages for new customers targeting specific market segments. Implemented A/B testing a tracking withing the different experiences.",
+            "skills": [
+              "Angular",
+              "Jasmine",
+              "Jenkins",
+              "JSON",
+              "Karma",
+              "Spring"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: guided tours",
+        "dates": {
+          "start": "06/01/2016",
+          "end": "07/01/2016"
+        },
+        "responsibilities": [
+          {
+            "description": "Designed and implemented a framework to, by configuration, easily spin up a series of different initial product experiences and homepages for new customers targeting specific market segments. Implemented A/B testing a tracking withing the different experiences.",
+            "skills": [
+              "Angular",
+              "Jasmine",
+              "Jenkins",
+              "JSON",
+              "Karma",
+              "Spring"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: in product messaging",
+        "dates": {
+          "start": "01/01/2015"
+        },
+        "responsibilities": [
+          {
+            "description": "Designed and implemented a framework to, by configuration, set up a system of user action triggers in product that launch step-by-step guided tours through specific product workflows",
+            "skills": [
+              "dotCMS",
+              "Jasmine",
+              "JavaScript",
+              "localStorage",
+              "Karma",
+              "Spring"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: campaigns pages",
+        "dates": {
+          "start": "01/01/2015"
+        },
+        "responsibilities": [
           {
             "description": "Created new home page and listing pages unifying the separate products (email, events, social campaign, survey, etc.) into a single interface. Aggregated data from almost every microservice at the company into a single, high-performing, mobile-responsive page view. Helped lead disparate teams to a common data model. Created entry points into the wizard flows for each product. Implemented an automated onboarding checklist for new users. Supported numerous user experience A/B tests.",
             "skills": [
@@ -219,45 +446,14 @@
               "CloudFlare",
               "Akamai"
             ]
-          },
-          {
-            "description": "Architected and implemented a mobile responsive \"site chrome\" (navigation, messaging, account, and company data UI elements that can vary by account) as a set of static assets served from a CDN that could be self-configured and injected on every page without interfering with page content or requiring its direct involvement. Build process supported creating various internationalized versions of the site chrome. Supported targeted marketing and billing messaging.",
-            "skills": [
-              "JavaScript",
-              "Handlebars",
-              "AJAX",
-              "HTML",
-              "CSS",
-              "SASS",
-              "jasmine",
-              "istanbul",
-              "karma",
-              "grunt",
-              "npm",
-              "nvm",
-              "jQuery",
-              "localStorage",
-              "postMessage",
-              "Adobe Target",
-              "dotCMS",
-              "Akamai"
-            ]
-          },
-          {
-            "description": "Implemented JavaScript frameworks and APIs for capturing the following data from the browser and proxying them to the following services: <ol><li>page performance &rarr; StatsD/Graphite/Grafana dashboards</li><li>page view and user interaction event tracking &rarr; Adobe Analytics</li><li>RUM data &rarr; SOASTA mPulse</li></ol> Supported passive page view and user interaction event tracking, allowing developers to simply annotate DOM elements with data attributes to achieve click tracking.",
-            "skills": [
-              "JavaScript", "Tealium", "mPulse", "Adobe Analytics", "StatsD", "Graphite", "Grafana", "AJAX", "JSON", "CORS", "JSONP", "Java", "Spring", "CXF", "grunt", "npm", "nvm", "jasmine", "istanbul", "karma"
-            ]
           }
         ]
       },
       {
-        "name": "Senior Software Engineer II",
+        "name": "Project: distributed UI framework",
         "dates": {
-          "start": "04/01/2013",
-          "end": "04/01/2014"
+          "start": "01/01/2012"
         },
-        "summary": "Expert in all areas of team responsibility.",
         "responsibilities": [
           {
             "description": "Architected and implemented a configuration and iframe based web portlet framework to allow the company to break up the single \"monolithic\" application into separate teams, repositories, technology stacks, and deploy schedules while maintaining a unified UI. Architected and implemented an accompanying JavaScript API that was loaded and consumed in all applications and windows to provide common, inter-application and cross-domain functionality and communication. Supported in-browser overrides of configuration data for development and testing against locally running applications.",
@@ -292,7 +488,16 @@
               "JSONP",
               "CloudFlare"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Project: email wizard v2",
+        "dates": {
+          "start": "04/01/2011",
+          "end": "01/01/2012"
+        },
+        "responsibilities": [
           {
             "description": "Re-implemented the email creation and management wizard flow again as a separate Spring application and microservice.",
             "skills": [
@@ -302,19 +507,27 @@
         ]
       },
       {
-        "name": "Senior Software Engineer",
+        "name": "Project: email wizard",
         "dates": {
-          "start": "04/01/2011",
-          "end": "04/01/2013"
+          "start": "04/01/2012",
+          "end": "01/01/2013"
         },
-        "summary": "Expert in all areas of team responsibility.",
         "responsibilities": [
           {
             "description": "Re-implemented the email creation and management wizard flow using Spring POST-back form transitions.",
             "skills": [
               "JavaScript", "jQuery", "Java", "JSP", "Spring"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Project: stock image management system",
+        "dates": {
+          "start": "04/01/2011",
+          "end": "01/01/2012"
+        },
+        "responsibilities": [
           {
             "description": "Streamlined the management of stock images available to customers.",
             "skills": [

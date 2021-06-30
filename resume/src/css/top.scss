@@ -2,18 +2,20 @@
 // Top section
 // ===========
 .me {
-  display: table;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 
   & > * {
-    display: table-cell;
-
     &:first-child {
-      width: 70%;
+      flex-basis: 70%;
     }
     &:last-child {
       text-align: right;
-      width: 30%;
+      flex-basis: 30%;
     }
   }
 }
@@ -31,7 +33,7 @@
   margin-bottom: 0.5rem;
 }
 
-@media only screen and (max-device-width: 900px) {
+@mixin stacking-contact {
   .me {
     display: block;
     width: 100%;
@@ -71,8 +73,17 @@
   }
 }
 
+@media screen and (max-device-width: 900px) {
+  @include stacking-contact;
+}
+
 @media print {
+  a {
+    text-decoration: none;
+  }
   .print, .skills-prompt, .src {
     display: none !important;
   }
+
+  @include stacking-contact;
 }

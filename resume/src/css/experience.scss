@@ -23,27 +23,33 @@
   position: relative;
 
   header {
-    border-collapse: collapse;
-    display: table;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+
     margin-bottom: 1rem;
     width: 100%;
 
     & > * {
-      display: table-cell;
-      vertical-align: middle;
       white-space: nowrap;
-      width: 99%;
+      
+      &:last-child {
+        flex-grow: 8;
+        text-align: right;
+      }
     }
     .logo {
+      flex-grow: 0;
+      flex-shrink: 0;
+
       max-height: 3rem;
       padding-right: 1rem;
       width: 3rem;
     }
     .logo[src=""] {
       display: none;
-    }
-    address {
-      text-align: right;
     }
   }
   .summary {
@@ -55,13 +61,19 @@
     }
 
     header {
-      display: table;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
       width: 100%;
 
       & > * {
-        display: table-cell;
+        flex-grow: 0;
+        flex-shrink: 0;
       }
       &:last-child {
+        flex-grow: 8;
         text-align: right;
       }
     }

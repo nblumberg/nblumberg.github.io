@@ -5,8 +5,6 @@
 // Skills styles
 // =============
 .skills {
-  max-width: 75%; // leave room for slide ins
-
   .skills-prompt {
     color: grey;
   }
@@ -123,6 +121,12 @@
   }
   .details {
     @extend .slideIn;
+  }
+}
+
+@media only screen {
+  .skillList {
+    max-width: 75%; // leave room for slide ins
   }
 }
 

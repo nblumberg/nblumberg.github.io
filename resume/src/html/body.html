@@ -6,7 +6,10 @@
     <div>
         <nb-placeholder data-key="me">address</nb-placeholder>
         <nb-placeholder data-key="me">contact</nb-placeholder>
-        <a class="print" href="javascript:void(0);" onclick="window.print(); return false;">Print/Save as PDF</a>
+        <div class="actions">
+            <a class="mode" href="javascript:void(0);" onclick="document.body.classList.toggle('dark'); return false;">Toggle dark mode</a>
+            <a class="print" href="javascript:void(0);" onclick="window.print(); return false;">Print/Save as PDF</a>
+        </div>
     </div>
 </header>
 <section class="skills">

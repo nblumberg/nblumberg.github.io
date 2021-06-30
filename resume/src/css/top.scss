@@ -20,7 +20,7 @@
   }
 }
 
-.contact {
+.actions, .contact {
   a {
     display: block;
     margin-bottom: 0.5rem;
@@ -54,20 +54,23 @@
       }
     }
 
-    address, .contact a {
+    address, .contact a, .actions a {
       display: inline;
     }
 
-    .contact {
+    .contact, .actions {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-around;
       align-items: center;
+    }
+
+    .contact {
       width: 66%;
     }
 
-    .print {
+    .actions {
       width: 100%;
     }
   }
@@ -81,7 +84,7 @@
   a {
     text-decoration: none;
   }
-  .print, .skills-prompt, .src {
+  .actions, .skills-prompt, .src {
     display: none !important;
   }
 

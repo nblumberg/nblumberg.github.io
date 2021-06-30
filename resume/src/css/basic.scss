@@ -86,6 +86,13 @@ a:visited {
   color: lightsteelblue;
 }
 
+@media only screen {
+  body.dark {
+    background-color: black;
+    color: white;
+  }
+}
+
 // =====================
 // Generic icon elements
 // =====================
@@ -116,6 +123,13 @@ address {
   }
   .short-month, .short-year {
     display: none;
+  }
+}
+
+.mode {
+  &:before {
+    @extend .icon;
+    content: "\f042";
   }
 }
 

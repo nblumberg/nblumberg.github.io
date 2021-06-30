@@ -31,6 +31,46 @@
   margin-bottom: 0.5rem;
 }
 
+@media only screen and (max-device-width: 900px) {
+  .me {
+    display: block;
+    width: 100%;
+
+    & > * {
+      display: block;
+      &:first-child {
+        width: 100%;
+      }
+      &:last-child {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    address, .contact a {
+      display: inline;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 66%;
+    }
+
+    .print {
+      width: 100%;
+    }
+  }
+}
+
 @media print {
   .print, .skills-prompt, .src {
     display: none !important;

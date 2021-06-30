@@ -3,7 +3,9 @@ const data = require("../data/experience.json");
 const skills = require("./skills.js");
 const formatDate = require("./formatDate.js");
 
-const LIMIT_EXPERIENCE = parseInt((new URLSearchParams(window.location.search)).get("limit"), 10) || 12;
+const URL_PARAMS = new URLSearchParams(window.location.search);
+const LIMIT_EXPERIENCE = parseInt(URL_PARAMS.get("limit"), 10) || 12;
+const LIMIT_PRIORITY = parseInt(URL_PARAMS.get("priority"), 10) || 0;
 
 /**
  * Replace string start/end dates with maps containing their component values for HTML rendering
@@ -46,7 +48,7 @@ const mapResponsibility = (data) => {
  * @returns {{ name: string, dates: { start: see formatDate[, end: see formatDate] }, summary: string, responsibilities: [ see mapResponsibility, ... ] }}
  */
 const mapPosition = (data) => {
-    const position = Object.assign({}, data);
+    const position = Object.assign({ priority: 1 }, data);
     if (data.dates) {
         position.dates = Object.assign({}, data.dates);
     }
@@ -86,7 +88,8 @@ const mapJob = (data) => {
         job.address = Object.assign({}, data.address);
     }
     job.positions = (data.positions || []).map(mapPosition);
-    job.positions = job.positions.filter(position => position !== null);
+    // Exclude anything limited by URL parameter for a leaner resume
+    job.positions = job.positions.filter(position => position !== null && position.priority >= LIMIT_PRIORITY);
     if (!job.positions.length) {
         return null;
     }

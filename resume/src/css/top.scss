@@ -33,6 +33,10 @@
   margin-bottom: 0.5rem;
 }
 
+.online {
+  display: none;
+}
+
 @mixin stacking-contact {
   .me {
     display: block;
@@ -87,6 +91,11 @@
   .actions, .skills-prompt, .src {
     display: none !important;
   }
+  .online {
+    display: block;
+    text-align: center;
+  }
+
 
   @include stacking-contact;
 }

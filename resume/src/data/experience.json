@@ -89,6 +89,7 @@
         "dates": {
           "start": "01/01/2020"
         },
+        "priority": 0,
         "responsibilities": [
           {
             "description": "Aggregate and index campaign, contact, and template data to provide a search service.",
@@ -111,6 +112,7 @@
           "start": "12/01/2019",
           "end": "06/01/2021"
         },
+        "priority": 1,
         "responsibilities": [
           {
             "description": "Publish marketing campaign scheduling data via iCal standard for integration with external calendar clients (e.g. Apple, Google, Outlook)",
@@ -135,6 +137,7 @@
           "start": "01/01/2020",
           "end": "10/01/2020"
         },
+        "priority": 0,
         "responsibilities": [
           {
             "description": "Helped to design a system surfacing recommendations to users. Recommendations can be submitted by multiple applications, sourced from the company's data lake, fed through a complex event processing framework, stored in a framework that resolves conflicts from different sources, and presents a unified API for listening to real time recommendation events or pulling events via a REST API.",
@@ -156,6 +159,7 @@
           "start": "09/01/2018",
           "end": "01/01/2020"
         },
+        "priority": -1,
         "responsibilities": [
           {
             "description": "Created cloud-based infrastructure and UI for campaign search. Aggregated all user-created content from disparate microservices, indexed it, and provided an API for running search queries against it. Polled for updates to keep indexed data current. Supported gradual roll out of the feature to the user base along with tools for managing and monitoring data processing.",
@@ -180,6 +184,7 @@
         "dates": {
           "start": "01/01/2019"
         },
+        "priority": 0,
         "responsibilities": [
           {
             "description": "Reimplemented calendar view of customer campaigns to enable date-based-planning and searching.",
@@ -211,6 +216,7 @@
         "dates": {
           "start": "01/01/2019"
         },
+        "priority": -1,
         "responsibilities": [
           {
             "description": "Reimplement major portions of the UI using React. Reorganize front end code into lerna repos and break common functionality into reusable npm libraries shared across the product.",
@@ -236,6 +242,7 @@
         "dates": {
           "start": "01/01/2019"
         },
+        "priority": 1,
         "responsibilities": [
           {
             "description": "Designed and implemented a series of JavaScript libraries centralizing the listing and display of customer campaigns and associating/implementing customer actions against those campaigns.",
@@ -264,6 +271,7 @@
           "start": "03/01/2018",
           "end": "10/01/2018"
         },
+        "priority": 0,
         "responsibilities": [
           {
             "description": "Created a Facebook and Instagram integration presenting background social media activity on those platforms (e.g. posts, comments, replies, mentions from other users) as an interactive inbox.",
@@ -282,6 +290,7 @@
         "dates": {
           "start": "01/01/2018"
         },
+        "priority": 1,
         "responsibilities": [
           {
             "description": "Helped create and organize adoption of a new Bootstrap-convention and React based design system to centralize the product display layer to allow for rebranding and white-labeling at build time.",
@@ -306,6 +315,7 @@
         "dates": {
           "start": "01/01/2017"
         },
+        "priority": -1,
         "responsibilities": [
           {
             "description": "Designed and implemented a calendar view of customer campaigns to enable date-based-planning and searching.",
@@ -325,6 +335,7 @@
           "start": "01/01/2016",
           "end": "01/01/2017"
         },
+        "priority": -1,
         "responsibilities": [
           {
             "description": "Tested users on log in for current or past suspicious or malfeasant behavior using e-hawk",
@@ -356,6 +367,7 @@
           "start": "01/01/2016",
           "end": "12/01/2016"
         },
+        "priority": -1,
         "responsibilities": [
           {
             "description": "Designed and implemented several A/B tested variations of post-sign up questionnaires segmenting users into profiles, and providing different \"first steps\" guidance by profile.",
@@ -377,6 +389,7 @@
           "start": "01/01/2016",
           "end": "12/01/2016"
         },
+        "priority": -1,
         "responsibilities": [
           {
             "description": "Designed and implemented a framework to, by configuration, easily spin up a series of different initial product experiences and homepages for new customers targeting specific market segments. Implemented A/B testing a tracking withing the different experiences.",
@@ -398,6 +411,7 @@
           "start": "06/01/2016",
           "end": "07/01/2016"
         },
+        "priority": -1,
         "responsibilities": [
           {
             "description": "Designed and implemented a framework to, by configuration, easily spin up a series of different initial product experiences and homepages for new customers targeting specific market segments. Implemented A/B testing a tracking withing the different experiences.",
@@ -421,6 +435,7 @@
         "dates": {
           "start": "01/01/2015"
         },
+        "priority": -1,
         "responsibilities": [
           {
             "description": "Designed and implemented a framework to, by configuration, set up a system of user action triggers in product that launch step-by-step guided tours through specific product workflows",
@@ -443,6 +458,7 @@
         "dates": {
           "start": "01/01/2015"
         },
+        "priority": 1,
         "responsibilities": [
           {
             "description": "Created new home page and listing pages unifying the separate products (email, events, social campaign, survey, etc.) into a single interface. Aggregated data from almost every microservice at the company into a single, high-performing, mobile-responsive page view. Helped lead disparate teams to a common data model. Created entry points into the wizard flows for each product. Implemented an automated onboarding checklist for new users. Supported numerous user experience A/B tests.",
@@ -488,6 +504,7 @@
         "dates": {
           "start": "01/01/2012"
         },
+        "priority": 1,
         "responsibilities": [
           {
             "description": "Architected and implemented a configuration and iframe based web portlet framework to allow the company to break up the single \"monolithic\" application into separate teams, repositories, technology stacks, and deploy schedules while maintaining a unified UI. Architected and implemented an accompanying JavaScript API that was loaded and consumed in all applications and windows to provide common, inter-application and cross-domain functionality and communication. Supported in-browser overrides of configuration data for development and testing against locally running applications.",
@@ -532,6 +549,7 @@
           "start": "04/01/2011",
           "end": "01/01/2012"
         },
+        "priority": -1,
         "responsibilities": [
           {
             "description": "Re-implemented the email creation and management wizard flow again as a separate Spring application and microservice.",
@@ -547,6 +565,7 @@
           "start": "04/01/2012",
           "end": "01/01/2013"
         },
+        "priority": -1,
         "responsibilities": [
           {
             "description": "Re-implemented the email creation and management wizard flow using Spring POST-back form transitions.",
@@ -562,6 +581,7 @@
           "start": "04/01/2011",
           "end": "01/01/2012"
         },
+        "priority": -1,
         "responsibilities": [
           {
             "description": "Streamlined the management of stock images available to customers.",

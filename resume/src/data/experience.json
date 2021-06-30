@@ -189,10 +189,11 @@
               "CloudFormation",
               "CodePipeline",
               "DynamoDB",
-              "eslint",
+              "ESLint",
               "IAM",
               "JavaScript",
               "Jenkins",
+              "JSDoc",
               "JSX",
               "Lambda",
               "Lerna",
@@ -215,7 +216,7 @@
             "description": "Reimplement major portions of the UI using React. Reorganize front end code into lerna repos and break common functionality into reusable npm libraries shared across the product.",
             "skills": [
               "Babel",
-              "eslint",
+              "ESLint",
               "JavaScript",
               "Jenkins",
               "Jest",
@@ -240,11 +241,12 @@
             "description": "Designed and implemented a series of JavaScript libraries centralizing the listing and display of customer campaigns and associating/implementing customer actions against those campaigns.",
             "skills": [
               "Babel",
-              "eslint",
+              "ESLint",
               "Grunt",
               "JavaScript",
               "Jenkins",
               "Jest",
+              "JSDoc",
               "JSX",
               "Lerna",
               "npm",
@@ -285,9 +287,11 @@
             "description": "Helped create and organize adoption of a new Bootstrap-convention and React based design system to centralize the product display layer to allow for rebranding and white-labeling at build time.",
             "skills": [
               "Babel",
-              "eslint",
+              "ESLint",
               "JavaScript",
+              "Jenkins",
               "Jest",
+              "JSDoc",
               "JSX",
               "npm",
               "React",
@@ -332,6 +336,7 @@
               "CORS",
               "HTML",
               "jasmine",
+              "JSDoc",
               "istanbul",
               "karma",
               "grunt",
@@ -341,6 +346,27 @@
               "Spring",
               "CXF",
               "Akamai"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Project: onboarding",
+        "dates": {
+          "start": "01/01/2016",
+          "end": "12/01/2016"
+        },
+        "responsibilities": [
+          {
+            "description": "Designed and implemented several A/B tested variations of post-sign up questionnaires segmenting users into profiles, and providing different \"first steps\" guidance by profile.",
+            "skills": [
+              "jQuery",
+              "JavaScript",
+              "Jasmine",
+              "Jenkins",
+              "JSON",
+              "Karma",
+              "Spring"
             ]
           }
         ]
@@ -356,6 +382,7 @@
             "description": "Designed and implemented a framework to, by configuration, easily spin up a series of different initial product experiences and homepages for new customers targeting specific market segments. Implemented A/B testing a tracking withing the different experiences.",
             "skills": [
               "Angular",
+              "JavaScript",
               "Jasmine",
               "Jenkins",
               "JSON",
@@ -375,10 +402,14 @@
           {
             "description": "Designed and implemented a framework to, by configuration, easily spin up a series of different initial product experiences and homepages for new customers targeting specific market segments. Implemented A/B testing a tracking withing the different experiences.",
             "skills": [
-              "Angular",
+              "dotCMS",
+              "ehcache",
+              "JavaScript",
               "Jasmine",
-              "Jenkins",
+              "JSDoc",
               "JSON",
+              "jQuery",
+              "jQuery-UI",
               "Karma",
               "Spring"
             ]
@@ -397,15 +428,18 @@
               "dotCMS",
               "Jasmine",
               "JavaScript",
+              "JSDoc",
               "localStorage",
               "Karma",
-              "Spring"
+              "Spring",
+              "Tealium",
+              "Optimizely"
             ]
           }
         ]
       },
       {
-        "name": "Project: campaigns pages",
+        "name": "Project: marketing campaigns pages",
         "dates": {
           "start": "01/01/2015"
         },
@@ -475,6 +509,7 @@
               "JMX Console",
               "AMD",
               "jasmine",
+              "JSDoc",
               "istanbul",
               "karma",
               "grunt",
@@ -516,7 +551,7 @@
           {
             "description": "Re-implemented the email creation and management wizard flow using Spring POST-back form transitions.",
             "skills": [
-              "JavaScript", "jQuery", "Java", "JSP", "Spring"
+              "JavaScript", "jQuery", "Java", "JSP", "Spring", "Tiles"
             ]
           }
         ]
@@ -603,7 +638,7 @@
           {
             "description": "Maven Console: allowed users to upload videos and thumbnails into a CMS, browse/search for videos, edit video metadata and availability, organize videos into playlists, and associate videos with specific player configurations. Users could also create player configurations by customizing base player UIs (each defined by a Flash swf) with uploaded images or colors chosen in the Console.",
             "skills": [
-              "HTML", "JavaScript", "AJAX", "Flash CS3", "httpd", "Internet Explorer Developer Tools", "Visual Studio"
+              "HTML", "JavaScript", "AJAX", "Flash CS3", "httpd", "IE", "Visual Studio"
             ]
           }
         ]
@@ -629,7 +664,7 @@
           {
             "description": "Developed ActionScript libraries for in-browser Flash player-based implementation of BrightText™, a system for defining, presenting, editing, and saving an interactively customizable form letter, report, or other content. Implemented XML parsing of definition files, data model classes, and UI classes responsible for data presentation and interaction.",
             "skills": [
-              "Flash", "ActionScript", "XML", "FlexBuilder", "Firefox", "Firebug"
+              "Flash", "ActionScript", "XML", "Flex Builder", "Firefox", "Firebug"
             ]
           }
         ]

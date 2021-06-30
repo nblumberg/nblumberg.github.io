@@ -35,7 +35,7 @@ const mapResponsibility = (data) => {
         return a.toLowerCase() < b.toLowerCase() ? -1 : 1;
     });
     responsibility.skills = responsibility.skills.sort().map((skill) => {
-        return skills.map[ skill.toLowerCase() ] || { "shortName": skill, "longName": skill, "experienceLevel": "familiar" };
+        return skills.map[ skill.toLowerCase() ] || { "shortName": skill, "longName": skill, "experienceLevel": "unknown" };
     });
     return responsibility;
 };

@@ -12,7 +12,8 @@
     "website": "http://www.adobe.com/devnet/actionscript.html",
     "company": "Adobe",
     "description": "Interpreted scripting language for the Adobe (formerly Macromedia) Flash and AIR runtime environments",
-    "experienceLevel": "experienced"
+    "experienceLevel": "experienced",
+    "deprecated": true
   },
   {
     "shortName": "Adobe Analytics",
@@ -94,6 +95,13 @@
     "experienceLevel": "familiar"
   },
   {
+    "shortName": "Babel",
+    "fullName": "Babel",
+    "website": "https://babeljs.io/",
+    "description": "A JavaScript transpiler allowing for modern code syntax to be transformed into backward-compatible syntax",
+    "experienceLevel": "experienced"
+  },
+  {
     "shortName": "Backbone",
     "fullName": "Backbone.js",
     "website": "http://backbonejs.org/",
@@ -128,6 +136,14 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "Chrome",
+    "fullName": "Google Chrome",
+    "website": "https://www.google.com/chrome/",
+    "company": "Google",
+    "description": "Google's web browser",
+    "experienceLevel": "expert"
+  },
+  {
     "shortName": "Cloudflare",
     "fullName": "Cloudflare CDN",
     "website": "https://www.cloudflare.com/",
@@ -155,7 +171,8 @@
     "fullName": "Microsoft Component Object Model technologies",
     "company": "Microsoft",
     "website": "https://www.microsoft.com/com/default.mspx",
-    "experienceLevel": "familiar"
+    "experienceLevel": "familiar",
+    "deprecated": true
   },
   {
     "shortName": "CommonJS",
@@ -257,6 +274,14 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "Edge",
+    "fullName": "Microsoft Edge",
+    "website": "https://www.microsoft.com/en-us/edge",
+    "company": "Microsoft",
+    "description": "Microsoft's web browser",
+    "experienceLevel": "experienced"
+  },
+  {
     "shortName": "e-hawk",
     "fullName": "e-hawk",
     "description": "Phisher, bot, spammer, fraudster, and high-risk user identification service",
@@ -287,6 +312,13 @@
     "description": "AWS fully-managed, scalable indexing service based on lucene"
   },
   {
+    "shortName": "ESLint",
+    "fullName": "ESLint",
+    "website": "https://eslint.org/",
+    "description": "A JavaScript linting library",
+    "experienceLevel": "expert"
+  },
+  {
     "shortName": "Excel",
     "fullName": "Microsoft Excel",
     "company": "Microsoft",
@@ -311,6 +343,14 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "Firebug",
+    "fullName": "Firebug",
+    "website": "https://getfirebug.com/",
+    "description": "A free and open-source web browser extension for Mozilla Firefox that facilitated the live debugging, editing, and monitoring of any website's CSS, HTML, DOM, XHR, and JavaScript",
+    "experienceLevel": "experienced",
+    "deprecated": true
+  },
+  {
     "shortName": "Firehose",
     "fullName": "Amazon Kinesis Data Firehose",
     "company": "Amazon",
@@ -332,7 +372,17 @@
     "website": "http://www.adobe.com/products/flash-builder.html",
     "company": "Adobe",
     "description": "An IDE for Flex and ActionScript applications",
-    "experienceLevel": "experienced"
+    "experienceLevel": "experienced",
+    "deprecated": true
+  },
+  {
+    "shortName": "Flash CS3",
+    "fullName": "Adobe Flash Creative Suite 3",
+    "website": "https://www.adobe.com/devnet/author_bios/adobe_fl_cs3.html",
+    "company": "Adobe",
+    "description": "The 9th major version of the Adobe Flash authoring application",
+    "experienceLevel": "experienced",
+    "deprecated": true
   },
   {
     "shortName": "Flex",
@@ -343,11 +393,21 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "Flex Builder",
+    "fullName": "Flex Builder",
+    "website": "https://www.adobe.com/support/documentation/en/flex/3/releasenotes_flex3_fb.html",
+    "company": "Adobe",
+    "description": "ActionScript based application IDE",
+    "experienceLevel": "experienced",
+    "deprecated": true
+  },
+  {
     "shortName": "flex-mojos",
     "fullName": "flex-mojos",
     "website": "https://flexmojos.atlassian.net/wiki/display/FLEXMOJOS/Home",
     "description": "A maven plugin for building Flex applications",
-    "experienceLevel": "familiar"
+    "experienceLevel": "familiar",
+    "deprecated": true
   },
   {
     "shortName": "FlexUnit",
@@ -355,7 +415,8 @@
     "website": "http://www.flexunit.org/",
     "company": "Adobe",
     "description": "A unit testing framework for Flex and ActionScript applications",
-    "experienceLevel": "experienced"
+    "experienceLevel": "experienced",
+    "deprecated": true
   },
   {
     "shortName": "FlinkCEP",
@@ -369,7 +430,8 @@
     "shortName": "fluint",
     "fullName": "Flex unit and integration",
     "description": "A Flex unit and integration test framework",
-    "experienceLevel": "familiar"
+    "experienceLevel": "familiar",
+    "deprecated": true
   },
   {
     "shortName": "FreeMarker",
@@ -378,6 +440,14 @@
     "company": "Apache",
     "description": "A Java-based templating engine",
     "experienceLevel": "familiar"
+  },
+  {
+    "shortName": "Firefox",
+    "fullName": "Mozilla Firefox",
+    "website": "https://www.mozilla.org/en-US/firefox/new/",
+    "company": "Mozilla",
+    "description": "Mozilla's web browser",
+    "experienceLevel": "expert"
   },
   {
     "shortName": "git",
@@ -444,7 +514,8 @@
     "fullName": "Atlassian HipChat",
     "company": "Atlassian",
     "description": "Highly graphical chat, video chat, and screen sharing program supporting a wide range of bots and plugins",
-    "experienceLevel": "expert"
+    "experienceLevel": "expert",
+    "deprecated": true
   },
   {
     "shortName": "HTML",
@@ -469,6 +540,14 @@
     "website": "https://aws.amazon.com/iam/"
   },
   {
+    "shortName": "IE",
+    "fullName": "Microsoft Internet Explorer",
+    "website": "https://www.microsoft.com/en-us/download/internet-explorer.aspx",
+    "company": "Microsoft",
+    "description": "Microsoft's old web browser",
+    "experienceLevel": "experienced"
+  },
+  {
     "shortName": "Illustrator",
     "fullName": "Adobe Illustrator",
     "company": "Adobe",
@@ -488,13 +567,15 @@
     "shortName": "In-house editor",
     "fullName": "In-house editor",
     "description": "A game editor developed in-house",
-    "experienceLevel": "familiar"
+    "experienceLevel": "familiar",
+    "deprecated": true
   },
   {
     "shortName": "In-house scripting language",
     "fullName": "In-house scripting language",
     "description": "A scripting language developed in-house",
-    "experienceLevel": "familiar"
+    "experienceLevel": "familiar",
+    "deprecated": true
   },
   {
     "shortName": "InCopy",
@@ -567,7 +648,7 @@
     "fullName": "Jest",
     "website": "https://jestjs.io/",
     "description": "A NodeJs based Javascript unit testing framework",
-    "experienceLevel": "experienced"
+    "experienceLevel": "expert"
   },
   {
     "shortName": "jetty",
@@ -606,6 +687,13 @@
     "experienceLevel": "expert"
   },
   {
+    "shortName": "JSDoc",
+    "fullName": "JSDoc",
+    "website": "https://jsdoc.app/",
+    "description": "An API documentation generator for JavaScript",
+    "experienceLevel": "expert"
+  },
+  {
     "shortName": "JSON",
     "fullName": "JavaScript Object Notation",
     "description": "A hierarchical data format commonly used for data transfer on the web",
@@ -629,6 +717,13 @@
     "fullName": "Java server pages Standard Tag Library",
     "website": "https://jstl.java.net/",
     "description": "A set of JSP syntax extensions for common tasks like conditional execution, loops, and internationalization",
+    "experienceLevel": "expert"
+  },
+  {
+    "shortName": "JSX",
+    "fullName": "JavaScript XML",
+    "website": "https://reactjs.org/docs/introducing-jsx.html",
+    "description": "An extension to JavaScript syntax supporting declaring HTML-like React elements inside JavaScript code",
     "experienceLevel": "expert"
   },
   {
@@ -688,7 +783,8 @@
     "company": "Merant",
     "website": "http://www.softmart.ru/pdf/Tracker_Product_Overview_8.pdf",
     "description": "Issue and project tracking tool used by JAMDAT",
-    "experienceLevel": "familiar"
+    "experienceLevel": "familiar",
+    "deprecated": true
   },
   {
     "shortName": "MFC",
@@ -696,13 +792,15 @@
     "company": "Microsoft",
     "website": "https://msdn.microsoft.com/en-us/library/fe1cf721.aspx",
     "description": "A C++ SDK for Windows",
-    "experienceLevel": "familiar"
+    "experienceLevel": "familiar",
+    "deprecated": true
   },
   {
     "shortName": "mock4as",
     "fullName": "mock4as",
     "description": "ActionScript unit test mocking framework",
-    "experienceLevel": "familiar"
+    "experienceLevel": "familiar",
+    "deprecated": true
   },
   {
     "shortName": "Mockito",
@@ -842,6 +940,14 @@
     "experienceLevel": "expert"
   },
   {
+    "shortName": "Safari",
+    "fullName": "Apple Safari",
+    "website": "https://www.apple.com/safari/",
+    "company": "Apple",
+    "description": "Apple's web browser",
+    "experienceLevel": "expert"
+  },
+  {
     "shortName": "SASS",
     "fullName": "Syntactically Awesome Style Sheets",
     "website": "http://sass-lang.com/",
@@ -899,6 +1005,14 @@
     "shortName": "SQL",
     "fullName": "Structured Query Language",
     "description": "A language for writing queries against a relational database management system",
+    "experienceLevel": "experienced"
+  },
+  {
+    "shortName": "SQS",
+    "fullName": "Amazon Simple Queue Service",
+    "website": "https://aws.amazon.com/sqs/",
+    "company": "Amazon",
+    "description": "A fully managed message queues for microservices, distributed systems, and serverless applications",
     "experienceLevel": "experienced"
   },
   {
@@ -1053,10 +1167,20 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "YInst",
+    "fullName": "Yahoo YInst",
+    "company": "Yahoo",
+    "description": "A browser performance measuring tool",
+    "experienceLevel": "familiar",
+    "deprecated": true
+  },
+  {
     "shortName": "YTS",
     "fullName": "Yahoo Traffic Server",
+    "company": "Yahoo",
     "description": "A caching proxy server",
     "experienceLevel": "familiar",
-    "website": "http://trafficserver.apache.org/"
+    "website": "http://trafficserver.apache.org/",
+    "deprecated": true
   }
 ]

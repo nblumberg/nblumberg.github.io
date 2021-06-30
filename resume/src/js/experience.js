@@ -5,7 +5,7 @@ const formatDate = require("./formatDate.js");
 
 const URL_PARAMS = new URLSearchParams(window.location.search);
 const LIMIT_EXPERIENCE = parseInt(URL_PARAMS.get("limit"), 10) || 12;
-const LIMIT_PRIORITY = parseInt(URL_PARAMS.get("priority"), 10) || 0;
+const LIMIT_PRIORITY = parseInt(URL_PARAMS.get("priority"), 10) || -1;
 
 /**
  * Replace string start/end dates with maps containing their component values for HTML rendering

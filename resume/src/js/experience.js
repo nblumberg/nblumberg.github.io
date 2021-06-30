@@ -3,7 +3,7 @@ const data = require("../data/experience.json");
 const skills = require("./skills.js");
 const formatDate = require("./formatDate.js");
 
-const LIMIT_EXPERIENCE = 12;
+const LIMIT_EXPERIENCE = parseInt((new URLSearchParams(window.location.search)).get("limit"), 10) || 12;
 
 /**
  * Replace string start/end dates with maps containing their component values for HTML rendering

@@ -19,13 +19,13 @@
         "dates": {
           "start": "08/01/2016"
         },
-        "summary": "Most senior development role within the organization. Responsibilities include those of prior positions in addition to the following:",
+        "summary": "Most senior development role within the organization. Responsibilities also include those of prior positions.",
         "responsibilities": [
           {
-            "description": "Built and trained four separate teams from the ground up. Starting with almost exclusively junior engineers, I shepherded them through their technical and engineering growth until they were highly performing and efficient teams. All of this was accomplished during a periods of engineering and product management leadership turmoil."
+            "description": "Built and trained four separate teams from the ground up. Starting with almost exclusively junior engineers, I shepherded them through their technical and engineering growth until they were highly performing and efficient teams. All of this was accomplished during periods of engineering and product management leadership transition."
           },
           {
-            "description": "Serve as technical lead for several areas of the company code base."
+            "description": "Serve as technical lead for several areas of the company code base: front end architecture, front end design system, microservice data aggregation and caching, marketing campaign listing, site navigation by configuration, universal js code, and user tracking."
           },
           {
             "description": "Architectural design of software across teams in a distributed, micro-service environment."
@@ -47,19 +47,16 @@
           "start": "08/01/2014",
           "end": "08/01/2016"
         },
-        "summary": "Generally, the most senior development role within a team. Responsibilities include those of prior positions in addition to the following:",
+        "summary": "Generally, the most senior development role within a team. Responsibilities also include those of prior positions.",
         "responsibilities": [
           {
-            "description": "Act as technical liaison to other teams inside and outside the engineering organization."
+            "description": "Architectural design of software within the team's purview."
           },
           {
-            "description": "Oversee team code quality."
+            "description": "Represent the engineering team in technical matters when liaising with other teams inside and outside the engineering organization."
           },
           {
-            "description": "Facilitate team velocity."
-          },
-          {
-            "description": "Act as mentor to other team members."
+            "description": "Determine and prioritize non-feature-driven engineering work within the team."
           }
         ]
       },
@@ -71,6 +68,18 @@
         },
         "summary": "Expert in all areas of team responsibility.",
         "responsibilities": [
+          {
+            "description": "Responsible for common front end functionality throughout the product and supporting microservices: e.g. site navigation by configuration, help, marketing/sales/support messaging, and user tracking."
+          },
+          {
+            "description": "Responsible for the hub pages of the product that list user activity and branch into the various wizard flows, as well as supporting microservices."
+          },
+          {
+            "description": "Act as mentor to other team members."
+          },
+          {
+            "description": "Facilitate team velocity (a measure of productivity under Agile development)."
+          }
         ]
       },
       {
@@ -79,13 +88,23 @@
           "start": "04/01/2011",
           "end": "04/01/2013"
         },
-        "summary": "Expert in all areas of team responsibility.",
+        "summary": "Expert in at least one area of team responsibility.",
         "responsibilities": [
+          {
+            "description": "Responsible for the email wizard UI and microservices."
+          },
+          {
+            "description": "Lead a project within the team."
+          },
+          {
+            "description": "Oversee team code quality."
+          }
         ]
-      },
-
+      }
+    ],
+    "achievements": [
       {
-        "name": "Project: universal search",
+        "name": "Universal search",
         "dates": {
           "start": "01/01/2020"
         },
@@ -107,7 +126,7 @@
         ]
       },
       {
-        "name": "Project: iCal integration",
+        "name": "iCal integration",
         "dates": {
           "start": "12/01/2019",
           "end": "06/01/2021"
@@ -132,7 +151,7 @@
         ]
       },
       {
-        "name": "Project: recommendations",
+        "name": "Recommendations",
         "dates": {
           "start": "01/01/2020",
           "end": "10/01/2020"
@@ -154,7 +173,7 @@
         ]
       },
       {
-        "name": "Project: campaign search",
+        "name": "Campaign search",
         "dates": {
           "start": "09/01/2018",
           "end": "01/01/2020"
@@ -180,7 +199,7 @@
         ]
       },
       {
-        "name": "Project: marketing calendar v2",
+        "name": "Marketing calendar v2",
         "dates": {
           "start": "01/01/2019"
         },
@@ -212,7 +231,7 @@
         ]
       },
       {
-        "name": "Project: React refactor",
+        "name": "React refactor",
         "dates": {
           "start": "01/01/2019"
         },
@@ -238,7 +257,7 @@
         ]
       },
       {
-        "name": "Project: campaign libraries",
+        "name": "Campaign libraries",
         "dates": {
           "start": "01/01/2019"
         },
@@ -266,7 +285,7 @@
         ]
       },
       {
-        "name": "Project: social media integrations",
+        "name": "Social media integrations",
         "dates": {
           "start": "03/01/2018",
           "end": "10/01/2018"
@@ -286,7 +305,7 @@
         ]
       },
       {
-        "name": "Project: front end design system",
+        "name": "Front end design system",
         "dates": {
           "start": "01/01/2018"
         },
@@ -311,7 +330,7 @@
         ]
       },
       {
-        "name": "Project: marketing calendar",
+        "name": "Marketing calendar",
         "dates": {
           "start": "01/01/2017"
         },
@@ -330,7 +349,7 @@
         ]
       },
       {
-        "name": "Project: eHawk validation",
+        "name": "E-HAWK validation",
         "dates": {
           "start": "01/01/2016",
           "end": "01/01/2017"
@@ -362,7 +381,7 @@
         ]
       },
       {
-        "name": "Project: onboarding",
+        "name": "Onboarding",
         "dates": {
           "start": "01/01/2016",
           "end": "12/01/2016"
@@ -384,7 +403,7 @@
         ]
       },
       {
-        "name": "Project: homepages",
+        "name": "Homepages",
         "dates": {
           "start": "01/01/2016",
           "end": "12/01/2016"
@@ -406,7 +425,7 @@
         ]
       },
       {
-        "name": "Project: guided tours",
+        "name": "Guided tours",
         "dates": {
           "start": "06/01/2016",
           "end": "07/01/2016"
@@ -431,7 +450,7 @@
         ]
       },
       {
-        "name": "Project: in product messaging",
+        "name": "In product messaging",
         "dates": {
           "start": "01/01/2015"
         },
@@ -454,7 +473,7 @@
         ]
       },
       {
-        "name": "Project: marketing campaigns pages",
+        "name": "Marketing campaigns pages",
         "dates": {
           "start": "01/01/2015"
         },
@@ -500,7 +519,7 @@
         ]
       },
       {
-        "name": "Project: distributed UI framework",
+        "name": "Distributed UI framework",
         "dates": {
           "start": "01/01/2012"
         },
@@ -544,7 +563,7 @@
         ]
       },
       {
-        "name": "Project: email wizard v2",
+        "name": "Email wizard v2",
         "dates": {
           "start": "04/01/2011",
           "end": "01/01/2012"
@@ -560,7 +579,7 @@
         ]
       },
       {
-        "name": "Project: email wizard",
+        "name": "Email wizard",
         "dates": {
           "start": "04/01/2012",
           "end": "01/01/2013"
@@ -576,7 +595,7 @@
         ]
       },
       {
-        "name": "Project: stock image management system",
+        "name": "Stock image management system",
         "dates": {
           "start": "04/01/2011",
           "end": "01/01/2012"

@@ -1,8 +1,8 @@
 const raw = {
     address: require("../html/address.html"),
     art: require("../html/art.html"),
-    resume: require("../html/body.html"),
     contact: require("../html/contact.html"),
+    dateRange: require("../html/dateRange.html"),
     education: require("../html/education.html"),
     experience: require("../html/experience.html"),
     name: require("../html/name.html"),
@@ -10,6 +10,7 @@ const raw = {
     portfolio: require("../html/portfolio.html"),
     positions: require("../html/positions.html"),
     responsibilities: require("../html/responsibilities.html"),
+    resume: require("../html/body.html"),
     skillListWidget: require("../html/skillListWidget.html"),
     skills: require("../html/skills.html")
 };

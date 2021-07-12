@@ -11,10 +11,15 @@
                 </div>
             </div>
         </h3>
-        <nb-placeholder data-key="address">address</nb-placeholder>
+        <nb-placeholder data-key="dates">dateRange</nb-placeholder>
+        <!--<nb-placeholder data-key="address">address</nb-placeholder>-->
     </header>
     <!--<div class="company-overview" data-show="${'summary'}${'portfolio'}">-->
     <!--</div>-->
     <article class="summary">${"summary"}</article>
     <nb-repeat data-key="positions" class="positions">positions</nb-repeat>
+    <h3 data-show="${'achievements'}">Key achievements</h3>
+    <div class="achievements">
+        <nb-repeat data-key="achievements" class="positions">positions</nb-repeat>
+    </div>
 </div>

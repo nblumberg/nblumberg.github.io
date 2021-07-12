@@ -63,7 +63,7 @@ const mapPosition = (data) => {
 };
 
 /**
- * Deep copies a job Object, formatting its dates and skills for display
+ * Deep copies a job Object, formatting its dates, positions, achievements, and skills for display
  * @param {Object} data {{ name: string, address: {}, logo: URL, website: URL, summary: string, positions: [ see mapPosition ] }}
  * @returns {any}
  */
@@ -87,11 +87,44 @@ const mapJob = (data) => {
     if (data.address) {
         job.address = Object.assign({}, data.address);
     }
-    job.positions = (data.positions || []).map(mapPosition);
-    // Exclude anything limited by URL parameter for a leaner resume
-    job.positions = job.positions.filter(position => position !== null && position.priority >= LIMIT_PRIORITY);
-    if (!job.positions.length) {
+    // Get the positions held at the job
+    let positions = (data.positions || []).map(mapPosition);
+    // Exclude any position limited by URL parameter for a leaner resume
+    positions = positions.filter(position => position !== null && position.priority >= LIMIT_PRIORITY);
+    if (!positions.length) {
         return null;
+    }
+    job.positions = positions;
+
+    // Since the positions contain the dates, determine the overall dates at the job from the positions
+    const startSortedPositions = positions.slice(0).sort(({ dates: { start: { moment: a } } }, { dates: { start: { moment: b } } }) => !a || a.isSameOrAfter(b) ? 1 : -1);
+    const startDate = startSortedPositions[0].dates.start.source;
+    const endSortedPositions = positions.slice(0).sort(({ dates: { end: { moment: a } = {} } }, { dates: { end: { moment: b } = {} } }) => !a || a.isSameOrAfter(b) ? -1 : 1);
+    const endDate = endSortedPositions[0].dates.end ? endSortedPositions[0].dates.end.source : null
+    const overallPosition = {
+        dates: {
+            start: startDate
+        }
+    };
+    if (endDate) {
+        overallPosition.dates.end = endDate;
+    }
+    formatDates(overallPosition);
+    job.dates = overallPosition.dates;
+
+    // If there's only one position, the job will display the dates
+    if (positions.length === 1) {
+        positions[0].dates = "";
+    }
+
+    // Get the achievements at the job
+    let achievements = (data.achievements || []).map(mapPosition);
+    // Exclude any achievement limited by URL parameter for a leaner resume
+    achievements = achievements.filter(achievement => achievement !== null && achievement.priority >= LIMIT_PRIORITY);
+    if (!achievements.length) {
+        job.achievments = "";
+    } else {
+        job.achievements = achievements;
     }
 
     return job;

@@ -11,6 +11,8 @@ const formatDate = (date) => {
     }
     const m = moment(date);
     return {
+        source: date,
+        moment: m,
         month: m.format("MMMM"),
         shortMonth: m.format("MMM"),
         year: m.format("YYYY"),

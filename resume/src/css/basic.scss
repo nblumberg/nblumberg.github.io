@@ -77,13 +77,10 @@ html {
 
 @media print {
   h4 {
-    margin: 0.4rem 0;
+    margin: 0.4em 0;
   }
-  ul, .overview, .summary {
-    font-size: smaller;
-  }
-  .skill {
-    font-size: x-small;
+  ul, .overview, .summary, .skill {
+    font-size: small;
   }
 }
 

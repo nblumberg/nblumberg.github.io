@@ -168,4 +168,17 @@
       }
     }
   }
+
+  .expert {
+    font-weight: bolder;
+  }
+  .experienced {
+    font-weight: bold;
+  }
+  //.familiar {
+  //  font-style: italic;
+  //}
+  .unknown {
+    text-decoration: line-through;
+  }
 }

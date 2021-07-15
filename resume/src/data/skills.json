@@ -464,6 +464,14 @@
     "experienceLevel": "expert"
   },
   {
+    "shortName": "Glance",
+    "fullName": "Glance Cobrowse",
+    "website": "https://ww2.glance.net/products/cobrowse/",
+    "company": "Glance",
+    "description": "A screen sharing tool allowing support reps to see a user's screen and guide them through the web application",
+    "experienceLevel": "experienced"
+  },
+  {
     "shortName": "Google Analytics",
     "fullName": "Google Analytics",
     "website": "https://analytics.google.com/analytics/web/provision/?authuser=0#/provision",
@@ -898,6 +906,14 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "puppet",
+    "fullName": "puppet",
+    "website": "https://puppet.com/",
+    "company": "Puppet, Inc.",
+    "description": "A software configuration management tool which includes its own declaractive language to describe system configuraiton",
+    "experienceLevel": "familiar"
+  },
+  {
     "shortName": "RabbitMQ",
     "fullName": "RabbitMQ",
     "description": "An inter-application messaging service",
@@ -1057,6 +1073,14 @@
     "fullName": "Atlassian Trello",
     "company": "Atlassian",
     "description": "Task tracking software",
+    "experienceLevel": "familiar"
+  },
+  {
+    "shortName": "Twiddle",
+    "fullName": "JBoss JMX Twiddle",
+    "website": "https://developer.jboss.org/docs/DOC-12458",
+    "company": "JBoss",
+    "description": "A command line tool that allows for interaction with a remote JMX server instance.",
     "experienceLevel": "familiar"
   },
   {

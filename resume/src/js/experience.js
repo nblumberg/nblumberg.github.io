@@ -4,8 +4,8 @@ const skills = require("./skills.js");
 const formatDate = require("./formatDate.js");
 
 const URL_PARAMS = new URLSearchParams(window.location.search);
-const LIMIT_EXPERIENCE = parseInt(URL_PARAMS.get("limit"), 10) || 12;
-const LIMIT_PRIORITY = parseInt(URL_PARAMS.get("priority"), 10) || -1;
+const LIMIT_EXPERIENCE_YEARS = parseInt(URL_PARAMS.get("limit"), 10) || 12;
+const LIMIT_PRIORITY = parseInt(URL_PARAMS.get("priority"), 10) || 0;
 
 /**
  * Replace string start/end dates with maps containing their component values for HTML rendering
@@ -48,12 +48,12 @@ const mapResponsibility = (data) => {
  * @returns {{ name: string, dates: { start: see formatDate[, end: see formatDate] }, summary: string, responsibilities: [ see mapResponsibility, ... ] }}
  */
 const mapPosition = (data) => {
-    const position = Object.assign({ priority: 1 }, data);
+    const position = Object.assign({ priority: 100 }, data);
     if (data.dates) {
         position.dates = Object.assign({}, data.dates);
     }
     const recentDate = moment.max(moment(position.dates.start || 0), moment(position.dates.end || 0));
-    if (moment.duration(moment().diff(recentDate)).asYears() > LIMIT_EXPERIENCE) {
+    if (moment.duration(moment().diff(recentDate)).asYears() > LIMIT_EXPERIENCE_YEARS) {
         // Exclude anything > 20 years old
         return null;
     }
@@ -61,6 +61,38 @@ const mapPosition = (data) => {
     position.responsibilities = (data.responsibilities || []).map(mapResponsibility);
     return position;
 };
+
+const dateOrder = ({ dates: { start: { moment: aStart }, end: { moment: aEnd } = {} } }, { dates: { start: { moment: bStart }, end: { moment: bEnd } = {} } }) => {
+    if (aStart.isAfter(bStart)) {
+        // If A starts later, move it toward the top of the list
+        return -1;
+    } else if (aStart.isSame(bStart)) {
+        // If A and B start at the same time
+        if (aEnd && !bEnd) {
+            // If A ends but B doesn't, move it toward the bottom of the list
+            return 1;
+        } else if (!aEnd && bEnd) {
+            // If A doesn't end but B does, move it toward the top of the list
+            return -1;
+        } else if (!aEnd && !bEnd) {
+            // If neither end, stay in the same order
+            return 0;
+        } else if (aEnd.isAfter(bEnd)) {
+            // If A ends after B, move it toward the top of the list
+            return -1;
+        } else if (aEnd.isSame(bEnd)) {
+            // If the end at the same time, stay in the same order
+            return 0;
+        } else {
+            // If A ends before B, move it toward the bottom of the list
+            return 1;
+        }
+    } else {
+        return 1;
+    }
+};
+
+const priorityOrder = ({ priority: a }, { priority: b }) => b - a;
 
 /**
  * Deep copies a job Object, formatting its dates, positions, achievements, and skills for display
@@ -118,7 +150,9 @@ const mapJob = (data) => {
     }
 
     // Get the achievements at the job
-    let achievements = (data.achievements || []).map(mapPosition);
+    let achievements = (data.achievements || []).map(mapPosition)
+        .sort(dateOrder);
+        // .sort(priorityOrder);
     // Exclude any achievement limited by URL parameter for a leaner resume
     achievements = achievements.filter(achievement => achievement !== null && achievement.priority >= LIMIT_PRIORITY);
     if (!achievements.length) {

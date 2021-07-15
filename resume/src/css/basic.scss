@@ -75,10 +75,11 @@ html {
   font-family: Roboto, Arial, sans-serif;
 }
 
+h4 {
+  margin: 0.4em 0;
+}
+
 @media print {
-  h4 {
-    margin: 0.4em 0;
-  }
   ul, .overview, .summary, .skill {
     font-size: small;
   }

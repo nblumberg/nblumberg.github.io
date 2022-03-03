@@ -112,6 +112,144 @@
     ],
     "achievements": [
       {
+        "name": "Sign up forms v2",
+        "dates": {
+          "start": "01/01/2022"
+        },
+        "priority": 20,
+        "responsibilities": [
+          {
+            "description": "Combine existing hosted lead generation landing pages and embedded-in-customer-website sign up forms offerings",
+            "skills": [
+              "ECR",
+              "ECS",
+              "Java",
+              "JavaScript",
+              "Lambda",
+              "Node",
+              "React",
+              "Webpack"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SMS Marketing",
+        "dates": {
+          "start": "11/01/2021"
+        },
+        "priority": 20,
+        "responsibilities": [
+          {
+            "description": "Collect mobile numbers and permission to be contacted via SMS marketing in existing lead generation landing page forms",
+            "skills": [
+              "ECR",
+              "ECS",
+              "Java",
+              "JavaScript",
+              "Lambda",
+              "Node",
+              "React",
+              "Webpack"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Domain oriented microservice architectural design",
+        "dates": {
+          "start": "10/01/2021"
+        },
+        "priority": 30,
+        "responsibilities": [
+          {
+            "description": "Help plan the future architecture of the combined company to use a domain oriented microservice architecture.",
+            "skills": [
+              "C4",
+              "plantUML"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cross-company C4 diagrams",
+        "dates": {
+          "start": "10/01/2021"
+        },
+        "priority": 30,
+        "responsibilities": [
+          {
+            "description": "Use code to model architecture of core company and acquisitions to form a living document and web hosted, hyperlinked diagrams allowing technical or non-technical users to start at a top-level view and dive down to code repositories.",
+            "skills": [
+              "C4",
+              "plantUML"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Page hosting in Gloo Mesh EKS",
+        "dates": {
+          "start": "9/01/2021"
+        },
+        "priority": 10,
+        "responsibilities": [
+          {
+            "description": "Use code to model architecture of core company and acquisitions to form a living document and web hosted, hyperlinked diagrams allowing technical or non-technical users to start at a top-level view and dive down to code repositories.",
+            "skills": [
+              "Gloo Edge",
+              "Gloo Mesh",
+              "Helm",
+              "Java",
+              "Node"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Unified front end design system",
+        "dates": {
+          "start": "8/01/2021"
+        },
+        "priority": 45,
+        "responsibilities": [
+          {
+            "description": "Unify companies on a single front end design system. Determine the front end component library to start with and technologies/tooling to extend it into a full, customized design system. Perform a gap analysis between existing component libraries and enumerate use cases to be supported by the new system.",
+            "skills": [
+              "Figma",
+              "Material UI",
+              "Node",
+              "Styled Components",
+              "React",
+              "Typescript",
+              "Webpack"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Landing Pages",
+        "dates": {
+          "start": "4/01/2021"
+        },
+        "priority": 50,
+        "responsibilities": [
+          {
+            "description": "Support customers editing and publishing web pages for capturing user contact information, publishing surveys, and static pages for advertising purposes.",
+            "skills": [
+              "ECR",
+              "ECS",
+              "Java",
+              "JavaScript",
+              "Lambda",
+              "Node",
+              "React",
+              "Webpack"
+            ]
+          }
+        ]
+      },
+      {
         "name": "Universal search",
         "dates": {
           "start": "01/01/2020"
@@ -209,7 +347,8 @@
       {
         "name": "Marketing calendar v2",
         "dates": {
-          "start": "01/01/2019"
+          "start": "01/01/2019",
+          "end": "06/01/2021"
         },
         "priority": 30,
         "responsibilities": [
@@ -340,7 +479,8 @@
       {
         "name": "Marketing calendar",
         "dates": {
-          "start": "01/01/2017"
+          "start": "01/01/2017",
+          "end": "01/01/2019"
         },
         "priority": 65,
         "responsibilities": [
@@ -483,7 +623,8 @@
       {
         "name": "Marketing campaigns pages",
         "dates": {
-          "start": "01/01/2015"
+          "start": "01/01/2015",
+          "end": "12/01/2021"
         },
         "priority": 100,
         "responsibilities": [
@@ -590,8 +731,8 @@
       {
         "name": "Email wizard v2",
         "dates": {
-          "start": "04/01/2011",
-          "end": "01/01/2012"
+          "start": "04/01/2012",
+          "end": "01/01/2013"
         },
         "priority": 3,
         "responsibilities": [
@@ -606,8 +747,8 @@
       {
         "name": "Email wizard",
         "dates": {
-          "start": "04/01/2012",
-          "end": "01/01/2013"
+          "start": "04/01/2011",
+          "end": "01/01/2012"
         },
         "priority": 2,
         "responsibilities": [

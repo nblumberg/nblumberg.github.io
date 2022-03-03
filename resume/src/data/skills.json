@@ -136,6 +136,13 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "C4",
+    "fullName": "C4 model for visualising software architecture",
+    "website": "https://c4model.com/",
+    "description": "The C4 model is an easy to learn, developer friendly approach to software architecture diagramming",
+    "experienceLevel": "experienced"
+  },
+  {
     "shortName": "Chrome",
     "fullName": "Google Chrome",
     "website": "https://www.google.com/chrome/",
@@ -274,6 +281,22 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "ECR",
+    "fullName": "Amazon Web Services Elastic Container Registry",
+    "company": "Amazon",
+    "description": "A fully managed container registry offering high-performance hosting, so you can reliably deploy application images and artifacts anywhere",
+    "experienceLevel": "familiar",
+    "website": "https://aws.amazon.com/ecr/"
+  },
+  {
+    "shortName": "ECS",
+    "fullName": "Amazon Web Services Elastic Container Service",
+    "company": "Amazon",
+    "description": "A fully managed container orchestration service that makes it easy for you to deploy, manage, and scale containerized applications",
+    "experienceLevel": "familiar",
+    "website": "https://aws.amazon.com/ecs/"
+  },
+  {
     "shortName": "Edge",
     "fullName": "Microsoft Edge",
     "website": "https://www.microsoft.com/en-us/edge",
@@ -341,6 +364,13 @@
     "company": "Facebook",
     "description": "A means of subscribing to Facebook change events",
     "experienceLevel": "experienced"
+  },
+  {
+    "shortName": "Figma",
+    "fullName": "Figma",
+    "description": "A suite of collaborative UX design software for mock ups, click through prototypes, and exporting design variables",
+    "experienceLevel": "familiar",
+    "website": "https://www.figma.com/"
   },
   {
     "shortName": "Firebug",
@@ -472,6 +502,22 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "Gloo Edge",
+    "fullName": "Gloo Edge",
+    "company": "solo.io",
+    "description": "An Envoy Proxy-based API Gateway handling north-south traffic in EKS clusters",
+    "experienceLevel": "familiar",
+    "website": "https://www.solo.io/products/gloo-edge/"
+  },
+  {
+    "shortName": "Gloo Mesh",
+    "fullName": "Gloo Mesh",
+    "company": "solo.io",
+    "description": "Enterprise Istio with multi-cluster and hybrid cloud management handling east-west traffic within/between EKS clusters",
+    "experienceLevel": "familiar",
+    "website": "https://www.solo.io/products/gloo-mesh/"
+  },
+  {
     "shortName": "Google Analytics",
     "fullName": "Google Analytics",
     "website": "https://analytics.google.com/analytics/web/provision/?authuser=0#/provision",
@@ -516,6 +562,13 @@
     "description": "A JavaScript templating library",
     "experienceLevel": "experienced",
     "website": "http://handlebarsjs.com/"
+  },
+  {
+    "shortName": "Helm",
+    "fullName": "Helm",
+    "description": "Package manager for Kubernetes, handling deploys and cluster management by configuration code",
+    "experienceLevel": "familiar",
+    "website": "https://helm.sh/"
   },
   {
     "shortName": "HipChat",
@@ -786,6 +839,14 @@
     "website": "https://lucene.apache.org/"
   },
   {
+    "shortName": "Material UI",
+    "fullName": "Material UI",
+    "company": "Material UI",
+    "experienceLevel": "familiar",
+    "description": "A robust, customizable, and accessible library of foundational and advanced visual components, enabling you to build your design system and develop React applications faster",
+    "website": "https://mui.com/"
+  },
+  {
     "shortName": "Merant Tracker",
     "fullName": "Merant Tracker",
     "company": "Merant",
@@ -882,6 +943,13 @@
     "website": "http://www.adobe.com/products/photoshop.html",
     "company": "Adobe",
     "description": "A high powered 2D graphics editor",
+    "experienceLevel": "experienced"
+  },
+  {
+    "shortName": "plantUML",
+    "fullName": "plantUML",
+    "website": "https://plantuml.com/",
+    "description": "Generate diagrams through code",
     "experienceLevel": "experienced"
   },
   {
@@ -1040,6 +1108,13 @@
     "experienceLevel": "experienced"
   },
   {
+    "shortName": "styled components",
+    "fullName": "styled components",
+    "experienceLevel": "familiar",
+    "description": "CSS in JavaScript build framework for styling React components",
+    "website": "https://styled-components.com/"
+  },
+  {
     "shortName": "svn",
     "fullName": "Subversion",
     "description": "A version control system",
@@ -1082,6 +1157,13 @@
     "company": "JBoss",
     "description": "A command line tool that allows for interaction with a remote JMX server instance.",
     "experienceLevel": "familiar"
+  },
+  {
+    "shortName": "TypeScript",
+    "fullName": "TypeScript",
+    "experienceLevel": "experienced",
+    "description": "A JavaScript superset syntax adding strong typing to JavaScript and development tooling to catch common errors",
+    "website": "https://www.typescriptlang.org/"
   },
   {
     "shortName": "UML",

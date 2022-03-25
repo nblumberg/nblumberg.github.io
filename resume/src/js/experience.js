@@ -151,6 +151,7 @@ const mapJob = (data) => {
 
     // Get the achievements at the job
     let achievements = (data.achievements || []).map(mapPosition)
+        .filter(achievement => !!achievement)
         .sort(dateOrder);
         // .sort(priorityOrder);
     // Exclude any achievement limited by URL parameter for a leaner resume

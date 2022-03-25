@@ -60,8 +60,8 @@
     "webpack-dev-server": "^3.8.1"
   },
   "engines": {
-    "node": ">=6.9.2",
-    "npm": ">=3.10.9"
+    "node": ">=8.3.0",
+    "npm": ">=5.3.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0"

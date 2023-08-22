@@ -251,6 +251,13 @@
     "experienceLevel": "familiar"
   },
   {
+    "shortName": "DevTools",
+    "fullName": "Chrome DevTools Protocol",
+    "description": "Allows for tools to instrument, inspect, debug and profile Chromium, Chrome and other Blink-based browsers",
+    "experienceLevel": "familiar",
+    "website": "https://chromedevtools.github.io/devtools-protocol/"
+  },
+  {
     "shortName": "Dojo",
     "fullName": "Dojo Toolkit",
     "website": "https://dojotoolkit.org/",
@@ -1172,6 +1179,13 @@
     "experienceLevel": "familiar"
   },
   {
+    "shortName": "V8",
+    "fullName": "V8 engine",
+    "description": "Google's open source high-performance JavaScript and WebAssembly engine",
+    "experienceLevel": "familiar",
+    "website": "https://v8.dev/"
+  },
+  {
     "shortName": "VBScript",
     "fullName": "Microsoft Visual Basic Scripting Edition",
     "company": "Microsoft",
@@ -1185,6 +1199,13 @@
     "company": "Apache",
     "description": "A Java-based template engine",
     "experienceLevel": "familiar"
+  },
+  {
+    "shortName": "Verdaccio",
+    "fullName": "Verdaccio",
+    "description": "A lightweight Node.js private proxy registry",
+    "experienceLevel": "familiar",
+    "website": "https://verdaccio.org/"
   },
   {
     "shortName": "VersionOne",

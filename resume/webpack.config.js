@@ -1,103 +1,71 @@
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-const isProduction = process.env.NODE_ENV === "production";
-// fallback to style-loader in development
-const finalCssLoader = !isProduction ?
-    "style-loader" : // creates style nodes from JS strings
-    MiniCssExtractPlugin.loader;
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
-    mode: "production",
-    entry: {
-        app: "./src/js/index.js"
-    },
-    devServer: {
-        contentBase: "./dist",
-        // https: true,
-        liveReload: true,
-        writeToDisk: true
-    },
-    devtool: "inline-source-map",
-    output: {
-        filename: "[name].js",
-        path: path.resolve(__dirname, "dist")
-    },
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: [
-                    finalCssLoader,
-                    "css-loader" // translates CSS into CommonJS
-                ]
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    finalCssLoader,
-                    // translates CSS into CommonJS, interprets @import and @url() and resolves them.
-                    {
-                        loader: "css-loader",
-                        options: {
-                            // modules: {
-                            //     mode: "local",
-                            //     localIdentName: isProduction ? "[name]__[local]___[hash:base64:5]" : "[path][name]__[local]",
-                            //     context: path.resolve(__dirname, "src"),
-                            //     // camelCase: true,
-                            // },
-                            importLoaders: 1,
-                            sourceMap: !isProduction
-                        }
-                    },
-                    // compiles Sass to CSS, using Node Sass by default
-                    {
-                        loader: "sass-loader",
-                        options: {
-                            sourceMap: !isProduction
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    "file-loader"
-                ]
-            },
-            {
-                test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: [
-                    "file-loader"
-                ]
-            },
-            {
-                test: /\.(html)$/,
-                use: [
-                    "html-loader"
-                ]
-            }
-        ]
-    },
-    plugins: [
-        new CleanWebpackPlugin(),
-        // extracts our CSS out of the JavaScript bundle into a separate file, essential for production builds.
-        new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
-            filename: isProduction ? "[name].[hash].css" : "[name].css",
-            chunkFilename: isProduction ? "[id].[hash].css" : "[id].css"
-        }),
-        new HtmlWebpackPlugin({
-            title: "Nathaniel Blumberg",
-            // filename: "resume.html",
-            template: "src/html/index.html",
-            xhtml: true
-        })
+const isProduction = process.env.NODE_ENV == 'production';
+
+const stylesHandler = MiniCssExtractPlugin.loader;
+
+const config = {
+  entry: './src/js/index.ts',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+  },
+  devServer: {
+    open: true,
+    host: 'localhost',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/html/index.html',
+    }),
+
+    new MiniCssExtractPlugin(),
+
+    // Add your plugins here
+    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.(ts|tsx)$/i,
+        loader: 'ts-loader',
+        exclude: ['/node_modules/'],
+      },
+      {
+        test: /\.css$/i,
+        use: [stylesHandler, 'css-loader'],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [stylesHandler, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2|otf|png|jpg|gif)$/i,
+        type: 'asset',
+      },
+      {
+        test: /\.html$/i,
+        use: ['raw-loader'],
+      },
+
+      // Add your rules for custom modules here
+      // Learn more about loaders from https://webpack.js.org/loaders/
     ],
-    resolve: {
-        extensions: [ ".js", ".css", ".sass", ".scss" ]
-    }
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.html', '...'],
+  },
+};
+
+module.exports = () => {
+  if (isProduction) {
+    config.mode = 'production';
+
+
+  } else {
+    config.mode = 'development';
+  }
+  return config;
 };

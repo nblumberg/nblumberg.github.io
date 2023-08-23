@@ -22,13 +22,13 @@
           {
             "description": "Work on frontend build tooling supporting the HubSpot engineering organization.",
             "skills": [
-              "JavaScript", "node", "TypeScript"
+              "JavaScript", "node", "TypeScript", "Webpack"
             ]
           },
           {
             "description": "Work on in-house alternative to npm to support HubSpot's \"evergreen\" model that automatically updates package dependencies to their latest versions.",
             "skills": [
-              "JavaScript", "node", "TypeScript", "S3"
+              "JavaScript", "node", "TypeScript", "S3", "Webpack"
             ]
           },
           {
@@ -40,7 +40,7 @@
           {
             "description": "Set up npm packages for consumption through in-house package manager.",
             "skills": [
-              "JavaScript", "node", "npm"
+              "JavaScript", "node", "npm", "Webpack"
             ]
           },
           {

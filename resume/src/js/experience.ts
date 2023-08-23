@@ -20,8 +20,12 @@ interface FormattedResponsibility extends BaseResponsibility {
   skills?: Skill[];
 }
 
-interface BasePosition {
+interface BaseAchievement {
   name: string;
+  priority?: number;
+}
+
+interface BasePosition extends BaseAchievement {
   summary?: string;
 }
 
@@ -31,28 +35,26 @@ interface RawPosition extends BasePosition {
 }
 
 interface FormattedPosition extends BasePosition {
-  dates?: FormattedDateRange;
+  dates: FormattedDateRange;
   priority: number;
   responsibilities: FormattedResponsibility[];
+}
+
+interface RawAchievement extends BaseAchievement {
+  dates: RawDateRange;
+  responsibilities?: RawResponsibility[];
+}
+
+interface FormattedAchievement extends BaseAchievement {
+  dates: FormattedDateRange;
+  priority: number;
+  responsibilities?: FormattedResponsibility[];
 }
 
 interface Artwork {
   name: string;
   image: string;
   website: string;
-}
-
-interface BaseAchievement {
-  name: string;
-}
-
-interface RawAchievement extends BaseAchievement {
-  dates: RawDateRange;
-}
-
-interface FormattedAchievement extends BaseAchievement {
-  dates: FormattedDateRange;
-  priority: number;
 }
 
 interface BaseJob extends Place {
@@ -99,8 +101,8 @@ function mapAchievementOrPosition<T extends RawPosition | RawAchievement>(data: 
     // Exclude anything > 20 years old
     return;
   }
-  if ('responsibilities' in data) {
-    (formatted as FormattedPosition).responsibilities = (data.responsibilities || []).map(mapResponsibility);
+  if (data.responsibilities) {
+    formatted.responsibilities = (data.responsibilities || []).map(mapResponsibility);
   }
   return formatted;
 }

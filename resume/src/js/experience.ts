@@ -1,12 +1,7 @@
-import moment from "moment";
 import data from "../data/experience.json";
 import { FormattedDate, FormattedDateRange, RawDateRange, formatDates } from "./formatDate";
 import { Skill, map as skillsMap } from "./skills";
 import { Place } from "./types";
-
-const URL_PARAMS = new URLSearchParams(window.location.search);
-const LIMIT_EXPERIENCE_YEARS = parseInt(URL_PARAMS.get("limit"), 10) || 12;
-const LIMIT_PRIORITY = parseInt(URL_PARAMS.get("priority"), 10) || 0;
 
 interface BaseResponsibility {
   description: string;
@@ -35,7 +30,7 @@ interface RawPosition extends BasePosition {
 }
 
 interface FormattedPosition extends BasePosition {
-  dates: FormattedDateRange;
+  dates?: FormattedDateRange;
   priority: number;
   responsibilities: FormattedResponsibility[];
 }
@@ -93,14 +88,9 @@ function mapResponsibility(data: RawResponsibility): FormattedResponsibility {
 type BaseAchievementOrPosition<T extends RawPosition | RawAchievement> = T extends RawAchievement ? BaseAchievement : BasePosition;
 type FormattedAchievementOrPosition<T extends RawPosition | RawAchievement> = T extends RawAchievement ? FormattedAchievement : FormattedPosition;
 
-function mapAchievementOrPosition<T extends RawPosition | RawAchievement>(data: T): FormattedAchievementOrPosition<T> | undefined {
+function mapAchievementOrPosition<T extends RawPosition | RawAchievement>(data: T): FormattedAchievementOrPosition<T> {
   const formatted = Object.assign({ priority: 100 }, data) as BaseAchievementOrPosition<T> as FormattedAchievementOrPosition<T>;
   formatted.dates = formatDates(data.dates);
-  const recentDate = moment.max(moment(data.dates.start ?? 0), moment(data.dates.end ?? 0));
-  if (moment.duration(moment().diff(recentDate)).asYears() > LIMIT_EXPERIENCE_YEARS) {
-    // Exclude anything > 20 years old
-    return;
-  }
   if (data.responsibilities) {
     formatted.responsibilities = (data.responsibilities || []).map(mapResponsibility);
   }
@@ -166,11 +156,6 @@ function mapJob(data: RawJob): FormattedJob {
 
   // Get the positions held at the job
   let positions = (data.positions || []).map(mapAchievementOrPosition);
-  // Exclude any position limited by URL parameter for a leaner resume
-  positions = positions.filter(position => !!position && position.priority >= LIMIT_PRIORITY);
-  if (!positions.length) {
-    return null;
-  }
   job.positions = positions;
 
   // Since the positions contain the dates, determine the overall dates at the job from the positions
@@ -198,8 +183,6 @@ function mapJob(data: RawJob): FormattedJob {
     .filter(achievement => !!achievement)
     .sort(dateOrder);
   // .sort(priorityOrder);
-  // Exclude any achievement limited by URL parameter for a leaner resume
-  achievements = achievements.filter(achievement => achievement !== null && achievement.priority >= LIMIT_PRIORITY);
   if (!achievements.length) {
     delete job.achievements;
   } else {

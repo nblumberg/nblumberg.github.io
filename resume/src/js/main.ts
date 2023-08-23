@@ -1,3 +1,4 @@
+import moment from "moment";
 import me from "../data/me.json";
 import education, { FormattedEducation } from "./education";
 import experience, { FormattedJob } from "./experience";
@@ -5,10 +6,57 @@ import skillSearch from "./skillSearch";
 import { Skill, list } from "./skills";
 import templates from "./templates";
 
+const URL_PARAMS = new URLSearchParams(window.location.search);
+const LIMIT_EXPERIENCE_YEARS = parseInt(URL_PARAMS.get("limit"), 10) || 12;
+const LIMIT_PRIORITY = parseInt(URL_PARAMS.get("priority"), 10) || 0;
+const LIMIT_SKILLS_USED_WITHIN_YEARS = URL_PARAMS.get("skills") === '0' ? false : parseInt(URL_PARAMS.get("skills"), 10) || 10;
+
+function getRelevantSkills(): Skill[] {
+  if (LIMIT_SKILLS_USED_WITHIN_YEARS === false) {
+    return list;
+  }
+  const map = new Map<string, moment.Moment>();
+  experience.flatMap(({ achievements = [], dates: jobDates, positions }) => {
+    return [...achievements, ...positions].flatMap(({ dates, responsibilities }) => {
+      const date = dates?.end?.moment ?? jobDates?.end?.moment ?? moment(); // or still working on it
+      return (responsibilities ?? [])
+        .flatMap(
+          ({ skills = [] }) => skills.map(
+            ({ shortName: skill }) => ({ skill,  date })
+          )
+        );
+    });
+  }).forEach(({ skill, date }) => {
+    if (!map.has(skill) || map.get(skill).isBefore(date)) {
+      map.set(skill, date);
+    }
+  });
+  const threshold = moment().subtract(LIMIT_SKILLS_USED_WITHIN_YEARS, 'years');
+  return list.filter(({ shortName: skill }) => map.has(skill) && map.get(skill).isAfter(threshold));
+}
+
+function getRelevantExperience(): FormattedJob[] {
+  const yearThreshold = moment().subtract(LIMIT_EXPERIENCE_YEARS, 'years');
+  const relevantJobs = experience.filter(({ dates }) => {
+    const date = dates?.end?.moment ?? moment(); // or still working there
+    return date.isAfter(yearThreshold);
+  });
+  return relevantJobs.map(job => {
+    const clone = { ...job };
+    const { achievements = [], positions } = job;
+    clone.achievements = achievements.filter(({ priority }) => priority >= LIMIT_PRIORITY);
+    clone.positions = positions.filter(({ priority }) => priority >= LIMIT_PRIORITY);
+    if (!clone.positions.length) {
+      return null;
+    }
+    return clone;
+  }).filter(job => !!job);
+}
+
 const data = {
   me,
-  skills: list,
-  experience,
+  skills: getRelevantSkills(),
+  experience: getRelevantExperience(),
   education,
 };
 

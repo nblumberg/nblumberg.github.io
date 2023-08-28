@@ -1,56 +1,4 @@
-import { boardToQueryString } from './queryStringUtils.js';
-import { addWord, clearWords } from './words.js';
-function createButton(label, parent, clickHandler) {
-    const button = document.createElement('button');
-    button.classList.add('btn');
-    button.innerText = label;
-    parent.appendChild(button);
-    button.addEventListener('click', clickHandler, false);
-    return button;
-}
-export function addButtons(createCrossWord, unnumberClues, playCrossWord) {
-    const crossword = document.getElementById('crossword');
-    if (!crossword) {
-        throw new Error(`Can't find #crossword`);
-    }
-    crossword.addEventListener('focus', () => false);
-    const buttonBar = document.getElementById('buttons');
-    if (!buttonBar) {
-        throw new Error(`Can't find #buttons`);
-    }
-    createButton('Create', buttonBar, createCrossWord);
-    createButton('Add more', buttonBar, unnumberClues);
-    const play = createButton('Play', buttonBar, playCrossWord);
-    play.id = 'play';
-    play.style.display = 'none';
-    const playableLink = document.createElement('a');
-    playableLink.id = 'playable-link';
-    playableLink.style.display = 'none';
-    buttonBar.appendChild(playableLink);
-    const copyToClipboard = createButton('📋', buttonBar, () => {
-        const href = getPlayableLink();
-        navigator.clipboard.writeText(href);
-    });
-    copyToClipboard.id = 'copy-to-clipboard';
-    copyToClipboard.title = 'Copy playable link to clipboard';
-    copyToClipboard.style.display = 'none';
-}
-export function updatePlayableLink(board) {
-    const playButton = document.getElementById('play');
-    playButton.style.display = 'inline';
-    const link = document.getElementById('playable-link');
-    link.innerText = 'Playable link';
-    link.target = 'playableCrossword';
-    const url = new URL(window.location.href);
-    url.search = boardToQueryString(board);
-    link.href = url.toString();
-    const copyToClipboard = document.getElementById('copy-to-clipboard');
-    copyToClipboard.style.display = 'inline';
-}
-export function getPlayableLink() {
-    const link = document.getElementById('playable-link');
-    return link.href;
-}
+import { addWord, clearWords } from '../words.js';
 function getWordInput(event) {
     const element = event.target;
     if (element.classList.contains('word')) {
@@ -78,6 +26,12 @@ export function createWordInput(word = '', clue = '') {
     const parentElement = document.getElementById('words');
     if (!parentElement) {
         throw new Error(`Could not find #words`);
+    }
+    const heading = 'Enter words and clues';
+    if (parentElement.firstChild?.innerText !== heading) {
+        const header = document.createElement('h1');
+        header.innerText = heading;
+        parentElement.insertBefore(header, parentElement.firstChild);
     }
     function addNewWord() {
         if (wordInput.value.trim() && Array.from(parentElement.children).indexOf(wordAndClue) === parentElement.children.length - 1) {
@@ -111,80 +65,12 @@ export function getWordsFromInputs() {
         }
     });
 }
-export function createLetterInputs() {
-    const inputs = [];
-    Array.from(document.getElementsByClassName('letter')).forEach(element => {
-        element.innerHTML = '';
-        const input = document.createElement('input');
-        const index = inputs.length;
-        inputs.push(input);
-        input.type = 'text';
-        input.maxLength = 1;
-        input.classList.add('char');
-        element.appendChild(input);
-        input.addEventListener('keyup', event => {
-            if (/^[a-zA-Z]$/.test(event.key) && input.value || event.key === 'ArrowRight') {
-                inputs[(index + 1) % inputs.length].focus();
-            }
-            else if (event.key === 'ArrowLeft') {
-                if (index === 0) {
-                    inputs[inputs.length - 1].focus();
-                }
-                else {
-                    inputs[(index - 1) % inputs.length].focus();
-                }
-            }
-            else if (event.key === 'ArrowUp') {
-            }
-        });
-    });
-}
-function getCrossword() {
-    const id = 'crossword';
-    const crossword = document.getElementById(id);
-    if (!crossword) {
-        throw new Error(`Can't find #${id}`);
-    }
-    return crossword;
-}
 function getWordsParent() {
     const wordsParentElement = document.getElementById('words');
     if (!wordsParentElement) {
         throw new Error(`Could not find #words element`);
     }
     return wordsParentElement;
-}
-export function render(html) {
-    getCrossword().innerHTML = html;
-}
-export function clearCrossWordDisplay() {
-    render('');
-}
-export function createRow(id) {
-    const row = document.createElement('div');
-    row.classList.add('row');
-    row.id = id;
-    getCrossword().appendChild(row);
-}
-export function createCell(rowId, content, numbers) {
-    const row = document.getElementById(rowId);
-    if (!row) {
-        throw new Error(`Can't find row #${rowId}`);
-    }
-    const cell = document.createElement('div');
-    cell.innerHTML = content;
-    (content ? ['square', 'letter'] : ['square']).forEach(className => cell.classList.add(className));
-    if (numbers.ACROSS) {
-        cell.classList.add('across');
-        cell.classList.add(`across-${numbers.ACROSS}`);
-        cell.dataset.across = `${numbers.ACROSS}`;
-    }
-    if (numbers.DOWN) {
-        cell.classList.add('down');
-        cell.classList.add(`down-${numbers.DOWN}`);
-        cell.dataset.down = `${numbers.DOWN}`;
-    }
-    row.appendChild(cell);
 }
 export function numberClues(acrossWords, downWords) {
     const wordInputs = Array.from(document.querySelectorAll('.word'));
@@ -254,7 +140,4 @@ export function createClues({ across, down }) {
         downList.appendChild(li);
     });
 }
-export function markPlaying(playing = true) {
-    document.body.classList[playing ? 'add' : 'remove']('play');
-}
-//# sourceMappingURL=dom.js.map
+//# sourceMappingURL=wordAndClueInputs.js.map

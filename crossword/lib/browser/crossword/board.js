@@ -1,5 +1,6 @@
 import { randomFrom } from '../../shared/random.js';
-import { clearCrossWordDisplay, createCell, createRow, numberClues } from './dom.js';
+import { clearCrossWordDisplay, createCell, createRow } from './dom/grid.js';
+import { numberClues } from './dom/wordAndClueInputs.js';
 import { ACROSS, DOWN, addPotentialCrosses, findCrosses, getWords } from './words.js';
 ;
 const board = [];

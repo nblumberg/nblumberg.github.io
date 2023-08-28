@@ -1,6 +1,9 @@
 import { setRandomSeed } from '../../shared/random.js';
+import { addButtons, getPlayableLink, updatePlayableLink } from './dom/buttons.js';
 import { Cell, boardToHtml, populateBoard } from './board.js';
-import { addButtons, createClues, createLetterInputs, createWordInput, getPlayableLink, getWordsFromInputs, render, unnumberClues, updatePlayableLink } from './dom.js';
+import { createLetterInputs } from './dom/letterInputs.js';
+import { render } from './dom/grid.js';
+import { createClues, createWordInput, getWordsFromInputs, unnumberClues } from './dom/wordAndClueInputs.js';
 import { startPlaying } from './mode.js';
 import { isPlaying, queryStringToBoard, queryStringToClues } from './queryStringUtils.js';
 

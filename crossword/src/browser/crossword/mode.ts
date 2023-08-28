@@ -1,4 +1,4 @@
-import { markPlaying } from "./dom.js";
+import { markPlaying } from "./dom/body.js";
 
 let playing = false;
 

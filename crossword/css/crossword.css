@@ -69,9 +69,14 @@ body.play .btn {
 }
 
 .crossword {
+  color: white;
   display: block;
   background-color: rgb(32,32,32);
   margin-bottom: 8px;
+}
+
+.crossword * {
+  color: black;
 }
 
 .square {

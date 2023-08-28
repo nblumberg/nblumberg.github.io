@@ -16,6 +16,11 @@ export function createLetterInputs() {
 const isALetter = /^[a-zA-Z]$/;
 const isArrow = /^Arrow\w+$/;
 const isControlKey = /^Tab|Return|Enter$/;
+function checkSolution() {
+    if (inputs.every(input => input.value === input.parentElement.dataset.letter)) {
+        render('Correct!');
+    }
+}
 function letterInputEventHandler(event) {
     const input = event.target;
     if (!input || !input.classList.contains('char')) {
@@ -47,8 +52,29 @@ function navigate(event, input) {
     function navigateRight() {
         inputs[(index + 1) % inputs.length].focus();
     }
+    function navigateVertically(arrow = 'ArrowDown') {
+        const squareElement = input.parentElement;
+        const rowElement = squareElement.parentElement;
+        const column = Array.from(rowElement.children).indexOf(squareElement);
+        const otherRow = (arrow === 'ArrowUp' ? rowElement.previousSibling : rowElement.nextSibling);
+        const otherInput = otherRow?.children.length > column + 1 && (otherRow?.children[column].querySelector('input'));
+        if (otherInput) {
+            otherInput.focus();
+        }
+        else if (arrow === 'ArrowUp') {
+            navigateLeft();
+        }
+        else {
+            navigateRight();
+        }
+    }
     if (isALetter.test(event.key)) {
-        navigateRight();
+        if (input.parentElement.nextSibling?.querySelector('input')) {
+            navigateRight();
+        }
+        else {
+            navigateVertically();
+        }
     }
     else if (isArrow.test(event.key)) {
         switch (event.key) {
@@ -60,29 +86,11 @@ function navigate(event, input) {
                 break;
             case 'ArrowUp':
             case 'ArrowDown':
-                const squareElement = input.parentElement;
-                const rowElement = squareElement.parentElement;
-                const column = Array.from(rowElement.children).indexOf(squareElement);
-                const otherRow = (event.key === 'ArrowUp' ? rowElement.previousSibling : rowElement.nextSibling);
-                const otherInput = otherRow?.children.length > column + 1 && (otherRow?.children[column].querySelector('input'));
-                if (otherInput) {
-                    otherInput.focus();
-                }
-                else if (event.key === 'ArrowUp') {
-                    navigateLeft();
-                }
-                else {
-                    navigateRight();
-                }
+                navigateVertically(event.key);
             default:
                 // ignore
                 break;
         }
-    }
-}
-function checkSolution() {
-    if (inputs.every(input => input.value === input.parentElement.dataset.letter)) {
-        render('Correct!');
     }
 }
 document.addEventListener('keyup', letterInputEventHandler, false);

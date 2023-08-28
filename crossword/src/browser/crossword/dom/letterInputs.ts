@@ -20,6 +20,12 @@ const isALetter = /^[a-zA-Z]$/;
 const isArrow = /^Arrow\w+$/;
 const isControlKey = /^Tab|Return|Enter$/;
 
+function checkSolution(): void {
+  if (inputs.every(input => input.value === input.parentElement!.dataset.letter)) {
+    render('Correct!');
+  }
+}
+
 function letterInputEventHandler(event: KeyboardEvent): void {
   const input = event.target as HTMLInputElement;
   if (!input || !input.classList.contains('char')) {
@@ -52,9 +58,28 @@ function navigate(event: KeyboardEvent, input: HTMLInputElement): void {
   function navigateRight() {
     inputs[(index + 1) % inputs.length].focus();
   }
+  function navigateVertically(arrow: 'ArrowUp' | 'ArrowDown' = 'ArrowDown') {
+    const squareElement = input.parentElement as HTMLDivElement;
+    const rowElement = squareElement.parentElement as HTMLDivElement;
+
+    const column = Array.from(rowElement.children).indexOf(squareElement);
+    const otherRow = (arrow === 'ArrowUp' ? rowElement.previousSibling : rowElement.nextSibling) as HTMLDivElement;
+    const otherInput = otherRow?.children.length > column + 1 && (otherRow?.children[column].querySelector('input')) as HTMLInputElement | null
+    if (otherInput) {
+      otherInput.focus();
+    } else if (arrow === 'ArrowUp') {
+      navigateLeft();
+    } else {
+      navigateRight();
+    }
+  }
 
   if (isALetter.test(event.key)) {
-    navigateRight();
+    if ((input.parentElement!.nextSibling as HTMLDivElement)?.querySelector('input')) {
+      navigateRight();
+    } else {
+      navigateVertically();
+    }
   } else if (isArrow.test(event.key)) {
     switch (event.key) {
       case 'ArrowRight':
@@ -65,29 +90,11 @@ function navigate(event: KeyboardEvent, input: HTMLInputElement): void {
         break;
       case 'ArrowUp':
       case 'ArrowDown':
-        const squareElement = input.parentElement as HTMLDivElement;
-        const rowElement = squareElement.parentElement as HTMLDivElement;
-
-        const column = Array.from(rowElement.children).indexOf(squareElement);
-        const otherRow = (event.key === 'ArrowUp' ? rowElement.previousSibling : rowElement.nextSibling) as HTMLDivElement;
-        const otherInput = otherRow?.children.length > column + 1 && (otherRow?.children[column].querySelector('input')) as HTMLInputElement | null
-        if (otherInput) {
-          otherInput.focus();
-        } else if (event.key === 'ArrowUp') {
-          navigateLeft();
-        } else {
-          navigateRight();
-        }
-        default:
-          // ignore
-          break;
+        navigateVertically(event.key);
+      default:
+        // ignore
+        break;
     }
-  }
-}
-
-function checkSolution(): void {
-  if (inputs.every(input => input.value === input.parentElement!.dataset.letter)) {
-    render('Correct!');
   }
 }
 

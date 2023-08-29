@@ -212,10 +212,13 @@ class MazeBuilder {
         const container = document.createElement("div");
         container.id = "maze";
         container.dataset.steps = `${this.totalSteps}`; // TODO: was a number
-        this.maze.forEach((row) => {
-            let rowDiv = document.createElement("div");
-            row.forEach((cell) => {
-                let cellDiv = document.createElement("div");
+        this.maze.forEach((row, y) => {
+            const rowDiv = document.createElement("div");
+            rowDiv.dataset.y = `${y}`;
+            row.forEach((cell, x) => {
+                const cellDiv = document.createElement("div");
+                cellDiv.dataset.y = `${y}`;
+                cellDiv.dataset.x = `${x}`;
                 if (cell) {
                     cellDiv.className = cell.join(" ");
                 }

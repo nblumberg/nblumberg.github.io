@@ -21,7 +21,8 @@ class Mazing {
     heroHasKey;
     childMode;
     utter;
-    keyPressHandler;
+    boundHandlers;
+    touchEventCache;
     constructor(id) {
         // Original JavaScript code by Chirp Internet: www.chirpinternet.eu
         // Please acknowledge use of this code by including this header.
@@ -62,10 +63,14 @@ class Mazing {
         this.setMessage("first find the key");
         this.mazeContainer.insertAdjacentElement("afterend", mazeOutputDiv);
         /* activate control keys */
-        this.keyPressHandler = this.mazeKeyPressHandler.bind(this);
-        this.touchHandler = this.touchHandler.bind(this);
-        document.addEventListener("keydown", this.keyPressHandler, false);
-        document.addEventListener("touchend", this.touchHandler, false);
+        this.touchEventCache = undefined;
+        this.boundHandlers = new Map();
+        this.boundHandlers.set("keydown", this.mazeKeyPressHandler.bind(this));
+        this.boundHandlers.set("touchstart", this.touchStart.bind(this));
+        this.boundHandlers.set("touchend", this.touchEnd.bind(this));
+        this.boundHandlers.forEach((value, key) => {
+            document.addEventListener(key, value, false);
+        });
     }
     enableSpeech() {
         this.utter = new SpeechSynthesisUtterance();
@@ -108,8 +113,9 @@ class Mazing {
     }
     gameOver(text) {
         /* de-activate control keys */
-        document.removeEventListener("keydown", this.keyPressHandler, false);
-        document.removeEventListener("touchend", this.touchHandler, false);
+        this.boundHandlers.forEach((value, key) => {
+            document.removeEventListener(key, value, false);
+        });
         this.setMessage(text);
         this.mazeContainer.classList.add("finished");
     }
@@ -173,7 +179,7 @@ class Mazing {
                 return;
             }
         }
-        this.setMessage("...");
+        // this.setMessage("...");
     }
     move(direction) {
         const tryPos = new Position(this.heroPos.x, this.heroPos.y);
@@ -203,20 +209,7 @@ class Mazing {
             this.move(e.key.replace("Arrow", ""));
         }
     }
-    touchHandler(e) {
-        e.preventDefault();
-        const heroElement = document.querySelector(".hero");
-        if (!heroElement) {
-            return;
-        }
-        const rect = heroElement.getBoundingClientRect();
-        const { changedTouches: touches } = e;
-        if (touches.length !== 1) {
-            return;
-        }
-        const [touch] = touches;
-        const horizontal = (rect.left + rect.right) / 2 - touch.pageX;
-        const vertical = (rect.top + rect.bottom) / 2 - touch.pageY;
+    weightedMove(horizontal, vertical) {
         if (Math.abs(horizontal) > Math.abs(vertical)) {
             if (horizontal > 0) {
                 this.move("Left");
@@ -233,6 +226,45 @@ class Mazing {
                 this.move("Down");
             }
         }
+    }
+    touchStart(event) {
+        if (this.touchEventCache) {
+            this.touchEventCache.multitouch = true;
+        }
+        else if (event.targetTouches.length !== 1) {
+            return;
+        }
+        else {
+            this.touchEventCache = { touch: event.targetTouches[0], multitouch: false };
+        }
+    }
+    touchEnd(event) {
+        const { touch: originalTouch, multitouch } = this.touchEventCache ?? {};
+        const matchingTouch = Array.from(event.changedTouches).find(({ identifier }) => originalTouch?.identifier === identifier);
+        if (matchingTouch) {
+            this.touchEventCache = undefined;
+        }
+        if (multitouch) {
+            return;
+        }
+        try {
+            event.preventDefault();
+        }
+        catch (e) {
+            // ignore
+        }
+        const cell = (matchingTouch?.target ?? originalTouch?.target);
+        if (!cell || !cell.dataset.x || !cell.dataset.y) {
+            return;
+        }
+        const heroElement = document.querySelector('.hero');
+        if (!heroElement) {
+            return;
+        }
+        const horizontal = parseInt(heroElement.dataset.x, 10) - parseInt(cell.dataset.x, 10);
+        const vertical = parseInt(heroElement.dataset.y, 10) - parseInt(cell.dataset.y, 10);
+        this.setMessage(`${heroElement.dataset.x} - ${cell.dataset.x} = ${horizontal}, ${heroElement.dataset.y} - ${cell.dataset.y} = ${vertical}`);
+        this.weightedMove(horizontal, vertical);
     }
     setChildMode() {
         this.childMode = true;

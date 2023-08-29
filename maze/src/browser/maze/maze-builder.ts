@@ -276,11 +276,14 @@ class MazeBuilder {
     container.id = "maze";
     container.dataset.steps = `${this.totalSteps}`; // TODO: was a number
 
-    this.maze.forEach((row) => {
-      let rowDiv = document.createElement("div");
-      row.forEach((cell) => {
-        let cellDiv = document.createElement("div");
-        if(cell) {
+    this.maze.forEach((row, y) => {
+      const rowDiv: HTMLDivElement = document.createElement("div");
+      rowDiv.dataset.y = `${y}`;
+      row.forEach((cell, x) => {
+        const cellDiv = document.createElement("div");
+        cellDiv.dataset.y = `${y}`;
+        cellDiv.dataset.x = `${x}`;
+        if (cell) {
           cellDiv.className = cell.join(" ");
         }
         rowDiv.appendChild(cellDiv);

@@ -25,7 +25,8 @@ class Mazing {
   heroHasKey: boolean;
   childMode: boolean;
   utter: any;
-  keyPressHandler: (e: KeyboardEvent) => void;
+  boundHandlers: Map<string, (e: any) => void>;
+  touchEventCache?: { touch: Touch; multitouch: boolean; };
 
   constructor(id: string) {
 
@@ -82,11 +83,15 @@ class Mazing {
     this.mazeContainer.insertAdjacentElement("afterend", mazeOutputDiv);
 
     /* activate control keys */
+    this.touchEventCache = undefined;
 
-    this.keyPressHandler = this.mazeKeyPressHandler.bind(this);
-    this.touchHandler = this.touchHandler.bind(this);
-    document.addEventListener("keydown", this.keyPressHandler, false);
-    document.addEventListener("touchend", this.touchHandler, false);
+    this.boundHandlers = new Map();
+    this.boundHandlers.set("keydown", this.mazeKeyPressHandler.bind(this));
+    this.boundHandlers.set("touchstart", this.touchStart.bind(this));
+    this.boundHandlers.set("touchend", this.touchEnd.bind(this));
+    this.boundHandlers.forEach((value, key) => {
+      document.addEventListener(key, value, false);
+    });
   }
 
   enableSpeech() {
@@ -139,8 +144,9 @@ class Mazing {
 
   gameOver(text: string) {
     /* de-activate control keys */
-    document.removeEventListener("keydown", this.keyPressHandler, false);
-    document.removeEventListener("touchend", this.touchHandler, false);
+    this.boundHandlers.forEach((value, key) => {
+      document.removeEventListener(key, value, false);
+    });
     this.setMessage(text);
     this.mazeContainer.classList.add("finished");
   }
@@ -223,7 +229,7 @@ class Mazing {
 
     }
 
-    this.setMessage("...");
+    // this.setMessage("...");
 
   }
 
@@ -256,7 +262,6 @@ class Mazing {
     }
 
     this.tryMoveHero(tryPos);
-
   }
 
   mazeKeyPressHandler(e: KeyboardEvent): void {
@@ -266,20 +271,7 @@ class Mazing {
     }
   }
 
-  touchHandler(e: TouchEvent): void {
-    e.preventDefault();
-    const heroElement = document.querySelector(".hero");
-    if (!heroElement) {
-      return;
-    }
-    const rect = heroElement.getBoundingClientRect();
-    const { changedTouches: touches } = e;
-    if (touches.length !== 1) {
-      return;
-    }
-    const [touch] = touches;
-    const horizontal = (rect.left + rect.right)/2 - touch.pageX;
-    const vertical = (rect.top + rect.bottom)/2 - touch.pageY;
+  weightedMove(horizontal: number, vertical: number): void {
     if (Math.abs(horizontal) > Math.abs(vertical)) {
       if (horizontal > 0) {
         this.move("Left");
@@ -293,6 +285,47 @@ class Mazing {
         this.move("Down");
       }
     }
+  }
+
+  touchStart(event: TouchEvent): void {
+    if (this.touchEventCache) {
+      this.touchEventCache.multitouch = true;
+    } else if (event.targetTouches.length !== 1) {
+      return;
+    } else {
+      this.touchEventCache = { touch: event.targetTouches[0], multitouch: false };
+    }
+  }
+
+  touchEnd(event: TouchEvent): void {
+    const { touch: originalTouch, multitouch } = this.touchEventCache ?? {};
+    const matchingTouch = Array.from(event.changedTouches).find(({ identifier }) => originalTouch?.identifier === identifier);
+    if (matchingTouch) {
+      this.touchEventCache = undefined;
+    }
+
+    if (multitouch) {
+      return;
+    }
+
+    try {
+      event.preventDefault();
+    } catch (e) {
+      // ignore
+    }
+
+    const cell = (matchingTouch?.target ?? originalTouch?.target) as HTMLDivElement;
+    if (!cell || !cell.dataset.x || !cell.dataset.y) {
+      return;
+    }
+    const heroElement: HTMLDivElement | null = document.querySelector('.hero');
+    if (!heroElement) {
+      return;
+    }
+    const horizontal = parseInt(heroElement.dataset.x!, 10) - parseInt(cell.dataset.x!, 10);
+    const vertical = parseInt(heroElement.dataset.y!, 10) - parseInt(cell.dataset.y!, 10);
+    this.setMessage(`${heroElement.dataset.x} - ${cell.dataset.x} = ${horizontal}, ${heroElement.dataset.y} - ${cell.dataset.y} = ${vertical}`);
+    this.weightedMove(horizontal, vertical);
   }
 
   setChildMode() {

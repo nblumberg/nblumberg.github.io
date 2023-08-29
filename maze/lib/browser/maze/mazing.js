@@ -211,25 +211,26 @@ class Mazing {
         }
         const rect = heroElement.getBoundingClientRect();
         const { changedTouches: touches } = e;
-        for (let i = 0; i < touches.length; i++) {
-            const touch = touches[i];
-            const horizontal = (rect.left + rect.right) / 2 - touch.pageX;
-            const vertical = (rect.top + rect.bottom) / 2 - touch.pageY;
-            if (Math.abs(horizontal) > Math.abs(vertical)) {
-                if (horizontal > 0) {
-                    this.move("Left");
-                }
-                else {
-                    this.move("Right");
-                }
+        if (touches.length !== 1) {
+            return;
+        }
+        const [touch] = touches;
+        const horizontal = (rect.left + rect.right) / 2 - touch.pageX;
+        const vertical = (rect.top + rect.bottom) / 2 - touch.pageY;
+        if (Math.abs(horizontal) > Math.abs(vertical)) {
+            if (horizontal > 0) {
+                this.move("Left");
             }
             else {
-                if (vertical > 0) {
-                    this.move("Up");
-                }
-                else {
-                    this.move("Down");
-                }
+                this.move("Right");
+            }
+        }
+        else {
+            if (vertical > 0) {
+                this.move("Up");
+            }
+            else {
+                this.move("Down");
             }
         }
     }

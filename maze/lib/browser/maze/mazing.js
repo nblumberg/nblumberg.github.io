@@ -179,7 +179,7 @@ class Mazing {
                 return;
             }
         }
-        // this.setMessage("...");
+        this.setMessage("...");
     }
     move(direction) {
         const tryPos = new Position(this.heroPos.x, this.heroPos.y);
@@ -263,7 +263,7 @@ class Mazing {
         }
         const horizontal = parseInt(heroElement.dataset.x, 10) - parseInt(cell.dataset.x, 10);
         const vertical = parseInt(heroElement.dataset.y, 10) - parseInt(cell.dataset.y, 10);
-        this.setMessage(`${heroElement.dataset.x} - ${cell.dataset.x} = ${horizontal}, ${heroElement.dataset.y} - ${cell.dataset.y} = ${vertical}`);
+        // this.setMessage(`${heroElement.dataset.x} - ${cell.dataset.x} = ${horizontal}, ${heroElement.dataset.y} - ${cell.dataset.y} = ${vertical}`);
         this.weightedMove(horizontal, vertical);
     }
     setChildMode() {

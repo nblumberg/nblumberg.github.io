@@ -95,10 +95,24 @@ function resolveCustomElements(parent: HTMLElement | Document, subData?: DataPoi
     }
     repeat.parentElement.removeChild(repeat);
   });
-};
+}
+
+function earlierExperience() {
+  const params = new URLSearchParams(window.location.search);
+  const years = moment.duration(Date.now() - 210312000000).years();
+  const earlierExperienceLink = document.getElementById("earlier-experience");
+  if (parseInt(params.get("limit"), 10) > years && params.get("priority") === "0") {
+    earlierExperienceLink.parentElement.style.display = "none";
+  } else {
+    earlierExperienceLink.addEventListener("click", () => {
+      window.location.search = 'limit=100&priority=0&skills=0';
+    });
+  }
+}
 
 export default () => {
   resolveCustomElements(document);
+  earlierExperience();
   document.addEventListener("keyup", skillSearch);
 
   // if (window.location.host.indexOf("localhost") !== -1) {

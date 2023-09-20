@@ -226,6 +226,10 @@ footer {
   font-style: italic;
   font-weight: 400;
   text-align: center;
+
+  .print-only {
+    display: none;
+  }
 }
 
 .src, .src:visited {
@@ -245,6 +249,13 @@ footer {
 @media print {
   footer {
     font-size: 1rem;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    .print-only {
+      display: inline-block;
+    }
   }
   .experience {
     &.game, &.academic, &.television {

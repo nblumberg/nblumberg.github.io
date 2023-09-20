@@ -144,6 +144,12 @@ function mapPortfolio(portfolio?: Artwork[]): Artwork[] | undefined {
   return portfolio.map(entry => Object.assign({}, entry, { image: loadImage(entry.image) }));
 }
 
+function forceEndDate<T extends RawPosition | RawAchievement>(endDate: FormattedDate, obj: FormattedAchievementOrPosition<T>): void {
+  if (obj.dates && !obj.dates.end) {
+    obj.dates.end = endDate;
+  }
+}
+
 function mapJob(data: RawJob): FormattedJob {
   // Deep copy the raw data before manipulating it
   const job = Object.assign({}, data as BaseJob as FormattedJob);
@@ -170,6 +176,10 @@ function mapJob(data: RawJob): FormattedJob {
   };
   if (endDate) {
     overallPosition.dates.end = endDate;
+    job.positions.forEach(position => {
+      forceEndDate(endSortedPositions[0].dates.end, position);
+      position.responsibilities?.forEach(forceEndDate.bind(null, endSortedPositions[0].dates.end));
+    });
   }
   job.dates = formatDates(overallPosition.dates);
 
@@ -187,6 +197,9 @@ function mapJob(data: RawJob): FormattedJob {
     delete job.achievements;
   } else {
     job.achievements = achievements;
+    if (endDate) {
+      job.achievements.forEach(forceEndDate.bind(null, endSortedPositions[0].dates.end));
+    }
   }
 
   return job;

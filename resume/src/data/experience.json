@@ -22,39 +22,27 @@
         "responsibilities": [
           {
             "description": "Work on frontend build tooling supporting the HubSpot engineering organization.",
-            "skills": [
-              "JavaScript", "node", "TypeScript", "Webpack"
-            ]
+            "skills": ["JavaScript", "node", "TypeScript", "Webpack"]
           },
           {
             "description": "Work on in-house alternative to npm to support HubSpot's \"evergreen\" model that automatically updates package dependencies to their latest versions.",
-            "skills": [
-              "JavaScript", "node", "TypeScript", "S3", "Webpack"
-            ]
+            "skills": ["JavaScript", "node", "TypeScript", "AWS S3", "Webpack"]
           },
           {
             "description": "Work on UI displaying the HubSpot frontend package ecosystem and package interdependencies.",
-            "skills": [
-              "JavaScript", "React", "node", "TypeScript", "S3"
-            ]
+            "skills": ["JavaScript", "React", "node", "TypeScript", "AWS S3"]
           },
           {
             "description": "Set up npm packages for consumption through in-house package manager.",
-            "skills": [
-              "JavaScript", "node", "npm", "Webpack"
-            ]
+            "skills": ["JavaScript", "node", "npm", "Webpack"]
           },
           {
             "description": "Address npm, AWS, and Blazar security issues.",
-            "skills": [
-              "JavaScript", "node", "Verdaccio", "IAM", "S3"
-            ]
+            "skills": ["JavaScript", "node", "Verdaccio", "AWS IAM", "AWS S3"]
           },
           {
             "description": "Analyze jasmine/Chrome V8Coverage data to produce code coverage reports for HubSpot frontend packages.",
-            "skills": [
-              "JavaScript", "node", "Chrome", "DevTools", "istanbul"
-            ]
+            "skills": ["JavaScript", "node", "Chrome", "DevTools", "istanbul"]
           }
         ]
       }
@@ -183,11 +171,11 @@
           {
             "description": "Combine existing hosted lead generation landing pages and embedded-in-customer-website sign up forms offerings",
             "skills": [
-              "ECR",
-              "ECS",
+              "AWS ECR",
+              "AWS ECS",
               "Java",
               "JavaScript",
-              "Lambda",
+              "AWS Lambda",
               "Node",
               "React",
               "Webpack"
@@ -205,11 +193,11 @@
           {
             "description": "Collect mobile numbers and permission to be contacted via SMS marketing in existing lead generation landing page forms",
             "skills": [
-              "ECR",
-              "ECS",
+              "AWS ECR",
+              "AWS ECS",
               "Java",
               "JavaScript",
-              "Lambda",
+              "AWS Lambda",
               "Node",
               "React",
               "Webpack"
@@ -226,10 +214,7 @@
         "responsibilities": [
           {
             "description": "Help plan the future architecture of the combined company to use a domain oriented microservice architecture.",
-            "skills": [
-              "C4",
-              "plantUML"
-            ]
+            "skills": ["C4", "plantUML"]
           }
         ]
       },
@@ -242,10 +227,7 @@
         "responsibilities": [
           {
             "description": "Use code to model architecture of core company and acquisitions to form a living document and web hosted, hyperlinked diagrams allowing technical or non-technical users to start at a top-level view and dive down to code repositories.",
-            "skills": [
-              "C4",
-              "plantUML"
-            ]
+            "skills": ["C4", "plantUML"]
           }
         ]
       },
@@ -257,14 +239,8 @@
         "priority": 10,
         "responsibilities": [
           {
-            "description": "Use code to model architecture of core company and acquisitions to form a living document and web hosted, hyperlinked diagrams allowing technical or non-technical users to start at a top-level view and dive down to code repositories.",
-            "skills": [
-              "Gloo Edge",
-              "Gloo Mesh",
-              "Helm",
-              "Java",
-              "Node"
-            ]
+            "description": "Help architect page hosting and API gateway request proxying within, and layout migration roadmap to Gloo Mesh.",
+            "skills": ["Gloo Edge", "Gloo Mesh", "Helm", "Java", "Node"]
           }
         ]
       },
@@ -299,11 +275,11 @@
           {
             "description": "Support customers editing and publishing web pages for capturing user contact information, publishing surveys, and static pages for advertising purposes.",
             "skills": [
-              "ECR",
-              "ECS",
+              "AWS ECR",
+              "AWS ECS",
               "Java",
               "JavaScript",
-              "Lambda",
+              "AWS Lambda",
               "Node",
               "React",
               "Webpack"
@@ -321,14 +297,14 @@
           {
             "description": "Aggregate and index campaign, contact, and template data to provide a search service.",
             "skills": [
-              "API Gateway",
-              "CloudFormation",
-              "CodePipeline",
-              "ElasticSearch",
+              "AWS API Gateway",
+              "AWS CloudFormation",
+              "AWS CodePipeline",
+              "AWS ElasticSearch",
               "git",
               "Java",
               "Jenkins",
-              "Lambda"
+              "AWS Lambda"
             ]
           }
         ]
@@ -344,16 +320,16 @@
           {
             "description": "Published marketing campaign scheduling data via iCal standard for integration with external calendar clients (e.g. Apple, Google, Outlook)",
             "skills": [
-              "API Gateway",
-              "CloudFormation",
-              "CodePipeline",
-              "DynamoDB",
+              "AWS API Gateway",
+              "AWS CloudFormation",
+              "AWS CodePipeline",
+              "AWS DynamoDB",
               "git",
-              "IAM",
+              "AWS IAM",
               "Jenkins",
-              "Lambda",
-              "S3",
-              "SQS"
+              "AWS Lambda",
+              "AWS S3",
+              "AWS SQS"
             ]
           }
         ]
@@ -369,13 +345,13 @@
           {
             "description": "Helped to design a system surfacing recommendations to users. Recommendations could be submitted by multiple applications, sourced from the company's data lake, fed through a complex event processing framework, stored in a framework that resolves conflicts from different sources, and presented a unified API for listening to real time recommendation events or pulling events via a REST API.",
             "skills": [
-              "API Gateway",
-              "Aurora",
-              "Firehose",
+              "AWS API Gateway",
+              "AWS Aurora",
+              "AWS Firehose",
               "FlinkCEP",
-              "Kinesis",
+              "AWS Kinesis",
               "JSON",
-              "S3"
+              "AWS S3"
             ]
           }
         ]
@@ -392,16 +368,16 @@
             "description": "Created cloud-based infrastructure and UI for campaign search. Aggregated all user-created content from disparate microservices, indexed it, and provided an API for running search queries against it. Polled for updates to keep indexed data current. Supported gradual roll out of the feature to the user base along with tools for managing and monitoring data processing.",
             "skills": [
               "Angular",
-              "CloudFormation",
-              "CodePipeline",
+              "AWS CloudFormation",
+              "AWS CodePipeline",
               "git",
-              "IAM",
+              "AWS IAM",
               "Java",
               "Jenkins",
-              "Lambda",
+              "AWS Lambda",
               "lucene",
               "New Relic",
-              "S3"
+              "AWS S3"
             ]
           }
         ]
@@ -417,18 +393,18 @@
           {
             "description": "Reimplemented calendar view of customer campaigns to enable date-based-planning and searching.",
             "skills": [
-              "API Gateway",
+              "AWS API Gateway",
               "Babel",
-              "CloudFormation",
-              "CodePipeline",
-              "DynamoDB",
+              "AWS CloudFormation",
+              "AWS CodePipeline",
+              "AWS DynamoDB",
               "ESLint",
-              "IAM",
+              "AWS IAM",
               "JavaScript",
               "Jenkins",
               "JSDoc",
               "JSX",
-              "Lambda",
+              "AWS Lambda",
               "Lerna",
               "npm",
               "nvm",
@@ -548,13 +524,7 @@
         "responsibilities": [
           {
             "description": "Design and implement a calendar view of customer campaigns to enable date-based-planning and searching.",
-            "skills": [
-              "Angular",
-              "Jasmine",
-              "Jenkins",
-              "Karma",
-              "Spring"
-            ]
+            "skills": ["Angular", "Jasmine", "Jenkins", "Karma", "Spring"]
           }
         ]
       },
@@ -621,7 +591,7 @@
         "priority": 70,
         "responsibilities": [
           {
-            "description": "Designed and implemented a framework to, by configuration, easily spin up a series of different initial product experiences and homepages for new customers targeting specific market segments. Implemented A/B testing a tracking withing the different experiences.",
+            "description": "Designed and implemented a framework to, by configuration, easily spin up a series of different initial product experiences and homepages for new customers targeting specific market segments. Implemented A/B testing a tracking within the different experiences.",
             "skills": [
               "Angular",
               "JavaScript",
@@ -801,7 +771,17 @@
           {
             "description": "Re-implemented the email creation and management wizard flow again as a separate Spring application and microservice.",
             "skills": [
-              "AJAX", "CXF", "DB2", "EJB persistence", "JDBC", "JavaScript", "jQuery", "Java", "JSP", "Spring", "SQL"
+              "AJAX",
+              "CXF",
+              "DB2",
+              "EJB persistence",
+              "JDBC",
+              "JavaScript",
+              "jQuery",
+              "Java",
+              "JSP",
+              "Spring",
+              "SQL"
             ]
           }
         ]
@@ -816,9 +796,7 @@
         "responsibilities": [
           {
             "description": "Re-implemented the email creation and management wizard flow using Spring POST-back form transitions.",
-            "skills": [
-              "JavaScript", "jQuery", "Java", "JSP", "Spring", "Tiles"
-            ]
+            "skills": ["JavaScript", "jQuery", "Java", "JSP", "Spring", "Tiles"]
           }
         ]
       },
@@ -832,9 +810,7 @@
         "responsibilities": [
           {
             "description": "Streamlined the management of stock images available to customers.",
-            "skills": [
-              "Excel", "Java", "JSP", "Spring"
-            ]
+            "skills": ["Excel", "Java", "JSP", "Spring"]
           }
         ]
       }
@@ -864,9 +840,7 @@
         "responsibilities": [
           {
             "description": "Developed sponsored ad campaigns as landing pages for TripAdvisor search results.",
-            "skills": [
-              "JavaScript", "HTML", "CSS", "Java", "Velocity"
-            ]
+            "skills": ["JavaScript", "HTML", "CSS", "Java", "Velocity"]
           }
         ]
       }
@@ -899,13 +873,33 @@
           {
             "description": "Yahoo Content/Video Platform Console: Consisted of an application chrome wrapping modular sub-applications that could be slotted in and enabled by the current user’s authorizations. Integrated a series of Yahoo services to include sub-applications for: <ul><li>Managing accounts, users, and authorizations</li><li>Viewing customer video usage analytics</li><li>Managing video player configurations and hosting</li><li>Managing videos, playlists, and their metadata (includes all the video functionality of the Maven Console below)</li></ul>",
             "skills": [
-              "Flex", "Flash", "FlexUnit", "Fluint", "Mock4AS", "JavaScript", "AJAX", "REST", "mvn", "Flex-mojos", "Firebug", "YInst", "YTS", "Agile", "VersionOne"
+              "Flex",
+              "Flash",
+              "FlexUnit",
+              "Fluint",
+              "Mock4AS",
+              "JavaScript",
+              "AJAX",
+              "REST",
+              "mvn",
+              "Flex-mojos",
+              "Firebug",
+              "YInst",
+              "YTS",
+              "Agile",
+              "VersionOne"
             ]
           },
           {
             "description": "Maven Console: allowed users to upload videos and thumbnails into a CMS, browse/search for videos, edit video metadata and availability, organize videos into playlists, and associate videos with specific player configurations. Users could also create player configurations by customizing base player UIs (each defined by a Flash swf) with uploaded images or colors chosen in the Console.",
             "skills": [
-              "HTML", "JavaScript", "AJAX", "Flash CS3", "httpd", "IE", "Visual Studio"
+              "HTML",
+              "JavaScript",
+              "AJAX",
+              "Flash CS3",
+              "httpd",
+              "IE",
+              "Visual Studio"
             ]
           }
         ]
@@ -915,8 +909,7 @@
 
   {
     "name": "BrightText",
-    "address": {
-    },
+    "address": {},
     "website": "http://brighttext.com/",
     "type": "software",
     "positions": [
@@ -931,7 +924,12 @@
           {
             "description": "Developed ActionScript libraries for in-browser Flash player-based implementation of BrightText, a system for defining, presenting, editing, and saving an interactively customizable form letter, report, or other content. Implemented XML parsing of definition files, data model classes, and UI classes responsible for data presentation and interaction.",
             "skills": [
-              "Flash", "ActionScript", "XML", "Flex Builder", "Firefox", "Firebug"
+              "Flash",
+              "ActionScript",
+              "XML",
+              "Flex Builder",
+              "Firefox",
+              "Firebug"
             ]
           }
         ]
@@ -961,13 +959,23 @@
           {
             "description": "Developed the non-Flash portions of Real Live Sport’s website, using and manipulating art assets created for the Flash portion of the website to mimic the Flash site using DHTML and CSS.",
             "skills": [
-              "HTML", "CSS", "JavaScript", "Photoshop", "ImageReady", "Illustrator", "Flash"
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "Photoshop",
+              "ImageReady",
+              "Illustrator",
+              "Flash"
             ]
           },
           {
             "description": "Assisted in development of the Flash portions of Real Live Sport’s website, providing ActionScript and file architecture expertise. Implemented the reading of data from an external XML file to manage prioritized and user-orderable preloading of .swf and .mp3 files. Implemented management of sounds, text, and user feedback from within ActionScript. Implemented dynamically generated Flash user interface elements (e.g. buttons, text feedback, etc.) based on external XML data.",
             "skills": [
-              "Flash", "ActionScript", "HTML", "JavaScript", "Photoshop"
+              "Flash",
+              "ActionScript",
+              "HTML",
+              "JavaScript",
+              "Photoshop"
             ]
           }
         ]
@@ -996,9 +1004,7 @@
         "responsibilities": [
           {
             "description": "Developed AppleScript tools for formatting Word documents as well as counting word occurrences to confirm that educational texts conformed to readable standards for English as a Second Language students.",
-            "skills": [
-              "AppleScript", "Word"
-            ]
+            "skills": ["AppleScript", "Word"]
           }
         ]
       },
@@ -1011,9 +1017,7 @@
         "responsibilities": [
           {
             "description": "Poured Word format textbook manuscripts into Adobe's InCopy. Set line and character styles and content layout within InCopy. Proofread content and compiled art specifications tables for art production. Tracked manuscript over matter inside Adobe InDesign templates.",
-            "skills": [
-              "InCopy", "Word"
-            ]
+            "skills": ["InCopy", "Word"]
           }
         ]
       }
@@ -1063,27 +1067,25 @@
         "responsibilities": [
           {
             "description": "Designed fiction and game play and implemented game spaces for Pirates of the Caribbean Multiplayer, a real-time multiplayer naval combat cell-phone game for BREW and J2ME cell phones and Microsoft Smartphones.",
-            "skills": [
-              "In-house editor"
-            ]
+            "skills": ["In-house editor"]
           },
           {
             "description": "Lead designer for Neverwinter Nights Mobile Edition for BREW and J2ME based cell phones and Microsoft Smartphones. Designed and implemented fiction, game play, and game spaces. Also wrote NPC dialog and scripted interaction with game objects. Coordinated in-house asset development and delivery to the publisher, JAMDAT mobile's, California offices. Created minor art contributions and managed art content.",
             "skills": [
-              "Photoshop", "In-house editor", "In-house scripting language", "Bugzilla", "Merant Tracker"
+              "Photoshop",
+              "In-house editor",
+              "In-house scripting language",
+              "Bugzilla",
+              "Merant Tracker"
             ]
           },
           {
             "description": "Story designer for Arkane Studio's Dark Messiah of Might and Magic. Coordinated content development with Arkane Studio's Lyon, France office.",
-            "skills": [
-              "cwRsync", "Valve's Hammer toolset"
-            ]
+            "skills": ["cwRsync", "Valve's Hammer toolset"]
           },
           {
             "description": "Designed and implemented fiction, game play, and game spaces for Neverwinter Nights: Shadows of Undrentide. Also scripted characters, monsters, items, traps, spells, and game events and created loadscreen, monster, and item portraits for Shadows of Undrentide. Coordinated content development with Bioware Entertainment's Edmonton, Canada office.",
-            "skills": [
-              "Bioware Aurora Toolset", "Photoshop"
-            ]
+            "skills": ["Bioware Aurora Toolset", "Photoshop"]
           }
         ]
       },
@@ -1096,9 +1098,7 @@
         "responsibilities": [
           {
             "description": "Prototyped GUI for a proposed video game.",
-            "skills": [
-              "Flash", "ActionScript", "Photoshop"
-            ]
+            "skills": ["Flash", "ActionScript", "Photoshop"]
           }
         ]
       }
@@ -1137,19 +1137,25 @@
           {
             "description": "Designed and implemented fiction, game play, and game spaces for Jane's Attack Squadron. Also researched historical accuracy of game elements and implemented changes to the game's editor.",
             "skills": [
-              "Visual Studio", "COM", "MFC", "Windows 2000", "in-house editor", "in-house scripting language"
+              "Visual Studio",
+              "COM",
+              "MFC",
+              "Windows 2000",
+              "in-house editor",
+              "in-house scripting language"
             ]
           },
           {
             "description": "Managed source control and backups of code and assets.",
-            "skills": [
-              "VSS", "CVS", "RCS"
-            ]
+            "skills": ["VSS", "CVS", "RCS"]
           },
           {
             "description": "Designed, implemented and documented user keys and tested game play for Star Trek Armada II.",
             "skills": [
-              "Visual Studio", "Word", "in-house editor", "in-house scripting language"
+              "Visual Studio",
+              "Word",
+              "in-house editor",
+              "in-house scripting language"
             ]
           }
         ]
@@ -1177,7 +1183,13 @@
           {
             "description": "Implemented game development tools and evaluation tests of rendering engine licenses for a planned PC massively multiplayer online role-playing game (MMORPG).",
             "skills": [
-              "Visual Studio", "C++", "Visual Basic", "NetImmerse", "Renderware3D", "UML", "Extreme Programming"
+              "Visual Studio",
+              "C++",
+              "Visual Basic",
+              "NetImmerse",
+              "Renderware3D",
+              "UML",
+              "Extreme Programming"
             ]
           }
         ]
@@ -1213,14 +1225,16 @@
           {
             "description": "Designed and implemented fiction, game play and game spaces, and prototyped GUI and game mechanics for a planned PC and console game.",
             "skills": [
-              "Macromedia Director", "Macromedia Lingo", "Photoshop", "Word", "in-house software and scripting language"
+              "Macromedia Director",
+              "Macromedia Lingo",
+              "Photoshop",
+              "Word",
+              "in-house software and scripting language"
             ]
           },
           {
             "description": "Implemented game spaces for Thief 2 Gold.",
-            "skills": [
-              "in-house software and scripting language"
-            ]
+            "skills": ["in-house software and scripting language"]
           }
         ]
       }
@@ -1255,14 +1269,17 @@
           {
             "description": "Implemented features for RBI's in-house model, action, and level editor Leo.",
             "skills": [
-              "Metroworks Codewarrior for Mac", "C", "C++", "Mac OS 8", "QuickDraw3D", "in-house scripting language"
+              "Metroworks Codewarrior for Mac",
+              "C",
+              "C++",
+              "Mac OS 8",
+              "QuickDraw3D",
+              "in-house scripting language"
             ]
           },
           {
             "description": "Helped design and create players, enemies, weapons, levels and game mechanics for unreleased projects ranging from a pulp comics \"ray gun & rocket pack\" style 3rd person shooter to racing titles.",
-            "skills": [
-              "Word", "In-house editor", "In-house scripting language"
-            ]
+            "skills": ["Word", "In-house editor", "In-house scripting language"]
           }
         ]
       },
@@ -1275,21 +1292,15 @@
         "responsibilities": [
           {
             "description": "Implemented enemy/environment AI and cut scenes for Dark Vengeance video game.",
-            "skills": [
-              "In-house editor", "In-house scripting language"
-            ]
+            "skills": ["In-house editor", "In-house scripting language"]
           },
           {
             "description": "Managed source control and backups of code and assets.",
-            "skills": [
-              "VSS"
-            ]
+            "skills": ["VSS"]
           },
           {
             "description": "Acted as voice talent for Dark Vengeance.",
-            "skills": [
-              "VSS"
-            ]
+            "skills": ["VSS"]
           }
         ]
       },
@@ -1302,15 +1313,11 @@
         "responsibilities": [
           {
             "description": "Created 3D levels for Dark Vengeance.",
-            "skills": [
-              "In-house editor", "In-house scripting language"
-            ]
+            "skills": ["In-house editor", "In-house scripting language"]
           },
           {
             "description": "Documented and debugged RBI's in-house editor Leo.",
-            "skills": [
-              "Excel", "In-house editor"
-            ]
+            "skills": ["Excel", "In-house editor"]
           },
           {
             "description": "Ran user opinion studies on game artwork and animation."
@@ -1344,7 +1351,15 @@
           {
             "description": "Created a flash-card style study tool for art history students.",
             "skills": [
-              "Flash", "ActionScript", "Photoshop", "FileFlex", "Mac OS 8", "AppleShare", "AppleScript", "Microsoft FoxPro", "HTML"
+              "Flash",
+              "ActionScript",
+              "Photoshop",
+              "FileFlex",
+              "Mac OS 8",
+              "AppleShare",
+              "AppleScript",
+              "Microsoft FoxPro",
+              "HTML"
             ]
           }
         ]

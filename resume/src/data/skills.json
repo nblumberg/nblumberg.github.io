@@ -64,7 +64,7 @@
     "experienceLevel": "expert"
   },
   {
-    "shortName": "API Gateway",
+    "shortName": "AWS API Gateway",
     "fullName": "Amazon API Gateway",
     "company": "Amazon",
     "website": "https://aws.amazon.com/api-gateway/",
@@ -87,7 +87,7 @@
     "experienceLevel": "familiar"
   },
   {
-    "shortName": "Aurora",
+    "shortName": "AWS Aurora",
     "fullName": "Amazon Aurora",
     "company": "Amazon",
     "website": "https://aws.amazon.com/rds/aurora/",
@@ -158,7 +158,7 @@
     "experienceLevel": "familiar"
   },
   {
-    "shortName": "CloudFormation",
+    "shortName": "AWS CloudFormation",
     "fullName": "Amazon Web Services CloudFormation",
     "company": "Amazon",
     "website": "https://aws.amazon.com/cloudformation/",
@@ -166,7 +166,7 @@
     "experienceLevel": "experienced"
   },
   {
-    "shortName": "CodePipeline",
+    "shortName": "AWS CodePipeline",
     "fullName": "Amazon Web Services CodePipeline",
     "company": "Amazon",
     "website": "https://aws.amazon.com/codepipeline/",
@@ -272,7 +272,7 @@
     "experienceLevel": "experienced"
   },
   {
-    "shortName": "DynamoDB",
+    "shortName": "AWS DynamoDB",
     "fullName": "Amazon Web Services DynamoDB",
     "company": "Amazon",
     "website": "https://aws.amazon.com/dynamodb/",
@@ -288,7 +288,7 @@
     "experienceLevel": "experienced"
   },
   {
-    "shortName": "ECR",
+    "shortName": "AWS ECR",
     "fullName": "Amazon Web Services Elastic Container Registry",
     "company": "Amazon",
     "description": "A fully managed container registry offering high-performance hosting, so you can reliably deploy application images and artifacts anywhere",
@@ -296,7 +296,7 @@
     "website": "https://aws.amazon.com/ecr/"
   },
   {
-    "shortName": "ECS",
+    "shortName": "AWS ECS",
     "fullName": "Amazon Web Services Elastic Container Service",
     "company": "Amazon",
     "description": "A fully managed container orchestration service that makes it easy for you to deploy, manage, and scale containerized applications",
@@ -334,7 +334,7 @@
     "description": "Part of the J2EE framework abstracting database access and storage behind Java classes"
   },
   {
-    "shortName": "ElasticSearch",
+    "shortName": "AWS ElasticSearch",
     "fullName": "Amazon ElasticSearch Service",
     "company": "Amazon",
     "website": "https://aws.amazon.com/elasticsearch-service/",
@@ -388,7 +388,7 @@
     "deprecated": true
   },
   {
-    "shortName": "Firehose",
+    "shortName": "AWS Firehose",
     "fullName": "Amazon Kinesis Data Firehose",
     "company": "Amazon",
     "website": "https://aws.amazon.com/kinesis/data-firehose/",
@@ -600,7 +600,7 @@
     "website": "https://httpd.apache.org/"
   },
   {
-    "shortName": "IAM",
+    "shortName": "AWS IAM",
     "fullName": "AWS' Identity and Access Management",
     "company": "Amazon",
     "description": "Configuration of user authentication and AWS cloud resource authorization.",
@@ -809,7 +809,7 @@
     "experienceLevel": "expert"
   },
   {
-    "shortName": "Kinesis",
+    "shortName": "AWS Kinesis",
     "fullName": "Amazon Kinesis",
     "company": "Amazon",
     "website": "https://aws.amazon.com/kinesis/",
@@ -817,7 +817,7 @@
     "experienceLevel": "familiar"
   },
   {
-    "shortName": "Lambda",
+    "shortName": "AWS Lambda",
     "fullName": "Amazon Web Services Lambda",
     "company": "Amazon",
     "website": "https://aws.amazon.com/lambda/",
@@ -1024,7 +1024,7 @@
     "experienceLevel": "experienced"
   },
   {
-    "shortName": "S3",
+    "shortName": "AWS S3",
     "fullName": "Amazon Simple Storage Service",
     "website": "https://aws.amazon.com/s3/",
     "description": "Cloud-based object storage (i.e. discrete file storage, as opposed to block/file system storage)",
@@ -1099,7 +1099,7 @@
     "experienceLevel": "experienced"
   },
   {
-    "shortName": "SQS",
+    "shortName": "AWS SQS",
     "fullName": "Amazon Simple Queue Service",
     "website": "https://aws.amazon.com/sqs/",
     "company": "Amazon",

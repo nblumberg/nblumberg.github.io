@@ -1,44 +1,57 @@
 <header class="me">
-    <div>
-        <nb-placeholder data-key="me">name</nb-placeholder>
-        <nb-placeholder data-key="me">overview</nb-placeholder>
+  <div>
+    <nb-placeholder data-key="me">name</nb-placeholder>
+    <nb-placeholder data-key="me">overview</nb-placeholder>
+  </div>
+  <div>
+    <nb-placeholder data-key="me">address</nb-placeholder>
+    <nb-placeholder data-key="me">contact</nb-placeholder>
+    <div class="actions">
+      <a
+        class="mode"
+        href="javascript:void(0);"
+        onclick="document.body.classList.toggle('dark'); return false;"
+        >Toggle dark mode</a
+      >
+      <a
+        class="print"
+        href="javascript:void(0);"
+        onclick="window.print(); return false;"
+        >Print/Save as PDF</a
+      >
     </div>
-    <div>
-        <nb-placeholder data-key="me">address</nb-placeholder>
-        <nb-placeholder data-key="me">contact</nb-placeholder>
-        <div class="actions">
-            <a class="mode" href="javascript:void(0);" onclick="document.body.classList.toggle('dark'); return false;">Toggle dark mode</a>
-            <a class="print" href="javascript:void(0);" onclick="window.print(); return false;">Print/Save as PDF</a>
-        </div>
-    </div>
+  </div>
 </header>
 <a class="online" href="http://nblumberg.github.io/resume">Online resume</a>
 <section class="skills">
-    <div class="legend">
-        <h2>Skills</h2><span class="skills-prompt">(Hover or tap for details)</span>
-    </div>
-    <div class="skillList">
-        <nb-placeholder data-key="skills">skillListWidget</nb-placeholder>
-        <nb-repeat data-key="skills">skills</nb-repeat>
-    </div>
+  <div class="legend">
+    <h1>Skills</h1>
+    <span class="skills-prompt">(Hover or tap for details)</span>
+  </div>
+  <div class="skillList">
+    <nb-placeholder data-key="skills">skillListWidget</nb-placeholder>
+    <nb-repeat data-key="skills">skills</nb-repeat>
+  </div>
 </section>
 <section class="experiences">
-    <h2>Experience</h2>
-    <nb-repeat data-key="experience">experience</nb-repeat>
+  <h1>Experience</h1>
+  <nb-repeat data-key="experience">experience</nb-repeat>
 </section>
 <footer class="earlier-experience">
-    <a href="javascript:void(0)" id="earlier-experience">
-      Earlier experience (including video game development and tool scripting)
-    </a>
-    <span class="print-only">available upon request</span>
+  <a href="javascript:void(0)" id="earlier-experience">
+    Earlier experience (including video game development and tool scripting)
+  </a>
+  <span class="print-only">available upon request</span>
 </footer>
 <section class="education">
-    <h2>Education</h2>
-    <nb-repeat data-key="education">education</nb-repeat>
+  <h1>Education</h1>
+  <nb-repeat data-key="education">education</nb-repeat>
 </section>
-<footer>
-    References available upon request
-</footer>
-<a class="src" href="https://github.com/nblumberg/nblumberg.github.io/tree/master/resume" target="_blank">
-    <h3>See how this resume was made!</h3>
+<footer>References available upon request</footer>
+<a
+  class="src"
+  href="https://github.com/nblumberg/nblumberg.github.io/tree/master/resume"
+  target="_blank"
+>
+  <h3>See how this resume was made!</h3>
 </a>

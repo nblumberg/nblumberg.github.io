@@ -16,7 +16,8 @@
   }
 }
 
-.experience, .school {
+.experience,
+.school {
   border: 1px solid gray;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -108,7 +109,8 @@
     background-color: white;
     border: 3px solid black;
     border-radius: 8px;
-    -webkit-box-reflect: below 0px linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.1) 100%);
+    -webkit-box-reflect: below 0px
+      linear-gradient(top, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.1) 100%);
     left: -25%;
     padding: 0 1rem;
     position: absolute;
@@ -116,7 +118,8 @@
     z-index: 1;
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     .coverflow-container {
       @extend .slideIn;
     }
@@ -128,8 +131,9 @@
     border: 1px solid black;
     padding: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-    &:hover, &:active {
-      color: #FFF;
+    &:hover,
+    &:active {
+      color: #fff;
     }
   }
 
@@ -156,7 +160,7 @@
         margin: 0;
 
         img {
-          box-shadow: 0 1px 8px rgba(0,0,0,0.9);
+          box-shadow: 0 1px 8px rgba(0, 0, 0, 0.9);
           height: 150px;
           max-width: 150px;
         }
@@ -177,7 +181,7 @@
   }
 
   input[type="radio"] {
-    display:none;
+    display: none;
 
     //  &:checked {
     //    + .coverflow-item {
@@ -209,7 +213,6 @@
   }
 }
 
-
 //@keyframes cover-forward {
 //  0% { transform: rotateY( 45deg ); }
 //  50% { transform: rotateY( 0deg ) translate3d( 60px,0,0 ) scale3d(1.2,1.2,1.2); z-index:999; }
@@ -222,7 +225,6 @@
 //}
 
 footer {
-  font-size: 1.25rem;
   font-style: italic;
   font-weight: 400;
   text-align: center;
@@ -232,7 +234,8 @@ footer {
   }
 }
 
-.src, .src:visited {
+.src,
+.src:visited {
   background: forestgreen;
   border-radius: $quarterCircleRadius 0 0 0;
   bottom: 0;
@@ -248,7 +251,7 @@ footer {
 
 @media print {
   footer {
-    font-size: 1rem;
+    // font-size: 1rem;
     a {
       color: black;
       text-decoration: none;
@@ -258,7 +261,9 @@ footer {
     }
   }
   .experience {
-    &.game, &.academic, &.television {
+    &.game,
+    &.academic,
+    &.television {
       display: none !important;
     }
   }

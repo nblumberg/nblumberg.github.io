@@ -20,7 +20,8 @@
   }
 }
 
-.actions, .contact {
+.actions,
+.contact {
   a {
     display: block;
     margin-bottom: 0.5rem;
@@ -29,7 +30,6 @@
 
 .overview {
   font-style: italic;
-  font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
@@ -58,11 +58,14 @@
       }
     }
 
-    address, .contact a, .actions a {
+    address,
+    .contact a,
+    .actions a {
       display: inline;
     }
 
-    .contact, .actions {
+    .contact,
+    .actions {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -88,14 +91,15 @@
   a {
     text-decoration: none;
   }
-  .actions, .skills-prompt, .src {
+  .actions,
+  .skills-prompt,
+  .src {
     display: none !important;
   }
   .online {
     display: block;
     text-align: center;
   }
-
 
   @include stacking-contact;
 }

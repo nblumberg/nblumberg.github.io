@@ -21,27 +21,27 @@
         },
         "responsibilities": [
           {
-            "description": "Work on frontend build tooling supporting the HubSpot engineering organization.",
+            "description": "Create &amp; maintain frontend build tooling supporting the HubSpot engineering organization.",
             "skills": ["JavaScript", "node", "TypeScript", "Webpack"]
           },
           {
-            "description": "Work on in-house alternative to npm to support HubSpot's \"evergreen\" model that automatically updates package dependencies to their latest versions.",
+            "description": "Maintain in-house alternative to npm to support HubSpot's \"evergreen\" model that automatically updates package dependencies to their latest versions.",
             "skills": ["JavaScript", "node", "TypeScript", "AWS S3", "Webpack"]
           },
           {
-            "description": "Work on UI displaying the HubSpot frontend package ecosystem and package interdependencies.",
+            "description": "Develop UI displaying the HubSpot frontend package ecosystem and package interdependencies.",
             "skills": ["JavaScript", "React", "node", "TypeScript", "AWS S3"]
           },
           {
-            "description": "Set up npm packages for consumption through in-house package manager.",
+            "description": "Configure npm packages for consumption through in-house package manager.",
             "skills": ["JavaScript", "node", "npm", "Webpack"]
           },
           {
-            "description": "Address npm, AWS, and Blazar security issues.",
+            "description": "Tackle npm, AWS, and Blazar security issues.",
             "skills": ["JavaScript", "node", "Verdaccio", "AWS IAM", "AWS S3"]
           },
           {
-            "description": "Analyze jasmine/Chrome V8Coverage data to produce code coverage reports for HubSpot frontend packages.",
+            "description": "Create code coverage reports for HubSpot frontend packages through analysis of jasmine/Chrome V8Coverage data.",
             "skills": ["JavaScript", "node", "Chrome", "DevTools", "istanbul"]
           }
         ]

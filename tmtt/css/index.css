@@ -1,17 +1,73 @@
 body {
   background-color: black;
   color: white;
+  font-size: large;
   margin: 0;
   overflow-x: hidden;
   overscroll-behavior: none;
   padding: 0;
 }
 
+.tag-container.head {
+  justify-content: space-between;
+}
+
+.diversifier-container {
+  display: flex;
+  margin: 0;
+}
+
+.diversifier {
+  background: rgb(0, 255, 0);
+  background: linear-gradient(
+    126deg,
+    rgba(0, 255, 0, 1) 0%,
+    rgba(245, 255, 0, 1) 50%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  border: 5px solid gold;
+  border-radius: 50%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  height: 116px;
+  width: 116px;
+}
+
+.diversifier-count {
+  background-color: black;
+  border: 3px inset red;
+  color: red;
+  flex-shrink: 1;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  width: 3em;
+}
+
+.diversifier-count.complete {
+  background-color: green;
+  border: none;
+  color: black;
+}
+
+.title {
+  flex-shrink: 3;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .title {
+    display: none;
+  }
+}
+
 .clear-button {
+  flex-shrink: 1;
   font-size: 2em;
 }
 
 .tag-container {
+  align-items: stretch;
   border: 10px inset gray;
   box-sizing: border-box;
   display: flex;
@@ -21,12 +77,22 @@ body {
   width: 99vw;
 }
 
+.tag-figure {
+  margin: 0;
+}
+.tag-label {
+  text-align: center;
+  width: 100%;
+}
+
 .tag-count {
+  align-items: stretch;
   counter-reset: item -1;
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
   list-style-type: none;
+  margin: 0;
   overflow-x: scroll;
   padding-right: 90%;
   position: relative;
@@ -43,9 +109,8 @@ body {
 .tag-count li {
   flex-grow: 1;
   flex-shrink: 0;
-  font-size: large;
   font-weight: bold;
-  display: block;
+  display: inline-block;
   text-align: center;
   width: 3em;
 }
@@ -53,6 +118,8 @@ body {
 .tag-count li:before {
   content: counter(item) " ";
   counter-increment: item;
+  position: relative;
+  top: 50%;
 }
 
 .tag-count li.selected {

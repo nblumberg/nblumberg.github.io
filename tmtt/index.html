@@ -16,7 +16,23 @@
   </head>
   <body>
     <div id="root">
-      <button id="clear" class="clear-button">🗑 Reset</button>
+      <header class="tag-container head">
+        <div class="diversifier-container">
+          <figure class="tag-figure">
+            <div class="diversifier"></div>
+            <figcaption class="tag-label">Diversifier</figcaption>
+          </figure>
+          <input
+            id="diversifier"
+            class="diversifier-count"
+            type="number"
+            disabled
+            value="0"
+          />
+        </div>
+        <h1 class="title">Terraforming Mars Tag Tracker</h1>
+        <button id="clear" class="clear-button">🗑 Reset</button>
+      </header>
     </div>
     <footer>
       Assets from
@@ -26,7 +42,10 @@
     </footer>
     <template id="tag-template">
       <div class="tag-container">
-        <img class="tag-image" />
+        <figure class="tag-figure">
+          <img class="tag-image" />
+          <figcaption class="tag-label"></figcaption>
+        </figure>
         <ol class="tag-count">
           <li class="tag-count-number" data-value="0">&nbsp;</li>
           <li class="tag-count-number" data-value="1">&nbsp;</li>

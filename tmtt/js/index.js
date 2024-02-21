@@ -1,21 +1,22 @@
 // Constants
 const tags = [
-  "animal",
-  "building",
-  "city",
-  "clone",
-  "earth",
-  "event",
-  "jovian",
+  // Counts from https://ssimeonoff.github.io/cards-list
+  "building", // 100+10+9=119
+  "space", // 91+4+1=96
+  "event", // 66
+  "science", // 56+2+3=61
+  "earth", // 49+6+3=58
+  "power", // 35+2+3=40
+  "plant", // 30+2+4=36
+  "venus", // 32+3=35
+  "microbe", // 26+4+2=32
+  "jovian", // 24+2+2=28
+  "city", // 22+2=24
+  "animal", // 16+1=17
   "mars",
-  "microbe",
   "moon",
-  "plant",
-  "power",
-  "science",
-  "space",
-  "wild",
-  "venus",
+  "clone",
+  "wild", // 1+1+1=3
 ];
 
 const storageKey = "tag-tracker";
@@ -31,6 +32,15 @@ function storeState() {
 
 function updateState(tag, count) {
   state[tag] = typeof count === "number" ? count : parseInt(`${count}`, 10);
+  diversifier.value = Object.entries(state).reduce(
+    (acc, [tag, val]) => acc + (val && tag !== "event" ? 1 : 0),
+    0
+  );
+  if (diversifier.value >= 8) {
+    diversifier.classList.add("complete");
+  } else {
+    diversifier.classList.remove("complete");
+  }
   storeState();
 }
 
@@ -63,6 +73,9 @@ function createTagRow(tag) {
 
   const img = clone.querySelector(".tag-image");
   img.src = `https://terraforming-mars.herokuapp.com/assets/tags/${tag}.png`;
+
+  const label = clone.querySelector(".tag-label");
+  label.innerText = tag.charAt(0).toUpperCase() + tag.slice(1);
 
   const count = clone.querySelector(".tag-count");
   const numbers = [...count.children];
@@ -132,6 +145,8 @@ let state = localStorage.getItem(storageKey)
 
 // Create DOM & add event listeners
 const root = document.getElementById("root");
+
+const diversifier = document.getElementById("diversifier");
 
 const clear = document.getElementById("clear");
 clear.addEventListener("click", clearState);

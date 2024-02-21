@@ -1,0 +1,12 @@
+{
+  "name": "terraforming_mars_tag_tracker",
+  "version": "1.0.0",
+  "description": "A utility for tracking a player's tags in a game of Terraforming Mars",
+  "main": "index.js",
+  "scripts": {
+    "serve": "python3 -m http.server 8080 --directory .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nathaniel Blumberg <nathanielblumberg@gmail.com>",
+  "license": "ISC"
+}

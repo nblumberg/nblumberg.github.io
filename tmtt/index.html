@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Terraforming Mars Tag Tracker</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://terraforming-mars.herokuapp.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <button id="clear" class="clear-button">🗑 Reset</button>
+    </div>
+    <footer>
+      Assets from
+      <a href="https://terraforming-mars.herokuapp.com/"
+        >Terraforming Mars Open-source</a
+      >
+    </footer>
+    <template id="tag-template">
+      <div class="tag-container">
+        <img class="tag-image" />
+        <ol class="tag-count">
+          <li class="tag-count-number" data-value="0">&nbsp;</li>
+          <li class="tag-count-number" data-value="1">&nbsp;</li>
+          <li class="tag-count-number" data-value="2">&nbsp;</li>
+          <li class="tag-count-number" data-value="3">&nbsp;</li>
+          <li class="tag-count-number" data-value="4">&nbsp;</li>
+          <li class="tag-count-number" data-value="5">&nbsp;</li>
+          <li class="tag-count-number" data-value="6">&nbsp;</li>
+          <li class="tag-count-number" data-value="7">&nbsp;</li>
+          <li class="tag-count-number" data-value="8">&nbsp;</li>
+          <li class="tag-count-number" data-value="9">&nbsp;</li>
+          <li class="tag-count-number" data-value="10">&nbsp;</li>
+          <li class="tag-count-number" data-value="11">&nbsp;</li>
+          <li class="tag-count-number" data-value="12">&nbsp;</li>
+          <li class="tag-count-number" data-value="13">&nbsp;</li>
+          <li class="tag-count-number" data-value="14">&nbsp;</li>
+          <li class="tag-count-number" data-value="15">&nbsp;</li>
+          <li class="tag-count-number" data-value="16">&nbsp;</li>
+          <li class="tag-count-number" data-value="17">&nbsp;</li>
+          <li class="tag-count-number" data-value="18">&nbsp;</li>
+          <li class="tag-count-number" data-value="19">&nbsp;</li>
+          <li class="tag-count-number" data-value="20">&nbsp;</li>
+          <li class="tag-count-number" data-value="21">&nbsp;</li>
+          <li class="tag-count-number" data-value="22">&nbsp;</li>
+          <li class="tag-count-number" data-value="23">&nbsp;</li>
+          <li class="tag-count-number" data-value="24">&nbsp;</li>
+          <li class="tag-count-number" data-value="25">&nbsp;</li>
+          <li class="tag-count-number" data-value="26">&nbsp;</li>
+          <li class="tag-count-number" data-value="27">&nbsp;</li>
+          <li class="tag-count-number" data-value="28">&nbsp;</li>
+          <li class="tag-count-number" data-value="29">&nbsp;</li>
+          <li class="tag-count-number" data-value="30">&nbsp;</li>
+          <li class="tag-count-number" data-value="31">&nbsp;</li>
+          <li class="tag-count-number" data-value="32">&nbsp;</li>
+          <li class="tag-count-number" data-value="33">&nbsp;</li>
+          <li class="tag-count-number" data-value="34">&nbsp;</li>
+          <li class="tag-count-number" data-value="35">&nbsp;</li>
+          <li class="tag-count-number" data-value="36">&nbsp;</li>
+          <li class="tag-count-number" data-value="37">&nbsp;</li>
+          <li class="tag-count-number" data-value="38">&nbsp;</li>
+          <li class="tag-count-number" data-value="39">&nbsp;</li>
+          <li class="tag-count-number" data-value="40">&nbsp;</li>
+          <li class="tag-count-number" data-value="41">&nbsp;</li>
+          <li class="tag-count-number" data-value="42">&nbsp;</li>
+          <li class="tag-count-number" data-value="43">&nbsp;</li>
+          <li class="tag-count-number" data-value="44">&nbsp;</li>
+          <li class="tag-count-number" data-value="45">&nbsp;</li>
+          <li class="tag-count-number" data-value="46">&nbsp;</li>
+          <li class="tag-count-number" data-value="47">&nbsp;</li>
+          <li class="tag-count-number" data-value="48">&nbsp;</li>
+          <li class="tag-count-number" data-value="49">&nbsp;</li>
+          <li class="tag-count-number" data-value="50">&nbsp;</li>
+          <li class="tag-count-number" data-value="51">&nbsp;</li>
+          <li class="tag-count-number" data-value="52">&nbsp;</li>
+          <li class="tag-count-number" data-value="53">&nbsp;</li>
+          <li class="tag-count-number" data-value="54">&nbsp;</li>
+          <li class="tag-count-number" data-value="55">&nbsp;</li>
+          <li class="tag-count-number" data-value="56">&nbsp;</li>
+          <li class="tag-count-number" data-value="57">&nbsp;</li>
+          <li class="tag-count-number" data-value="58">&nbsp;</li>
+          <li class="tag-count-number" data-value="59">&nbsp;</li>
+          <li class="tag-count-number" data-value="60">&nbsp;</li>
+          <li class="tag-count-number" data-value="61">&nbsp;</li>
+          <li class="tag-count-number" data-value="62">&nbsp;</li>
+          <li class="tag-count-number" data-value="63">&nbsp;</li>
+          <li class="tag-count-number" data-value="64">&nbsp;</li>
+          <li class="tag-count-number" data-value="65">&nbsp;</li>
+          <li class="tag-count-number" data-value="66">&nbsp;</li>
+          <li class="tag-count-number" data-value="67">&nbsp;</li>
+          <li class="tag-count-number" data-value="68">&nbsp;</li>
+          <li class="tag-count-number" data-value="69">&nbsp;</li>
+          <li class="tag-count-number" data-value="70">&nbsp;</li>
+          <li class="tag-count-number" data-value="71">&nbsp;</li>
+          <li class="tag-count-number" data-value="72">&nbsp;</li>
+          <li class="tag-count-number" data-value="73">&nbsp;</li>
+          <li class="tag-count-number" data-value="74">&nbsp;</li>
+          <li class="tag-count-number" data-value="75">&nbsp;</li>
+          <li class="tag-count-number" data-value="76">&nbsp;</li>
+          <li class="tag-count-number" data-value="77">&nbsp;</li>
+          <li class="tag-count-number" data-value="78">&nbsp;</li>
+          <li class="tag-count-number" data-value="79">&nbsp;</li>
+          <li class="tag-count-number" data-value="80">&nbsp;</li>
+          <li class="tag-count-number" data-value="81">&nbsp;</li>
+          <li class="tag-count-number" data-value="82">&nbsp;</li>
+          <li class="tag-count-number" data-value="83">&nbsp;</li>
+          <li class="tag-count-number" data-value="84">&nbsp;</li>
+          <li class="tag-count-number" data-value="85">&nbsp;</li>
+          <li class="tag-count-number" data-value="86">&nbsp;</li>
+          <li class="tag-count-number" data-value="87">&nbsp;</li>
+          <li class="tag-count-number" data-value="88">&nbsp;</li>
+          <li class="tag-count-number" data-value="89">&nbsp;</li>
+          <li class="tag-count-number" data-value="90">&nbsp;</li>
+          <li class="tag-count-number" data-value="91">&nbsp;</li>
+          <li class="tag-count-number" data-value="92">&nbsp;</li>
+          <li class="tag-count-number" data-value="93">&nbsp;</li>
+          <li class="tag-count-number" data-value="94">&nbsp;</li>
+          <li class="tag-count-number" data-value="95">&nbsp;</li>
+          <li class="tag-count-number" data-value="96">&nbsp;</li>
+          <li class="tag-count-number" data-value="97">&nbsp;</li>
+          <li class="tag-count-number" data-value="98">&nbsp;</li>
+          <li class="tag-count-number" data-value="99">&nbsp;</li>
+          <li class="tag-count-number" data-value="100">&nbsp;</li>
+        </ol>
+      </div>
+    </template>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
